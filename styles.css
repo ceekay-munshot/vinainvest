@@ -1644,15 +1644,14 @@ select {
   position: fixed;
   inset: 0;
   z-index: 70;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 24px;
-  pointer-events: none;
 }
 
 .modal[aria-hidden="false"] {
-  pointer-events: auto;
+  display: flex;
 }
 
 .modal__backdrop {

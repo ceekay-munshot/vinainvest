@@ -1200,6 +1200,10 @@ function attachGlobalEvents() {
 
 // ========== MUNS AGENTS MODULE ==========
 
+const MUNS_API_BASE = "https://devde.muns.io";
+const MUNS_ACCESS_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZWE5ZGMyYi0xZDBmLTQ2MzctOGE2Ny0wM2VhNzFmMGYyY2YiLCJlbWFpbCI6Im5hZGFtc2FsdWphQGdtYWlsLmNvbSIsIm9yZ0lkIjoiMSIsImF1dGhvcml0eSI6InVzZXIiLCJpYXQiOjE3NzU3MTg5NTgsImV4cCI6MTc3NjE1MDk1OH0.Y8WQ1YxM29CJYRUbPsMqR2twkqSy_fquTrPv4Yyk_LU";
+
 const agentsState = {
   agents: [],
   activeAgentId: null,
@@ -1255,6 +1259,319 @@ function saveAgents() {
   localStorage.setItem(AGENTS_STORAGE_KEY, JSON.stringify(agentsState.agents));
 }
 
+function loadAgentSessions() {
+  try {
+    const stored = sessionStorage.getItem(AGENT_SESSIONS_KEY);
+    agentsState.sessions = stored ? JSON.parse(stored) : {};
+  } catch {
+    agentsState.sessions = {};
+  }
+}
+
+function saveAgentSessions() {
+  try {
+    sessionStorage.setItem(AGENT_SESSIONS_KEY, JSON.stringify(agentsState.sessions));
+  } catch {
+    /* sessionStorage quota or disabled; ignore */
+  }
+}
+
+// ---------- Output cleaning ----------
+
+const NOISE_RE = /^(WriteTodos|NewsSearch|WebSearch|WebReader|DocumentFetch|PythonRepl|GetAnnouncements|HTTP\/\d|server:|date:|content-type:|x-powered-by:|access-control|x-request-id:|x-ratelimit|cache-control:|x-active-analyst-id:|x-analyst-output-id:|access-control-expose)/i;
+const BASE64_NOISE_RE = /^H4sI[A-Za-z0-9+/=]+$|H4sI[A-Za-z0-9+/=]{120,}|^[A-Za-z0-9+/]{200,}={0,2}$/;
+
+function cleanStreamToMarkdown(raw) {
+  const withoutGraphs = raw.replace(/<graph[^>]*>[\s\S]*?<\/graph>/gi, "");
+  const withoutDocSources = withoutGraphs.replace(/<doc_source>\d+<\/doc_source>/g, "");
+  return withoutDocSources
+    .split("\n")
+    .map((line) => line.replace(/<[^>]+>/g, "").trim())
+    .filter(Boolean)
+    .filter((line) => !NOISE_RE.test(line))
+    .filter((line) => !BASE64_NOISE_RE.test(line))
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+// ---------- Output rendering ----------
+
+function renderAgentMarkdown(md) {
+  const blocks = parseAgentOutput(md);
+  if (blocks.length === 0) {
+    return `<div class="agents-markdown">${mdToHtml(md)}</div>`;
+  }
+  const sections = blocks.map(renderAgentBlock).join("");
+  return `<div class="agents-markdown">${sections}</div>`;
+}
+
+function parseAgentOutput(raw) {
+  const sections = raw
+    .split(/(?=^#{1,4}\s)/m)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sections.length === 0 && raw.trim()) {
+    return [{ heading: "Overview", type: "unknown", prose: raw, items: [], table: null }];
+  }
+  return sections.map((section) => {
+    const headingMatch = section.match(/^#{1,4}\s+(.+)$/m);
+    const heading = headingMatch ? headingMatch[1].trim() : "Overview";
+    const body = section.replace(/^#{1,4}\s+.+$/m, "").trim();
+
+    const tableMatch = body.match(/(\|.+\|[ \t]*\n\|[ \t|:\-]+\|[ \t]*\n(?:\|.+\|[ \t]*\n?)+)/);
+    const table = tableMatch ? parseMdTable(tableMatch[0]) : null;
+    const prose = tableMatch ? body.replace(tableMatch[0], "").trim() : body;
+
+    const items = [];
+    const boldBulletRe = /^[\*\-]\s+\*\*(.+?)\*\*[:\s]*(.*)/gm;
+    let m;
+    while ((m = boldBulletRe.exec(body)) !== null) {
+      items.push(m[2] ? `${m[1]}: ${m[2]}` : m[1]);
+    }
+    if (items.length === 0) {
+      const plainBulletRe = /^[\*\-]\s+(.+)$/gm;
+      while ((m = plainBulletRe.exec(body)) !== null) {
+        items.push(m[1].replace(/\*\*/g, "").trim());
+      }
+    }
+
+    const type = classifyAgentBlock(heading, table ? table.columns : []);
+    return { heading, type, prose, items, table };
+  });
+}
+
+function parseMdTable(raw) {
+  const lines = raw.trim().split("\n").map((l) => l.trim()).filter(Boolean);
+  if (lines.length < 3) return null;
+  const parseCells = (line) => line.replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+  if (!/^\|?[\s|\-:]+\|?$/.test(lines[1]) || !lines[1].includes("-")) return null;
+  const columns = parseCells(lines[0]).map((c) => c.replace(/\*\*/g, "").trim());
+  const rows = lines.slice(2).map((line) => {
+    const cells = parseCells(line);
+    const row = {};
+    columns.forEach((c, i) => {
+      row[c] = (cells[i] || "").replace(/\*\*/g, "").trim();
+    });
+    return row;
+  });
+  return { columns, rows };
+}
+
+function classifyAgentBlock(heading, columns) {
+  const h = heading.toLowerCase();
+  const cols = columns.map((c) => c.toLowerCase());
+  const has = (n) => cols.some((c) => c.includes(n));
+  if (/executive\s+summary|overview|background/.test(h)) return "executive_summary";
+  if (/key\s+finding|highlight|insight/.test(h)) return "key_findings";
+  if (/recommendation|action|next\s+step|takeaway/.test(h)) return "recommendations";
+  if (/ceo\s+detail|ceo\s+profile|chief\s+executive/.test(h)) return "ceo_details";
+  if (/timeline|announcement|recent\s+update/.test(h)) return "timeline_table";
+  if (/management\s+summary|management\s+overview/.test(h)) return "kv_table";
+  if (has("status")) return "status_table";
+  if (has("date") && (has("event") || has("update") || has("announcement"))) return "timeline_table";
+  if (has("field") && has("value")) return "kv_table";
+  return columns.length > 0 ? "data_table" : "unknown";
+}
+
+function statusClassFor(value) {
+  const v = (value || "").trim().toLowerCase();
+  if (["positive", "pass", "yes", "good", "experienced", "sufficient", "new", "increased"].includes(v)) return "status-badge--increased";
+  if (["negative", "fail", "no", "poor", "not experienced", "reduced", "exited"].includes(v)) return "status-badge--reduced";
+  if (["warning", "above average"].includes(v)) return "status-badge--filing-due";
+  return "status-badge--unchanged";
+}
+
+function renderAgentBlock(block) {
+  let inner = "";
+  if (block.type === "key_findings" && block.items.length) {
+    inner = `<ul>${block.items.map((i) => `<li>${mdInline(i)}</li>`).join("")}</ul>`;
+  } else if (block.type === "recommendations" && block.items.length) {
+    inner = `<ol>${block.items.map((i) => `<li>${mdInline(i)}</li>`).join("")}</ol>`;
+  } else if (block.type === "kv_table" && block.table) {
+    inner = renderKvGrid(block.table);
+    if (block.prose) inner += mdToHtml(block.prose);
+  } else if (block.type === "timeline_table" && block.table) {
+    inner = renderTimeline(block.table);
+    if (block.prose) inner += mdToHtml(block.prose);
+  } else if (block.type === "ceo_details" && block.table) {
+    inner = renderPersonCard(block.table);
+    if (block.prose) inner += mdToHtml(block.prose);
+  } else if (block.table) {
+    inner = renderDataTable(block.table);
+    if (block.prose) inner += mdToHtml(block.prose);
+  } else if (block.prose) {
+    inner = mdToHtml(block.prose);
+  } else if (block.items.length) {
+    inner = `<ul>${block.items.map((i) => `<li>${mdInline(i)}</li>`).join("")}</ul>`;
+  }
+  return `<section class="agents-block"><h3>${escapeHtml(block.heading)}</h3>${inner}</section>`;
+}
+
+function renderDataTable(table) {
+  const statusCol = table.columns.find((c) => c.toLowerCase().includes("status"));
+  const head = table.columns.map((c) => `<th>${escapeHtml(c)}</th>`).join("");
+  const body = table.rows
+    .map((row) => {
+      const cells = table.columns
+        .map((c) => {
+          const value = row[c] || "";
+          if (statusCol && c === statusCol && value) {
+            return `<td><span class="status-badge ${statusClassFor(value)}">${escapeHtml(value)}</span></td>`;
+          }
+          return `<td>${escapeHtml(value)}</td>`;
+        })
+        .join("");
+      return `<tr>${cells}</tr>`;
+    })
+    .join("");
+  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+function renderKvGrid(table) {
+  if (table.columns.length < 2 || table.rows.length === 0) return renderDataTable(table);
+  const [keyCol, valCol] = table.columns;
+  const cards = table.rows
+    .map((row) => {
+      const key = (row[keyCol] || "").trim();
+      const val = (row[valCol] || "").trim();
+      if (!key && !val) return "";
+      const statusCls = statusClassFor(val);
+      const isStatus = statusCls !== "status-badge--unchanged";
+      const valueHtml = isStatus
+        ? `<span class="status-badge ${statusCls}">${escapeHtml(val || "-")}</span>`
+        : `<p class="agents-kv-value">${escapeHtml(val || "-")}</p>`;
+      return `<div class="agents-kv-card"><p class="agents-kv-key">${escapeHtml(key || "Value")}</p>${valueHtml}</div>`;
+    })
+    .join("");
+  return `<div class="agents-kv-grid">${cards}</div>`;
+}
+
+function renderTimeline(table) {
+  const findCol = (...needles) =>
+    table.columns.find((c) => needles.some((n) => c.toLowerCase().includes(n)));
+  const dateCol = findCol("date", "time", "updated", "timestamp");
+  const titleCol = findCol("event", "update", "announcement", "headline", "item");
+  const detailCol = findCol("description", "detail", "notes", "summary", "comment");
+  if (!dateCol && !titleCol && !detailCol) return renderDataTable(table);
+  const items = table.rows
+    .map((row) => ({
+      date: (dateCol && row[dateCol]) || "",
+      title: (titleCol && row[titleCol]) || "",
+      detail: (detailCol && row[detailCol]) || "",
+    }))
+    .filter((i) => i.date || i.title || i.detail);
+  if (items.length === 0) return renderDataTable(table);
+  return `<div class="agents-timeline">${items
+    .map(
+      (i) => `
+    <div class="agents-timeline__item">
+      <div class="agents-timeline__dot"></div>
+      <div class="agents-timeline__card">
+        <div class="agents-timeline__head">
+          ${i.title ? `<strong>${escapeHtml(i.title)}</strong>` : ""}
+          ${i.date ? `<span class="agents-timeline__date">${escapeHtml(i.date)}</span>` : ""}
+        </div>
+        ${i.detail ? `<p>${escapeHtml(i.detail)}</p>` : ""}
+      </div>
+    </div>`,
+    )
+    .join("")}</div>`;
+}
+
+function renderPersonCard(table) {
+  const row = table.rows[0];
+  if (!row) return "";
+  const findCol = (...needles) =>
+    table.columns.find((c) => needles.some((n) => c.toLowerCase().includes(n)));
+  const name = row[findCol("name") || ""] || "";
+  const role = row[findCol("role", "position", "title") || ""] || "";
+  const age = row[findCol("age") || ""] || "";
+  const tenure = row[findCol("tenure") || ""] || "";
+  const comp = row[findCol("compensation", "salary", "pay", "total") || ""] || "";
+  const notes = row[findCol("notes", "detail", "description") || ""] || "";
+  if (!name && !role && !age && !tenure && !comp && !notes) return renderDataTable(table);
+  return `
+    <div class="agents-person">
+      ${name ? `<strong class="agents-person__name">${escapeHtml(name)}</strong>` : ""}
+      ${role ? `<p class="agents-person__role">${escapeHtml(role)}</p>` : ""}
+      <div class="agents-person__meta">
+        ${age ? `<div><span>Age</span><strong>${escapeHtml(age)}</strong></div>` : ""}
+        ${tenure ? `<div><span>Tenure</span><strong>${escapeHtml(tenure)}</strong></div>` : ""}
+        ${comp ? `<div><span>Compensation</span><strong>${escapeHtml(comp)}</strong></div>` : ""}
+      </div>
+      ${notes ? `<p class="agents-person__notes">${escapeHtml(notes)}</p>` : ""}
+    </div>`;
+}
+
+function mdInline(text) {
+  return escapeHtml(text)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+}
+
+function mdToHtml(text) {
+  if (!text) return "";
+  const lines = text.split("\n");
+  const out = [];
+  let paragraph = [];
+  let list = null;
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      out.push(`<p>${mdInline(paragraph.join(" "))}</p>`);
+      paragraph = [];
+    }
+  };
+  const flushList = () => {
+    if (list) {
+      out.push(`<${list.tag}>${list.items.map((i) => `<li>${mdInline(i)}</li>`).join("")}</${list.tag}>`);
+      list = null;
+    }
+  };
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+    const heading = line.match(/^(#{1,6})\s+(.+)$/);
+    if (heading) {
+      flushParagraph();
+      flushList();
+      const level = Math.min(heading[1].length + 2, 6);
+      out.push(`<h${level}>${mdInline(heading[2])}</h${level}>`);
+      continue;
+    }
+    const bullet = line.match(/^[\*\-]\s+(.+)$/);
+    if (bullet) {
+      flushParagraph();
+      if (!list || list.tag !== "ul") {
+        flushList();
+        list = { tag: "ul", items: [] };
+      }
+      list.items.push(bullet[1]);
+      continue;
+    }
+    const numbered = line.match(/^\d+\.\s+(.+)$/);
+    if (numbered) {
+      flushParagraph();
+      if (!list || list.tag !== "ol") {
+        flushList();
+        list = { tag: "ol", items: [] };
+      }
+      list.items.push(numbered[1]);
+      continue;
+    }
+    flushList();
+    paragraph.push(line);
+  }
+  flushParagraph();
+  flushList();
+  return out.join("");
+}
+
 function getSessionKey(agentId) {
   const investorId = state.selectedInvestorId || "default";
   return `${agentId}::${investorId}`;
@@ -1281,13 +1598,16 @@ function patchAgentSession(agentId, patch) {
   const key = getSessionKey(agentId);
   const sess = getAgentSession(agentId);
   agentsState.sessions[key] = { ...sess, ...patch };
+  saveAgentSessions();
 }
 
 function openAgentsView() {
   directoryView.classList.remove("is-active");
   profileView.classList.remove("is-active");
   agentEls.view.classList.add("is-active");
-  agentEls.tabstripPanel.style.display = "block";
+  if (!agentsState.activeAgentId && agentsState.agents.length > 0) {
+    agentsState.activeAgentId = agentsState.agents[0].id;
+  }
   renderAgentsTabs();
   if (agentsState.activeAgentId) {
     renderAgentPanel(agentsState.activeAgentId);
@@ -1333,7 +1653,7 @@ function renderAgentsTabs() {
     })
     .join("");
 
-  agentEls.tabstrip.querySelectorAll("[data-agent-id]").forEach((btn) => {
+  agentEls.tabstrip.querySelectorAll(".tab-chip[data-agent-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
       agentsState.activeAgentId = btn.dataset.agentId;
       renderAgentsTabs();
@@ -1409,9 +1729,9 @@ function renderAgentPanel(agentId) {
   }
 
   if (session.error) {
-    agentEls.output.innerHTML = `<p style="color: var(--danger);">${session.error}</p>`;
+    agentEls.output.innerHTML = `<p style="color: var(--danger);">${escapeHtml(session.error)}</p>`;
   } else if (session.markdown) {
-    agentEls.output.innerHTML = `<div class="agents-markdown">${escapeHtml(session.markdown)}</div>`;
+    agentEls.output.innerHTML = renderAgentMarkdown(session.markdown);
   } else {
     agentEls.output.innerHTML = "<p class='agents-output-empty'>Run the agent to load output.</p>";
   }
@@ -1420,9 +1740,12 @@ function renderAgentPanel(agentId) {
 }
 
 function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
+  return String(text == null ? "" : text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function openAddAgentModal() {
@@ -1529,15 +1852,14 @@ function setupAgentsEvents() {
     };
 
     try {
-      const token = (import.meta?.env?.VITE_MUNS_ACCESS_TOKEN || "").trim();
-      if (!token) {
+      if (!MUNS_ACCESS_TOKEN) {
         throw new Error("Missing MUNS_ACCESS_TOKEN.");
       }
 
-      const response = await fetch("https://devde.muns.io/agents/run", {
+      const response = await fetch(`${MUNS_API_BASE}/agents/run`, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${MUNS_ACCESS_TOKEN}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
@@ -1549,14 +1871,7 @@ function setupAgentsEvents() {
         throw new Error(`MUNS request failed (${response.status}).`);
       }
 
-      const markdown = raw
-        .split("\n")
-        .filter((line) => !line.match(/^(WriteTodos|NewsSearch|WebSearch|WebReader|DocumentFetch|PythonRepl|GetAnnouncements|HTTP\/\d|server:|date:|content-type:|x-powered-by:|access-control|x-request-id:|x-ratelimit|cache-control:|x-active-analyst-id:|x-analyst-output-id:|access-control-expose)/i))
-        .filter((line) => !line.match(/^H4sI[A-Za-z0-9+/=]+$|H4sI[A-Za-z0-9+/=]{120,}|^[A-Za-z0-9+/]{200,}={0,2}$/))
-        .filter(Boolean)
-        .join("\n")
-        .replace(/\n{3,}/g, "\n\n")
-        .trim();
+      const markdown = cleanStreamToMarkdown(raw);
 
       patchAgentSession(agent.id, {
         markdown,
@@ -1564,10 +1879,12 @@ function setupAgentsEvents() {
         activeAnalystId: response.headers.get("x-active-analyst-id") || null,
         analystOutputId: response.headers.get("x-analyst-output-id") || null,
       });
+      saveAgentSessions();
 
       renderAgentPanel(agent.id);
     } catch (err) {
       patchAgentSession(agent.id, { error: err.message });
+      saveAgentSessions();
       renderAgentPanel(agent.id);
     } finally {
       agentEls.runButton.disabled = false;
@@ -1581,6 +1898,7 @@ function init() {
   setupTabs();
   attachGlobalEvents();
   loadAgents();
+  loadAgentSessions();
   setupAgentsEvents();
   syncGlobalSearch();
   renderDirectory();

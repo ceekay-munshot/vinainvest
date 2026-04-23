@@ -1472,6 +1472,172 @@ select {
   color: inherit;
 }
 
+.agents-markdown .agents-block {
+  margin: 0 0 20px;
+  padding: 18px;
+  border: 1px solid rgba(199, 210, 227, 0.6);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 4px 12px rgba(17, 33, 58, 0.03);
+}
+
+.agents-markdown .agents-block h3 {
+  margin: 0 0 12px;
+  font-size: 0.98rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.agents-kv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.agents-kv-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.agents-kv-key {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.agents-kv-value {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: "IBM Plex Sans", monospace;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.agents-timeline {
+  position: relative;
+  padding-left: 22px;
+}
+
+.agents-timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--royal), rgba(31, 94, 168, 0.2));
+}
+
+.agents-timeline__item {
+  position: relative;
+  margin: 0 0 12px;
+}
+
+.agents-timeline__dot {
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--royal);
+}
+
+.agents-timeline__card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(31, 94, 168, 0.18);
+  background: var(--surface-strong);
+}
+
+.agents-timeline__head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.agents-timeline__head strong {
+  font-size: 0.92rem;
+}
+
+.agents-timeline__date {
+  padding: 2px 10px;
+  border-radius: var(--radius-xs);
+  background: rgba(31, 94, 168, 0.1);
+  color: var(--royal);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.agents-timeline__card p {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.agents-person {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 94, 168, 0.18);
+  background: linear-gradient(180deg, rgba(31, 94, 168, 0.06), rgba(255, 255, 255, 0.9));
+}
+
+.agents-person__name {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.agents-person__role {
+  margin: 2px 0 14px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.agents-person__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.agents-person__meta > div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.agents-person__meta span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.agents-person__meta strong {
+  font-size: 0.92rem;
+  font-family: "IBM Plex Sans", monospace;
+}
+
+.agents-person__notes {
+  margin: 12px 0 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* MODAL */
 
 .modal {

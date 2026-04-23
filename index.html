@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Munshot | Investor Research Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <button class="brand-button" id="home-brand" type="button" aria-label="Open Munshot investor directory">
+            <span class="brand-mark" aria-hidden="true">M</span>
+            <span class="brand-text">
+              <strong>Munshot</strong>
+              <span>Public Market Investor Tracker</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="topbar-search">
+          <label class="input-shell input-shell--search" for="global-search">
+            <span class="input-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M10.5 17a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13Zm9 2-4.1-4.1" />
+              </svg>
+            </span>
+            <input
+              id="global-search"
+              type="search"
+              placeholder="Search investor, fund, sector, or company"
+              autocomplete="off"
+            />
+          </label>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="ghost-button" type="button">Saved Screens</button>
+          <button class="ghost-button" type="button">Exports</button>
+          <button class="primary-button" type="button" id="compare-button">
+            Compare Investors
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="view view--directory is-active" id="directory-view" aria-labelledby="directory-title">
+          <div class="page-intro">
+            <div>
+              <p class="eyebrow">Investor Directory</p>
+              <h1 id="directory-title">Track top public-market investors with calm, high-clarity research workflows.</h1>
+              <p class="page-subtitle">
+                Review investor profiles, screen by portfolio posture, and move directly into disclosure-level holdings analysis.
+              </p>
+            </div>
+            <div class="summary-pill-grid">
+              <article class="summary-pill">
+                <span>Tracked Investors</span>
+                <strong id="tracked-count">06</strong>
+              </article>
+              <article class="summary-pill">
+                <span>Filed Holdings</span>
+                <strong id="holdings-count">87</strong>
+              </article>
+              <article class="summary-pill">
+                <span>Fresh Changes</span>
+                <strong id="change-count">19</strong>
+              </article>
+            </div>
+          </div>
+
+          <div class="directory-layout">
+            <aside class="panel filter-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Directory Controls</p>
+                  <h2>Screen investors</h2>
+                </div>
+                <button class="text-button" id="reset-directory-filters" type="button">Reset</button>
+              </div>
+
+              <div class="filter-stack">
+                <label class="field-block">
+                  <span class="field-label">Investor Type</span>
+                  <select id="type-filter"></select>
+                </label>
+
+                <label class="field-block">
+                  <span class="field-label">Net Worth Range</span>
+                  <select id="worth-filter"></select>
+                </label>
+
+                <label class="field-block">
+                  <span class="field-label">Number of Holdings</span>
+                  <select id="holdings-filter"></select>
+                </label>
+
+                <label class="field-block">
+                  <span class="field-label">Sector Focus</span>
+                  <select id="sector-filter"></select>
+                </label>
+
+                <label class="field-block">
+                  <span class="field-label">Recent Change Activity</span>
+                  <select id="activity-filter"></select>
+                </label>
+              </div>
+
+              <div class="filter-divider"></div>
+
+              <label class="field-block">
+                <span class="field-label">Sort Investors By</span>
+                <select id="sort-filter"></select>
+              </label>
+
+              <div class="selection-card">
+                <p class="panel-kicker">Live Selection</p>
+                <div id="selection-summary">
+                  <strong>No investor selected</strong>
+                  <p>Choose a card to pin it, then open the profile workspace.</p>
+                </div>
+              </div>
+            </aside>
+
+            <section class="directory-main">
+              <div class="section-toolbar">
+                <div class="section-toolbar__meta">
+                  <h2>Top Investors</h2>
+                  <p id="directory-results-copy">6 investors match the current screen.</p>
+                </div>
+                <div class="chip-row" id="active-filter-chips" aria-live="polite"></div>
+              </div>
+
+              <div class="card-grid" id="investor-grid" aria-live="polite"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view view--profile" id="profile-view" aria-labelledby="profile-title">
+          <div class="page-toolbar">
+            <button class="ghost-button ghost-button--compact" id="back-to-directory" type="button">
+              <span aria-hidden="true">←</span>
+              Investor Directory
+            </button>
+            <div class="tab-strip tab-strip--page">
+              <button class="tab-chip is-active" type="button" data-tab-target="overview-panel">Overview</button>
+              <button class="tab-chip" type="button" data-tab-target="holdings-panel">Holdings</button>
+              <button class="tab-chip" type="button" data-tab-target="changes-panel">Changes</button>
+              <button class="tab-chip" type="button" data-tab-target="sector-panel">Sector Exposure</button>
+              <button class="tab-chip" type="button" data-tab-target="history-panel">History</button>
+              <button class="tab-chip" type="button" data-tab-target="notes-panel">Notes</button>
+            </div>
+          </div>
+
+          <section class="hero-card panel" id="profile-hero">
+            <div class="hero-card__content">
+              <div class="profile-identity">
+                <div class="portrait-ring" id="profile-portrait"></div>
+                <div>
+                  <p class="eyebrow">Investor Profile</p>
+                  <h1 id="profile-title">Investor Name</h1>
+                  <p class="hero-subtitle" id="profile-fund">Fund / Entity</p>
+                  <p class="profile-summary" id="profile-summary">Profile summary</p>
+                </div>
+              </div>
+
+              <div class="hero-worth-card">
+                <span>Total Net Worth</span>
+                <strong id="profile-worth">₹0 Cr</strong>
+                <small id="profile-worth-note">Latest disclosed portfolio value</small>
+              </div>
+            </div>
+
+            <div class="hero-card__meta">
+              <div class="meta-grid" id="profile-meta-grid"></div>
+              <div class="hero-actions">
+                <button class="ghost-button" type="button">Bookmark</button>
+                <button class="ghost-button" type="button" id="profile-compare">Compare</button>
+                <button class="ghost-button" type="button">Export</button>
+                <button class="primary-button" type="button">Share Internally</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="kpi-row" id="kpi-row" aria-label="Portfolio KPIs"></section>
+
+          <section class="tab-panel is-active" id="overview-panel">
+            <div class="overview-layout">
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Top Holdings</p>
+                    <h2>Largest positions by current value</h2>
+                  </div>
+                  <button class="text-button" type="button">View full table</button>
+                </div>
+                <div class="mini-list" id="top-holdings-list"></div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Sector Allocation</p>
+                    <h2>Exposure mix</h2>
+                  </div>
+                </div>
+                <div class="allocation-layout">
+                  <div class="donut-card">
+                    <div class="donut-chart" id="sector-donut" aria-hidden="true"></div>
+                    <div class="donut-center">
+                      <span>Total</span>
+                      <strong id="sector-total-value">₹0 Cr</strong>
+                    </div>
+                  </div>
+                  <div class="allocation-legend" id="sector-legend"></div>
+                </div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Recent Changes</p>
+                    <h2>Disclosure highlights</h2>
+                  </div>
+                </div>
+                <div class="timeline-list" id="change-timeline"></div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Concentration</p>
+                    <h2>Portfolio balance</h2>
+                  </div>
+                </div>
+                <div class="concentration-card" id="concentration-card"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="holdings-panel">
+            <div class="table-shell panel">
+              <div class="panel-header panel-header--table">
+                <div>
+                  <p class="panel-kicker">Portfolio Holdings</p>
+                  <h2>Quarterly ownership table</h2>
+                </div>
+                <div class="table-tools">
+                  <label class="input-shell input-shell--small" for="holdings-search">
+                    <span class="input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M10.5 17a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13Zm9 2-4.1-4.1" />
+                      </svg>
+                    </span>
+                    <input id="holdings-search" type="search" placeholder="Search holdings" autocomplete="off" />
+                  </label>
+                  <label class="field-inline">
+                    <span>Sector</span>
+                    <select id="holdings-sector-filter"></select>
+                  </label>
+                  <label class="field-inline">
+                    <span>Status</span>
+                    <select id="holdings-status-filter"></select>
+                  </label>
+                </div>
+              </div>
+
+              <div class="table-wrap">
+                <table class="holdings-table">
+                  <thead>
+                    <tr id="holdings-head-row"></tr>
+                  </thead>
+                  <tbody id="holdings-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="changes-panel">
+            <div class="split-grid">
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Change Matrix</p>
+                    <h2>Recent additions and trims</h2>
+                  </div>
+                </div>
+                <div class="changes-grid" id="changes-grid"></div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Watchlist</p>
+                    <h2>Research notes</h2>
+                  </div>
+                </div>
+                <div class="notes-list" id="watchlist-notes"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="sector-panel">
+            <div class="split-grid">
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Sector Exposure</p>
+                    <h2>Allocation by sector</h2>
+                  </div>
+                </div>
+                <div class="bar-stack" id="sector-bars"></div>
+              </article>
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Theme Summary</p>
+                    <h2>Positioning readout</h2>
+                  </div>
+                </div>
+                <div class="theme-card" id="theme-card"></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="tab-panel" id="history-panel">
+            <article class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="panel-kicker">Disclosure History</p>
+                  <h2>Timeline of reported portfolio changes</h2>
+                </div>
+              </div>
+              <div class="history-list" id="history-list"></div>
+            </article>
+          </section>
+
+          <section class="tab-panel" id="notes-panel">
+            <div class="split-grid">
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Internal Notes</p>
+                    <h2>Research context</h2>
+                  </div>
+                </div>
+                <div class="notes-panel__body" id="notes-body"></div>
+              </article>
+              <article class="panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-kicker">Design System</p>
+                    <h2>Reusable interface components</h2>
+                  </div>
+                </div>
+                <div class="design-system-showcase">
+                  <div class="showcase-card">
+                    <h3>Badges</h3>
+                    <div class="chip-row">
+                      <span class="status-badge status-badge--new">New</span>
+                      <span class="status-badge status-badge--increased">Increased</span>
+                      <span class="status-badge status-badge--reduced">Reduced</span>
+                      <span class="status-badge status-badge--unchanged">Unchanged</span>
+                    </div>
+                  </div>
+                  <div class="showcase-card">
+                    <h3>KPI Tiles</h3>
+                    <div class="mini-kpi-sample">
+                      <div class="mini-kpi">
+                        <span>Portfolio Value</span>
+                        <strong>₹38,420 Cr</strong>
+                      </div>
+                      <div class="mini-kpi">
+                        <span>Active Holdings</span>
+                        <strong>22</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="showcase-card">
+                    <h3>Cards & Filters</h3>
+                    <p>White institutional surfaces, soft navy borders, disciplined shadows, and focused accent states.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <aside class="compare-drawer" id="compare-drawer" aria-hidden="true">
+      <div class="compare-drawer__header">
+        <div>
+          <p class="panel-kicker">Quick Compare</p>
+          <h2>Selected investor set</h2>
+        </div>
+        <button class="ghost-button ghost-button--compact" id="close-compare" type="button">Close</button>
+      </div>
+      <div class="compare-drawer__body" id="compare-list"></div>
+    </aside>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

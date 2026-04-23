@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import Plot from "react-plotly.js";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import pako from "pako";
 import { PlusCircle, Trash2, Play, MessageSquarePlus } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -153,44 +151,11 @@ const slugify = (value: string) =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
-const toUint8 = (binary: string) => {
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
-  return bytes;
-};
-
-const decodeGraphData = (encoded: string): unknown => {
-  const clean = encoded.replace(/\s+/g, "");
-  const bytes = toUint8(atob(clean));
-  const inflated = pako.inflate(bytes);
-  const json = new TextDecoder().decode(inflated);
-  return JSON.parse(json);
-};
-
-const extractGraphData = (raw: string): Array<{ filename: string; data: unknown }> => {
-  const graphRe = /<graph\s+filename="([^"]+)"\s*>([\s\S]*?)<\/graph>/gi;
-  const graphs: Array<{ filename: string; data: unknown }> = [];
-  let match: RegExpExecArray | null;
-
-  graphRe.lastIndex = 0;
-  while ((match = graphRe.exec(raw)) !== null) {
-    const filename = (match[1] || "Visualization").trim();
-    const encoded = (match[2] || "").trim();
-    if (!encoded) continue;
-    try {
-      graphs.push({ filename, data: decodeGraphData(encoded) });
-    } catch {
-      // ignore malformed graph blocks
-    }
-  }
-
-  return graphs;
-};
-
 const stripGraphTags = (raw: string) => raw.replace(/<graph[^>]*>[\s\S]*?<\/graph>/gi, "").trim();
 
 export const cleanStreamToMarkdown = (raw: string) => {
-  const lines = raw
+  const withoutGraphs = stripGraphTags(raw);
+  const lines = withoutGraphs
     .split("\n")
     .map(stripTags)
     .filter(Boolean)
@@ -408,7 +373,6 @@ interface AgentBlock {
   type: BlockType;
   debugName: string;
   rawContent: string;
-  graphs?: Array<{ filename: string; data: unknown }>;
   parsedTable?: ParsedTable;
   prose?: string;
   items?: string[];
@@ -517,7 +481,6 @@ const parseAgentOutput = (raw: string): AgentBlock[] => {
     const heading = headingMatch ? headingMatch[1].trim() : "Overview";
     const body = section.replace(HEADING_LINE_RE, "").trim();
 
-    const sectionGraphs = extractGraphData(body);
     const bodySansGraphs = stripGraphTags(body);
 
     MD_TABLE_RE.lastIndex = 0;
@@ -545,7 +508,6 @@ const parseAgentOutput = (raw: string): AgentBlock[] => {
       type,
       debugName: `${type} -> widget`,
       rawContent: bodySansGraphs,
-      graphs: sectionGraphs.length > 0 ? sectionGraphs : undefined,
       parsedTable,
       prose: prose || undefined,
       items: items.length > 0 ? items : undefined,
@@ -553,50 +515,6 @@ const parseAgentOutput = (raw: string): AgentBlock[] => {
   }
 
   return blocks;
-};
-
-const GraphRenderer = ({ graphs }: { graphs: Array<{ filename: string; data: unknown }> }) => {
-  if (graphs.length === 0) return null;
-
-  return (
-    <div className="space-y-3">
-      {graphs.map((graph, index) => {
-        const graphObj = graph.data as Record<string, unknown>;
-        const data = Array.isArray(graphObj?.data)
-          ? (graphObj.data as unknown[])
-          : Array.isArray(graph.data)
-            ? (graph.data as unknown[])
-            : [graph.data];
-        const layout =
-          graphObj && typeof graphObj.layout === "object"
-            ? (graphObj.layout as Record<string, unknown>)
-            : {};
-
-        return (
-          <Card key={`${graph.filename}-${index}`}>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm">{graph.filename}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Plot
-                data={data as never[]}
-                layout={{
-                  autosize: true,
-                  height: 360,
-                  paper_bgcolor: "transparent",
-                  plot_bgcolor: "transparent",
-                  ...layout,
-                }}
-                config={{ responsive: true }}
-                useResizeHandler
-                style={{ width: "100%" }}
-              />
-            </CardContent>
-          </Card>
-        );
-      })}
-    </div>
-  );
 };
 
 export const MarkdownProse = ({ content }: { content: string }) => (
@@ -620,31 +538,12 @@ export const MarkdownProse = ({ content }: { content: string }) => (
       td: (props) => <td className="border p-2" {...props} />,
       code: ({ children, ...rest }: any) => {
         const inline = Boolean(rest.inline);
-        const asText = String(children || "");
         if (!inline) {
-          try {
-            const parsed = JSON.parse(asText) as Record<string, unknown>;
-            const data = Array.isArray(parsed.data)
-              ? (parsed.data as never[])
-              : [parsed as never];
-            return (
-              <div className="my-3 overflow-hidden rounded-md border">
-                <Plot
-                  data={data}
-                  layout={{ autosize: true, height: 320, paper_bgcolor: "transparent" }}
-                  config={{ responsive: true }}
-                  useResizeHandler
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          } catch {
-            return (
-              <pre className="my-3 overflow-auto rounded-md bg-slate-900 p-3 text-xs text-slate-100">
-                <code>{children}</code>
-              </pre>
-            );
-          }
+          return (
+            <pre className="my-3 overflow-auto rounded-md bg-slate-900 p-3 text-xs text-slate-100">
+              <code>{children}</code>
+            </pre>
+          );
         }
         return <code className="rounded bg-muted px-1 py-0.5 text-xs">{children}</code>;
       },
@@ -901,15 +800,14 @@ const RenderedSections = ({ blocks, showDebug }: { blocks: AgentBlock[]; showDeb
   );
 };
 
-export const MunsAgentOutput = ({ markdown, raw }: { markdown: string; raw: string }) => {
+export const MunsAgentOutput = ({ markdown }: { markdown: string; raw?: string }) => {
   const cleaned = useMemo(
     () => stripGraphTags(markdown).replace(/<doc_source>\d+<\/doc_source>/g, "").trim(),
     [markdown],
   );
-  const graphs = useMemo(() => extractGraphData(raw || markdown), [raw, markdown]);
   const blocks = useMemo(() => parseAgentOutput(cleaned), [cleaned]);
 
-  if (!cleaned && graphs.length === 0 && blocks.length === 0) {
+  if (!cleaned && blocks.length === 0) {
     return <p className="text-sm text-muted-foreground">No output yet.</p>;
   }
 
@@ -931,12 +829,6 @@ export const MunsAgentOutput = ({ markdown, raw }: { markdown: string; raw: stri
       </TabsList>
 
       <TabsContent value="report" className="space-y-4">
-        {graphs.length > 0 ? (
-          <section className="space-y-2">
-            <h3 className="text-sm font-semibold tracking-wide text-foreground">Visualizations</h3>
-            <GraphRenderer graphs={graphs} />
-          </section>
-        ) : null}
         <RenderedSections blocks={blocks} showDebug={false} />
       </TabsContent>
 
@@ -1096,7 +988,7 @@ const AgentRunPanel = ({
                 value={session.userQuery}
                 onChange={(event) => onPatch({ userQuery: event.target.value })}
                 className="min-h-[100px]"
-                placeholder="e.g. generate as many graphs as possible for visualisation"
+                placeholder="e.g. summarise key financial health signals"
               />
             </div>
           ) : null}
@@ -1115,7 +1007,7 @@ const AgentRunPanel = ({
           {session.error ? (
             <p className="text-sm text-destructive">{session.error}</p>
           ) : session.markdown ? (
-            <MunsAgentOutput markdown={session.markdown} raw={session.rawOutput} />
+            <MunsAgentOutput markdown={session.markdown} />
           ) : (
             <p className="text-sm text-muted-foreground">Run the agent to load output.</p>
           )}

@@ -13,7 +13,8 @@ Use this prompt to transform a base Lovable dashboard into an evolved MUNS-enabl
 - Agent output must remain when switching tabs during the same session.
 - Ask for new agent `id` and `name` in UI (and collect `libraryId` for API execution).
 - Use a reusable `MunsRenderer.tsx` so it can be copy-pasted into any dashboard.
-- Render output with interactive widget UI (not markdown-only rendering).
+- Render output with interactive widget UI (typed blocks, not markdown-only rendering).
+- Graph rendering is explicitly out of scope for this phase. Any `<graph>` payloads must be stripped from output and never shown to users.
 
 ## Required Inputs
 1. `MunsRenderer.tsx` (drop-in renderer/module)
@@ -24,9 +25,10 @@ Use this prompt to transform a base Lovable dashboard into an evolved MUNS-enabl
 Install if missing:
 
 ```bash
-npm install react-markdown remark-gfm rehype-raw react-plotly.js plotly.js-dist-min pako
-npm install -D @types/pako @types/react-plotly.js
+npm install react-markdown remark-gfm rehype-raw
 ```
+
+Note: graph/plot rendering is disabled in this phase. Do NOT install `react-plotly.js`, `plotly.js-dist-min`, or `pako`.
 
 Ensure shadcn/ui primitives are available for:
 - `Card`, `Button`, `Badge`, `Dialog`, `Input`, `Label`, `Textarea`
@@ -49,7 +51,7 @@ curl --no-buffer -i -X POST "https://devde.muns.io/agents/run" \
   -H "Content-Type: application/json" \
   -d '{
     "agent_library_id": "f8c08f67-9dc2-4960-9c87-623251f297c1",
-    "user_query": "generate as many graphs as possible for visualisation",
+    "user_query": "summarise key financial health signals",
     "metadata": {
       "stock_ticker": "JIOFIN",
       "stock_country": "INDIA",
@@ -108,7 +110,7 @@ Then:
 ### 6) Interactive output renderer behavior (mandatory)
 - Do not stop at markdown parsing.
 - Implement a typed rendering pipeline inside the renderer:
-  1. Parse output sections (`##`/`###` headings), tables, bullets, and graph blocks.
+  1. Parse output sections (`##`/`###` headings), tables, and bullets. Graph blocks are stripped, not parsed.
   2. Classify each section into semantic block types such as:
      - `key_findings`
      - `recommendations`
@@ -127,6 +129,7 @@ Then:
   - **Person highlight card:** for CEO/details sections, render name/role/meta card.
   - **Data table renderer:** styled table with row stripes and readable headings.
   - **Markdown fallback:** only for blocks that cannot be confidently typed.
+  - **No graph/chart rendering:** graph blocks and chart payloads are intentionally not rendered in this phase.
 
 ### 7) Output hygiene and tool-noise suppression
 - Clean streamed output before rendering.
@@ -135,7 +138,7 @@ Then:
   - HTTP header lines
   - orchestration/tool tags (`WriteTodos`, `WebSearch`, etc.)
   - raw base64/gzip blobs (for example lines beginning with `H4sI...`)
-- Graph payloads should render as charts when possible; non-renderable blobs must not be shown as user-facing prose.
+- Strip all `<graph>...</graph>` blocks from the output entirely. Since graph rendering is disabled in this phase, these payloads must never appear as user-facing prose or raw base64 text.
 
 ## Expected User Experience
 - User can click `Add Agent`.
@@ -177,3 +180,4 @@ Then:
 - Renderer is reusable via copy-paste across dashboards.
 - Output UI is widget-first (typed blocks + Report/Audit tabs), not plain markdown-only.
 - Tool-noise/base64 blobs are suppressed from final displayed report text.
+- No chart/graph/Plotly output is rendered; `<graph>` payloads are silently stripped.

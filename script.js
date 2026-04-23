@@ -1236,10 +1236,53 @@ const agentEls = {
   formName: document.querySelector("#add-agent-name"),
   formLibraryId: document.querySelector("#add-agent-library-id"),
   formError: document.querySelector("#add-agent-error"),
+  tokenToggle: document.querySelector("#agents-token-toggle"),
+  tokenRow: document.querySelector("#agents-token-row"),
+  tokenInput: document.querySelector("#agents-token-input"),
+  tokenSave: document.querySelector("#agents-token-save"),
+  tokenClear: document.querySelector("#agents-token-clear"),
+  tokenStatus: document.querySelector("#agents-token-status"),
 };
 
 const AGENTS_STORAGE_KEY = "muns_agents_v2";
 const AGENT_SESSIONS_KEY = "muns_agent_sessions_v2";
+const AGENT_TOKEN_KEY = "muns_agent_token_override_v1";
+
+function getMunsToken() {
+  try {
+    const override = (localStorage.getItem(AGENT_TOKEN_KEY) || "").trim();
+    if (override) return override;
+  } catch {
+    /* ignore */
+  }
+  return MUNS_ACCESS_TOKEN;
+}
+
+function setMunsTokenOverride(value) {
+  const trimmed = (value || "").trim();
+  if (trimmed) {
+    localStorage.setItem(AGENT_TOKEN_KEY, trimmed);
+  } else {
+    localStorage.removeItem(AGENT_TOKEN_KEY);
+  }
+}
+
+function renderAgentsTokenStatus() {
+  let override = "";
+  try {
+    override = (localStorage.getItem(AGENT_TOKEN_KEY) || "").trim();
+  } catch {
+    /* ignore */
+  }
+  if (override) {
+    const tail = override.slice(-8);
+    agentEls.tokenStatus.textContent = `Using session override (…${tail}).`;
+    agentEls.tokenStatus.dataset.state = "override";
+  } else {
+    agentEls.tokenStatus.textContent = "Using built-in token.";
+    agentEls.tokenStatus.dataset.state = "default";
+  }
+}
 
 function slugify(value) {
   return value
@@ -1609,6 +1652,7 @@ function openAgentsView() {
     agentsState.activeAgentId = agentsState.agents[0].id;
   }
   renderAgentsTabs();
+  renderAgentsTokenStatus();
   if (agentsState.activeAgentId) {
     renderAgentPanel(agentsState.activeAgentId);
   }
@@ -1797,6 +1841,35 @@ function setupAgentsEvents() {
     btn.addEventListener("click", closeAddAgentModal);
   });
 
+  agentEls.tokenToggle.addEventListener("click", () => {
+    const isHidden = agentEls.tokenRow.hasAttribute("hidden");
+    if (isHidden) {
+      let current = "";
+      try {
+        current = localStorage.getItem(AGENT_TOKEN_KEY) || "";
+      } catch {
+        /* ignore */
+      }
+      agentEls.tokenInput.value = current;
+      agentEls.tokenRow.hidden = false;
+      renderAgentsTokenStatus();
+      agentEls.tokenInput.focus();
+    } else {
+      agentEls.tokenRow.hidden = true;
+    }
+  });
+
+  agentEls.tokenSave.addEventListener("click", () => {
+    setMunsTokenOverride(agentEls.tokenInput.value);
+    renderAgentsTokenStatus();
+  });
+
+  agentEls.tokenClear.addEventListener("click", () => {
+    agentEls.tokenInput.value = "";
+    setMunsTokenOverride("");
+    renderAgentsTokenStatus();
+  });
+
   agentEls.queryToggle.addEventListener("click", () => {
     const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
     if (agent) {
@@ -1852,14 +1925,15 @@ function setupAgentsEvents() {
     };
 
     try {
-      if (!MUNS_ACCESS_TOKEN) {
-        throw new Error("Missing MUNS_ACCESS_TOKEN.");
+      const token = getMunsToken();
+      if (!token) {
+        throw new Error("Missing MUNS access token.");
       }
 
       const response = await fetch(`${MUNS_API_BASE}/agents/run`, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${MUNS_ACCESS_TOKEN}`,
+          Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),

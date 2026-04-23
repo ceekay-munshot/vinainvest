@@ -420,6 +420,24 @@
                 <p class="panel-kicker">Agent Tabs</p>
                 <h2 id="agents-active-title">No agent selected</h2>
               </div>
+              <button class="text-button" type="button" id="agents-token-toggle">Token</button>
+            </div>
+            <div class="agents-token-row" id="agents-token-row" hidden>
+              <label class="field-block agents-token-field">
+                <span class="field-label">MUNS access token (session override)</span>
+                <input
+                  id="agents-token-input"
+                  type="text"
+                  placeholder="Paste JWT to override hardcoded token"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </label>
+              <div class="agents-token-actions">
+                <button class="ghost-button ghost-button--compact" type="button" id="agents-token-save">Save</button>
+                <button class="text-button" type="button" id="agents-token-clear">Clear</button>
+              </div>
+              <p class="agents-token-status" id="agents-token-status"></p>
             </div>
             <div class="agents-tabstrip" id="agents-tabstrip" aria-live="polite"></div>
           </article>

@@ -1342,11 +1342,38 @@ function cleanStreamToMarkdown(raw) {
 
 function renderAgentMarkdown(md) {
   const blocks = parseAgentOutput(md);
-  if (blocks.length === 0) {
-    return `<div class="agents-markdown">${mdToHtml(md)}</div>`;
+  const holdings = blocks.filter(isHoldingsBlock);
+  if (holdings.length === 0) {
+    return `<div class="agents-markdown"><p class="agents-output-empty">No holdings tables found in this output.</p></div>`;
   }
-  const sections = blocks.map(renderAgentBlock).join("");
+  const sections = holdings
+    .map(
+      (b) =>
+        `<section class="agents-block"><h3>${escapeHtml(b.heading)}</h3>${renderDataTable(b.table)}</section>`,
+    )
+    .join("");
   return `<div class="agents-markdown">${sections}</div>`;
+}
+
+function isHoldingsBlock(block) {
+  if (!block.table) return false;
+  const heading = (block.heading || "").toLowerCase();
+  const cols = block.table.columns.map((c) => c.toLowerCase());
+
+  if (/holding|portfolio|position|scrip/.test(heading)) return true;
+
+  const hasEntity = cols.some((c) =>
+    /\b(company|stock|ticker|symbol|security|scrip|instrument|name)\b/.test(c),
+  );
+  const hasPeriod = cols.some(
+    (c) =>
+      /\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|q[1-4]|quarter|fy)\b/.test(c) ||
+      /%|\bpct\b|percent/.test(c) ||
+      /\b(19|20)\d{2}\b/.test(c),
+  );
+  const hasValue = cols.some((c) => /value|worth|cr\.?|crore|₹|rs\.?|inr|usd|\$/.test(c));
+
+  return hasEntity && (hasPeriod || hasValue);
 }
 
 function parseAgentOutput(raw) {

@@ -1198,10 +1198,390 @@ function attachGlobalEvents() {
   drawerBackdrop.addEventListener("click", () => toggleCompareDrawer(false));
 }
 
+// ========== MUNS AGENTS MODULE ==========
+
+const agentsState = {
+  agents: [],
+  activeAgentId: null,
+  sessions: {},
+};
+
+const agentEls = {
+  button: document.querySelector("#agents-button"),
+  view: document.querySelector("#agents-view"),
+  backBtn: document.querySelector("#back-from-agents"),
+  tabstrip: document.querySelector("#agents-tabstrip"),
+  tabstripPanel: document.querySelector(".agents-tabstrip-panel"),
+  activeTitle: document.querySelector("#agents-active-title"),
+  runPanel: document.querySelector("#agents-run-panel"),
+  runName: document.querySelector("#agents-run-name"),
+  runId: document.querySelector("#agents-run-id"),
+  runButton: document.querySelector("#agents-run-button"),
+  queryToggle: document.querySelector("#agents-query-toggle"),
+  queryBlock: document.querySelector("#agents-query-block"),
+  queryInput: document.querySelector("#agents-query-input"),
+  tickerInput: document.querySelector("#agents-ticker-input"),
+  companyInput: document.querySelector("#agents-company-input"),
+  contextChips: document.querySelector("#agents-context-chips"),
+  output: document.querySelector("#agents-output"),
+  idsDiv: document.querySelector("#agents-ids"),
+  addAgentBtn: document.querySelector("#add-agent-button"),
+  modal: document.querySelector("#add-agent-modal"),
+  form: document.querySelector("#add-agent-form"),
+  formId: document.querySelector("#add-agent-id"),
+  formName: document.querySelector("#add-agent-name"),
+  formLibraryId: document.querySelector("#add-agent-library-id"),
+  formError: document.querySelector("#add-agent-error"),
+};
+
+const AGENTS_STORAGE_KEY = "muns_agents_v2";
+const AGENT_SESSIONS_KEY = "muns_agent_sessions_v2";
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-_]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
+function loadAgents() {
+  const stored = localStorage.getItem(AGENTS_STORAGE_KEY);
+  agentsState.agents = stored ? JSON.parse(stored) : [];
+}
+
+function saveAgents() {
+  localStorage.setItem(AGENTS_STORAGE_KEY, JSON.stringify(agentsState.agents));
+}
+
+function getSessionKey(agentId) {
+  const investorId = state.selectedInvestorId || "default";
+  return `${agentId}::${investorId}`;
+}
+
+function getAgentSession(agentId) {
+  const key = getSessionKey(agentId);
+  if (!agentsState.sessions[key]) {
+    agentsState.sessions[key] = {
+      markdown: "",
+      error: null,
+      userQuery: "",
+      queryOpen: false,
+      inputTicker: "",
+      inputCompanyName: "",
+      activeAnalystId: null,
+      analystOutputId: null,
+    };
+  }
+  return agentsState.sessions[key];
+}
+
+function patchAgentSession(agentId, patch) {
+  const key = getSessionKey(agentId);
+  const sess = getAgentSession(agentId);
+  agentsState.sessions[key] = { ...sess, ...patch };
+}
+
+function openAgentsView() {
+  directoryView.classList.remove("is-active");
+  profileView.classList.remove("is-active");
+  agentEls.view.classList.add("is-active");
+  agentEls.tabstripPanel.style.display = "block";
+  renderAgentsTabs();
+  if (agentsState.activeAgentId) {
+    renderAgentPanel(agentsState.activeAgentId);
+  }
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function closeAgentsView() {
+  agentEls.view.classList.remove("is-active");
+  openDirectoryView();
+}
+
+function renderAgentsTabs() {
+  if (agentsState.agents.length === 0) {
+    agentEls.tabstrip.innerHTML = "<p style='text-align: center; color: var(--text-muted); padding: 20px;'>No agent tabs yet. Add one to begin.</p>";
+    agentEls.activeTitle.textContent = "No agent selected";
+    agentEls.runPanel.hidden = true;
+    return;
+  }
+
+  agentEls.tabstrip.innerHTML = agentsState.agents
+    .map((agent) => {
+      const isActive = agent.id === agentsState.activeAgentId;
+      return `
+        <div class="agents-tab-item">
+          <button
+            class="tab-chip ${isActive ? "is-active" : ""}"
+            type="button"
+            data-agent-id="${agent.id}"
+          >
+            ${agent.name}
+          </button>
+          <button
+            class="agents-tab-remove"
+            type="button"
+            aria-label="Remove ${agent.name}"
+            data-agent-id="${agent.id}"
+          >
+            ✕
+          </button>
+        </div>
+      `;
+    })
+    .join("");
+
+  agentEls.tabstrip.querySelectorAll("[data-agent-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      agentsState.activeAgentId = btn.dataset.agentId;
+      renderAgentsTabs();
+      renderAgentPanel(agentsState.activeAgentId);
+    });
+  });
+
+  agentEls.tabstrip.querySelectorAll(".agents-tab-remove").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const agentId = btn.dataset.agentId;
+      agentsState.agents = agentsState.agents.filter((a) => a.id !== agentId);
+      if (agentsState.activeAgentId === agentId) {
+        agentsState.activeAgentId = agentsState.agents[0]?.id || null;
+      }
+      saveAgents();
+      renderAgentsTabs();
+      if (agentsState.activeAgentId) {
+        renderAgentPanel(agentsState.activeAgentId);
+      } else {
+        agentEls.runPanel.hidden = true;
+      }
+    });
+  });
+}
+
+function renderAgentPanel(agentId) {
+  const agent = agentsState.agents.find((a) => a.id === agentId);
+  if (!agent) return;
+
+  const session = getAgentSession(agentId);
+  const investor = investors.find((inv) => inv.id === state.selectedInvestorId) || {};
+
+  const defaultTicker = investor.ticker || "";
+  const defaultCompanyName = investor.name || "";
+  const effectiveTicker = session.inputTicker || defaultTicker;
+  const effectiveCompanyName = session.inputCompanyName || defaultCompanyName;
+
+  agentEls.runName.textContent = agent.name;
+  agentEls.runId.textContent = `Agent ID: ${agent.id}`;
+  agentEls.activeTitle.textContent = agent.name;
+
+  agentEls.tickerInput.value = session.inputTicker;
+  agentEls.tickerInput.placeholder = defaultTicker || "e.g. JIOFIN";
+  agentEls.companyInput.value = session.inputCompanyName;
+  agentEls.companyInput.placeholder = defaultCompanyName || "e.g. Jio Financial Services";
+
+  agentEls.queryInput.value = session.userQuery;
+  if (session.queryOpen) {
+    agentEls.queryBlock.hidden = false;
+  } else {
+    agentEls.queryBlock.hidden = true;
+  }
+
+  agentEls.contextChips.innerHTML = [
+    { label: "Library", value: agent.libraryId },
+    ...(effectiveTicker ? [{ label: "Ticker", value: effectiveTicker }] : []),
+    ...(effectiveCompanyName ? [{ label: "Company", value: effectiveCompanyName }] : []),
+    ...(investor.sectorFocus ? [{ label: "Sector", value: investor.sectorFocus }] : []),
+    ...(investor.worthCr ? [{ label: "Net Worth", value: currencyCr(investor.worthCr) }] : []),
+  ]
+    .map((chip) => `<span class="sector-chip">${chip.label}: ${chip.value}</span>`)
+    .join("");
+
+  if (session.activeAnalystId || session.analystOutputId) {
+    agentEls.idsDiv.innerHTML = `
+      ${session.activeAnalystId ? `<p><small>Active Analyst ID: ${session.activeAnalystId}</small></p>` : ""}
+      ${session.analystOutputId ? `<p><small>Analyst Output ID: ${session.analystOutputId}</small></p>` : ""}
+    `;
+    agentEls.idsDiv.hidden = false;
+  } else {
+    agentEls.idsDiv.hidden = true;
+  }
+
+  if (session.error) {
+    agentEls.output.innerHTML = `<p style="color: var(--danger);">${session.error}</p>`;
+  } else if (session.markdown) {
+    agentEls.output.innerHTML = `<div class="agents-markdown">${escapeHtml(session.markdown)}</div>`;
+  } else {
+    agentEls.output.innerHTML = "<p class='agents-output-empty'>Run the agent to load output.</p>";
+  }
+
+  agentEls.runPanel.hidden = false;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function openAddAgentModal() {
+  agentEls.modal.setAttribute("aria-hidden", "false");
+  agentEls.formId.focus();
+}
+
+function closeAddAgentModal() {
+  agentEls.modal.setAttribute("aria-hidden", "true");
+  agentEls.form.reset();
+  agentEls.formError.hidden = true;
+}
+
+function handleAddAgent(e) {
+  e.preventDefault();
+
+  const id = slugify(agentEls.formId.value.trim());
+  const name = agentEls.formName.value.trim();
+  const libraryId = agentEls.formLibraryId.value.trim();
+
+  if (!id || !name || !libraryId) {
+    agentEls.formError.textContent = "All fields are required.";
+    agentEls.formError.hidden = false;
+    return;
+  }
+
+  if (agentsState.agents.some((a) => a.id === id)) {
+    agentEls.formError.textContent = `Agent with ID "${id}" already exists.`;
+    agentEls.formError.hidden = false;
+    return;
+  }
+
+  agentsState.agents.push({ id, name, libraryId });
+  agentsState.activeAgentId = id;
+  saveAgents();
+  closeAddAgentModal();
+  renderAgentsTabs();
+  renderAgentPanel(id);
+}
+
+function setupAgentsEvents() {
+  agentEls.button.addEventListener("click", openAgentsView);
+  agentEls.backBtn.addEventListener("click", closeAgentsView);
+  agentEls.addAgentBtn.addEventListener("click", openAddAgentModal);
+
+  agentEls.form.addEventListener("submit", handleAddAgent);
+
+  document.querySelectorAll("[data-close-add-agent]").forEach((btn) => {
+    btn.addEventListener("click", closeAddAgentModal);
+  });
+
+  agentEls.queryToggle.addEventListener("click", () => {
+    const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
+    if (agent) {
+      const session = getAgentSession(agent.id);
+      patchAgentSession(agent.id, { queryOpen: !session.queryOpen });
+      renderAgentPanel(agent.id);
+    }
+  });
+
+  agentEls.tickerInput.addEventListener("change", () => {
+    const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
+    if (agent) {
+      patchAgentSession(agent.id, { inputTicker: agentEls.tickerInput.value });
+    }
+  });
+
+  agentEls.companyInput.addEventListener("change", () => {
+    const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
+    if (agent) {
+      patchAgentSession(agent.id, { inputCompanyName: agentEls.companyInput.value });
+    }
+  });
+
+  agentEls.queryInput.addEventListener("input", () => {
+    const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
+    if (agent) {
+      patchAgentSession(agent.id, { userQuery: agentEls.queryInput.value });
+    }
+  });
+
+  agentEls.runButton.addEventListener("click", async () => {
+    const agent = agentsState.agents.find((a) => a.id === agentsState.activeAgentId);
+    if (!agent) return;
+
+    const session = getAgentSession(agent.id);
+    const investor = investors.find((inv) => inv.id === state.selectedInvestorId) || {};
+
+    agentEls.runButton.disabled = true;
+    agentEls.runButton.textContent = "Running...";
+
+    const tickerToSend = agentEls.tickerInput.value.trim() || investor.ticker || "";
+    const companyToSend = agentEls.companyInput.value.trim() || investor.name || "";
+
+    const payload = {
+      agent_library_id: agent.libraryId,
+      ...(session.userQuery ? { user_query: session.userQuery } : {}),
+      metadata: {
+        stock_ticker: tickerToSend,
+        stock_country: "INDIA",
+        to_date: new Date().toISOString().split("T")[0],
+        timezone: "UTC",
+      },
+    };
+
+    try {
+      const token = (import.meta?.env?.VITE_MUNS_ACCESS_TOKEN || "").trim();
+      if (!token) {
+        throw new Error("Missing MUNS_ACCESS_TOKEN.");
+      }
+
+      const response = await fetch("https://devde.muns.io/agents/run", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const raw = await response.text();
+
+      if (!response.ok) {
+        throw new Error(`MUNS request failed (${response.status}).`);
+      }
+
+      const markdown = raw
+        .split("\n")
+        .filter((line) => !line.match(/^(WriteTodos|NewsSearch|WebSearch|WebReader|DocumentFetch|PythonRepl|GetAnnouncements|HTTP\/\d|server:|date:|content-type:|x-powered-by:|access-control|x-request-id:|x-ratelimit|cache-control:|x-active-analyst-id:|x-analyst-output-id:|access-control-expose)/i))
+        .filter((line) => !line.match(/^H4sI[A-Za-z0-9+/=]+$|H4sI[A-Za-z0-9+/=]{120,}|^[A-Za-z0-9+/]{200,}={0,2}$/))
+        .filter(Boolean)
+        .join("\n")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+
+      patchAgentSession(agent.id, {
+        markdown,
+        error: null,
+        activeAnalystId: response.headers.get("x-active-analyst-id") || null,
+        analystOutputId: response.headers.get("x-analyst-output-id") || null,
+      });
+
+      renderAgentPanel(agent.id);
+    } catch (err) {
+      patchAgentSession(agent.id, { error: err.message });
+      renderAgentPanel(agent.id);
+    } finally {
+      agentEls.runButton.disabled = false;
+      agentEls.runButton.textContent = "Run";
+    }
+  });
+}
+
 function init() {
   populateDirectoryFilters();
   setupTabs();
   attachGlobalEvents();
+  loadAgents();
+  setupAgentsEvents();
   syncGlobalSearch();
   renderDirectory();
   renderProfile(state.selectedInvestorId);

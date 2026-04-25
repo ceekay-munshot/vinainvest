@@ -9,15 +9,14 @@ async function loadInvestors() {
   const enriched = await Promise.all(
     registry.map(async (entry) => {
       const slug = slugifyInvestorKey(entry.name || entry.fund);
+      let detail = { holdings: [], worthCr: 0, lastScrapedAt: null };
       try {
         const detailRes = await fetch(`./data/investors/${slug}.json`, { cache: "no-store" });
-        if (!detailRes.ok) return null;
-        const detail = await detailRes.json();
-        return enrichInvestor(entry, detail, slug);
+        if (detailRes.ok) detail = await detailRes.json();
       } catch (err) {
-        console.error(`Failed to load investor ${slug}:`, err);
-        return null;
+        console.warn(`No detail file for ${slug}, rendering stub.`);
       }
+      return enrichInvestor(entry, detail, slug);
     })
   );
   return enriched.filter(Boolean);
@@ -92,6 +91,7 @@ function enrichInvestor(reg, detail, slug) {
   ];
 
   const focusList = sectorFocus.join(", ").toLowerCase() || "diversified sectors";
+  const isStub = !detail.lastScrapedAt && holdings.length === 0;
 
   return {
     id: slug,
@@ -101,12 +101,17 @@ function enrichInvestor(reg, detail, slug) {
     type: detail.type || "Individual",
     sourceUrl: reg.url || "",
     lastScrapedAt: detail.lastScrapedAt || null,
+    isStub,
     worthCr,
     holdingsCount: holdingsActive,
     sectorFocus,
     activity: activityLabel(counts),
-    description: `Portfolio anchored in ${focusList} with ${holdingsActive} disclosed live positions.`,
-    bio: `Tracked public-equity portfolio with ${holdingsActive} active holdings and a current disclosed value of ${currencyCr(worthCr)}.`,
+    description: isStub
+      ? "Holdings not yet scraped — click Refresh to fetch latest data."
+      : `Portfolio anchored in ${focusList} with ${holdingsActive} disclosed live positions.`,
+    bio: isStub
+      ? "Awaiting first data scrape. Holdings, KPIs, and charts will populate once data is fetched."
+      : `Tracked public-equity portfolio with ${holdingsActive} active holdings and a current disclosed value of ${currencyCr(worthCr)}.`,
     activeSince: detail.activeSince || "—",
     style: detail.style || "Diversified equity",
     concentration,

@@ -640,6 +640,126 @@ function statusBadge(status) {
   return `<span class="status-badge status-badge--${tone}">${status}</span>`;
 }
 
+function escAttr(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function normalizeCompanyName(name) {
+  return String(name || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[\.,]/g, "")
+    .replace(/\s+(ltd|limited|inc|pvt|private)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function findHoldersOfStock(companyName) {
+  const norm = normalizeCompanyName(companyName);
+  const holders = [];
+  for (const investor of investors) {
+    if (!investor.holdings) continue;
+    for (const h of investor.holdings) {
+      if (normalizeCompanyName(h.company) === norm) {
+        holders.push({ investor, holding: h });
+      }
+    }
+  }
+  return holders.sort((a, b) => b.holding.valueCr - a.holding.valueCr);
+}
+
+function sparklineFromHolding(holding) {
+  const series = QUARTER_KEYS.map((k) => holding[k]);
+  const present = series.filter((v) => v !== null && v !== undefined);
+  if (present.length < 2) return '<span class="sparkline-empty">—</span>';
+  const max = Math.max(...present);
+  const min = Math.min(...present);
+  const range = Math.max(max - min, 0.01);
+  const w = 90;
+  const h = 28;
+  const pad = 3;
+  const points = [];
+  series.forEach((v, i) => {
+    if (v === null || v === undefined) return;
+    const x = (i / (series.length - 1)) * (w - pad * 2) + pad;
+    const y = h - pad - ((v - min) / range) * (h - pad * 2);
+    points.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+  });
+  return `<svg class="sparkline" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" preserveAspectRatio="none" aria-hidden="true">
+    <polyline points="${points.join(" ")}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+function openStockDetail(companyName) {
+  const holders = findHoldersOfStock(companyName);
+  const drawer = document.querySelector("#stock-detail-drawer");
+  const title = document.querySelector("#stock-detail-title");
+  const summary = document.querySelector("#stock-detail-summary");
+  const body = document.querySelector("#stock-detail-body");
+  if (!drawer || !title || !summary || !body) return;
+
+  title.textContent = companyName.trim();
+
+  if (!holders.length) {
+    summary.textContent = "No tracked investors hold this stock yet.";
+    body.innerHTML = `
+      <p class="page-subtitle">Once an investor with this position is scraped, their stake will appear here.</p>
+    `;
+  } else {
+    const totalValueCr = holders.reduce((s, x) => s + x.holding.valueCr, 0);
+    const sector = holders[0].holding.sector;
+    summary.textContent = `${sector} · ${holders.length} tracked holder${holders.length === 1 ? "" : "s"} · ${currencyCr(totalValueCr)} total disclosed value`;
+
+    body.innerHTML = holders.map((h) => {
+      const inv = h.investor;
+      const display = inv.name || inv.fund || "Unknown";
+      const sub = inv.name && inv.fund ? inv.fund : "";
+      return `
+        <article class="stock-holder">
+          <header class="stock-holder__top">
+            <button class="text-button stock-holder__name" data-investor-id="${escAttr(inv.id)}">
+              <strong>${display}</strong>
+              ${sub ? `<span class="stock-holder__sub">${sub}</span>` : ""}
+            </button>
+            ${statusBadge(h.holding.status)}
+          </header>
+          <div class="stock-holder__metrics">
+            <div class="stock-holder__metric">
+              <span>Latest stake</span>
+              <strong>${percentage(h.holding.mar26)}</strong>
+            </div>
+            <div class="stock-holder__metric">
+              <span>Value</span>
+              <strong>${h.holding.valueCr ? currencyCr(h.holding.valueCr) : "—"}</strong>
+            </div>
+            <div class="stock-holder__sparkline" aria-label="5-quarter stake trend">
+              ${sparklineFromHolding(h.holding)}
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  drawer.classList.add("is-open");
+  drawer.setAttribute("aria-hidden", "false");
+  drawerBackdrop.hidden = false;
+}
+
+function closeStockDetail() {
+  const drawer = document.querySelector("#stock-detail-drawer");
+  if (!drawer) return;
+  drawer.classList.remove("is-open");
+  drawer.setAttribute("aria-hidden", "true");
+  if (!compareDrawer.classList.contains("is-open")) {
+    drawerBackdrop.hidden = true;
+  }
+}
+
 function populateHoldingsFilters(investor) {
   const sectors = ["All Sectors", ...new Set(investor.holdings.map((holding) => holding.sector))];
   const statuses = ["All Statuses", ...new Set(investor.holdings.map((holding) => holding.status))];
@@ -711,7 +831,7 @@ function renderProfile(investorId) {
       (holding) => `
         <div class="mini-list__item">
           <div>
-            <div class="mini-list__name">${holding.company}</div>
+            <div class="mini-list__name stock-link" data-stock="${escAttr(holding.company)}">${holding.company}</div>
             <div class="mini-list__sub">${holding.sector}</div>
           </div>
           <div class="mini-list__value">${holding.value}</div>
@@ -773,7 +893,7 @@ function renderProfile(investorId) {
       (holding) => `
         <article class="change-card">
           ${statusBadge(holding.status)}
-          <h3>${holding.company}</h3>
+          <h3 class="stock-link" data-stock="${escAttr(holding.company)}">${holding.company}</h3>
           <p>${holding.sector} • ${holding.mar26 ? `${holding.mar26.toFixed(2)}% in Mar 2026` : "Position inactive"}</p>
           <strong>${currencyCr(holding.valueCr)}</strong>
         </article>
@@ -926,7 +1046,7 @@ function renderHoldingsTable(investor) {
       (holding, index) => `
         <tr>
           <td class="is-numeric">${index + 1}</td>
-          <td><a class="company-link" href="#">${holding.company}</a></td>
+          <td><a class="company-link stock-link" href="#" data-stock="${escAttr(holding.company)}">${holding.company}</a></td>
           <td>${holding.sector}</td>
           <td class="is-numeric">${percentage(holding.jun25)}</td>
           <td class="is-numeric">${percentage(holding.aug25)}</td>
@@ -1118,7 +1238,28 @@ function attachGlobalEvents() {
     toggleCompareDrawer(true);
   });
   document.querySelector("#close-compare").addEventListener("click", () => toggleCompareDrawer(false));
-  drawerBackdrop.addEventListener("click", () => toggleCompareDrawer(false));
+  drawerBackdrop.addEventListener("click", () => {
+    toggleCompareDrawer(false);
+    closeStockDetail();
+  });
+
+  document.querySelector("#close-stock-detail").addEventListener("click", closeStockDetail);
+
+  document.body.addEventListener("click", (event) => {
+    const stockEl = event.target.closest("[data-stock]");
+    if (stockEl) {
+      event.preventDefault();
+      openStockDetail(stockEl.dataset.stock);
+      return;
+    }
+    const investorEl = event.target.closest("[data-investor-id]");
+    if (investorEl && document.querySelector("#stock-detail-drawer").classList.contains("is-open")) {
+      const id = investorEl.dataset.investorId;
+      closeStockDetail();
+      state.selectedInvestorId = id;
+      openProfileView();
+    }
+  });
 
   document.querySelector("#profile-refresh").addEventListener("click", handleRefreshClick);
 

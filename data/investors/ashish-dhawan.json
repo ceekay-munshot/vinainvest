@@ -1,0 +1,201 @@
+{
+  "lastScrapedAt": "2026-04-25T10:40:52.341Z",
+  "worthCr": 2074,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "AGI Greenpac Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.79,
+        "aug25": 4.79,
+        "sep25": 4.79,
+        "dec25": 4.79,
+        "mar26": 4.79
+      },
+      "valueCr": 172
+    },
+    {
+      "company": "Arvind Fashions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Dish TV India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.57,
+        "aug25": 1.57,
+        "sep25": 1.57,
+        "dec25": 1.57,
+        "mar26": 1.57
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Equitas Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.72,
+        "aug25": 3.86,
+        "sep25": 3.97,
+        "dec25": 4.02,
+        "mar26": 4.02
+      },
+      "valueCr": 299
+    },
+    {
+      "company": "Glenmark Pharmaceuticals Ltd.",
+      "sector": "Healthcare",
+      "stakes": {
+        "jun25": 1.77,
+        "aug25": 1.24,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Greenlam Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.77,
+        "aug25": 3.77,
+        "sep25": 3.77,
+        "dec25": 3.77,
+        "mar26": 3.77
+      },
+      "valueCr": 215
+    },
+    {
+      "company": "Mahindra & Mahindra Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": 1.05,
+        "sep25": 1.05,
+        "dec25": 1.05,
+        "mar26": 1.05
+      },
+      "valueCr": 430
+    },
+    {
+      "company": "Palred Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.54,
+        "aug25": 5.54,
+        "sep25": 5.54,
+        "dec25": 5.54,
+        "mar26": 5.54
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Quess Corp Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 4.09,
+        "aug25": 4.09,
+        "sep25": 4.09,
+        "dec25": 4.09,
+        "mar26": 4.85
+      },
+      "valueCr": 138
+    },
+    {
+      "company": "Religare Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.08,
+        "aug25": 4.14,
+        "sep25": 4.14,
+        "dec25": 4.12,
+        "mar26": 4.12
+      },
+      "valueCr": 302
+    },
+    {
+      "company": "RPSG Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 3.73,
+        "sep25": 3.73,
+        "dec25": 3.73,
+        "mar26": 3.73
+      },
+      "valueCr": 104
+    },
+    {
+      "company": "IDFC First Bank Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 1.26,
+        "aug25": 1.26,
+        "sep25": 1.26,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Bluspring Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 4.09,
+        "sep25": 4.09,
+        "dec25": 4.97,
+        "mar26": 6.3
+      },
+      "valueCr": 59
+    },
+    {
+      "company": "Digitide Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 4.09,
+        "sep25": 4.09,
+        "dec25": 4.09,
+        "mar26": 4.09
+      },
+      "valueCr": 57
+    },
+    {
+      "company": "Northern ARC Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 2.17,
+        "sep25": 2.17,
+        "dec25": 2.17,
+        "mar26": 2.17
+      },
+      "valueCr": 90
+    },
+    {
+      "company": "IIFL Finance Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.09
+      },
+      "valueCr": 195
+    }
+  ]
+}

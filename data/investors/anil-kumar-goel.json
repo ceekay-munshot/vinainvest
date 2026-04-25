@@ -1,0 +1,453 @@
+{
+  "lastScrapedAt": "2026-04-25T10:40:34.846Z",
+  "worthCr": 2239,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Amarjothi Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.77,
+        "aug25": null,
+        "sep25": 8.61,
+        "dec25": 8.61,
+        "mar26": 8.61
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Avadh Sugar & Energy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.1,
+        "aug25": 7.1,
+        "sep25": 7.05,
+        "dec25": 7.05,
+        "mar26": 6.88
+      },
+      "valueCr": 67
+    },
+    {
+      "company": "Crayons Advertising Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.11,
+        "dec25": null,
+        "mar26": 1.11
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Dalmia Bharat Sugar And Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.71,
+        "aug25": null,
+        "sep25": 6.72,
+        "dec25": 6.72,
+        "mar26": 6.73
+      },
+      "valueCr": 206
+    },
+    {
+      "company": "DCM Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.2,
+        "aug25": null,
+        "sep25": 2.2,
+        "dec25": 2.2,
+        "mar26": 2.2
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "DCM Nouvelle Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.33,
+        "aug25": null,
+        "sep25": 2.33,
+        "dec25": 2.38,
+        "mar26": 2.38
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Dhampur Bio Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 12.74,
+        "aug25": null,
+        "sep25": 12.74,
+        "dec25": 12.74,
+        "mar26": null
+      },
+      "valueCr": 101
+    },
+    {
+      "company": "Dhunseri Tea & Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.79,
+        "aug25": null,
+        "sep25": 2.79,
+        "dec25": 2.79,
+        "mar26": 2.79
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Ganesh Benzoplast Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.45,
+        "aug25": null,
+        "sep25": 3.54,
+        "dec25": 3.58,
+        "mar26": 5.31
+      },
+      "valueCr": 38
+    },
+    {
+      "company": "GK Consultants Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 0.27
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Indsil Hydro Power and Manganese Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.59,
+        "aug25": null,
+        "sep25": 4.21,
+        "dec25": 4.21,
+        "mar26": 4.21
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "KG Denim Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.91,
+        "aug25": null,
+        "sep25": 1.91,
+        "dec25": 1.91,
+        "mar26": 1.91
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "KRBL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.45,
+        "aug25": null,
+        "sep25": 4.45,
+        "dec25": 4.45,
+        "mar26": 4.8
+      },
+      "valueCr": 396
+    },
+    {
+      "company": "LG Balakrishnan & Bros Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": null,
+        "sep25": 1.25,
+        "dec25": 1.25,
+        "mar26": 1.3
+      },
+      "valueCr": 73
+    },
+    {
+      "company": "Magadh Sugar & Energy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.44,
+        "aug25": null,
+        "sep25": 4.44,
+        "dec25": 4.44,
+        "mar26": 4.44
+      },
+      "valueCr": 32
+    },
+    {
+      "company": "Nahar Capital And Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.5,
+        "aug25": null,
+        "sep25": 2.5,
+        "dec25": 2.5,
+        "mar26": 2.5
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Nahar Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.04,
+        "aug25": null,
+        "sep25": 7.04,
+        "dec25": 7.04,
+        "mar26": 7.04
+      },
+      "valueCr": 59
+    },
+    {
+      "company": "Omaxe Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Panama Petrochem Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.21,
+        "aug25": null,
+        "sep25": 1.21,
+        "dec25": 1.21,
+        "mar26": 1.21
+      },
+      "valueCr": 20
+    },
+    {
+      "company": "Precot Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 3.53,
+        "sep25": 3.53,
+        "dec25": 3.53,
+        "mar26": 3.53
+      },
+      "valueCr": 24
+    },
+    {
+      "company": "Samtex Fashions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.3,
+        "aug25": null,
+        "sep25": 4.3,
+        "dec25": 4.3,
+        "mar26": 4.3
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "South India Paper Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.74,
+        "aug25": null,
+        "sep25": 9.07,
+        "dec25": 9.07,
+        "mar26": 9.07
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Sportking India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.69,
+        "aug25": null,
+        "sep25": 4.69,
+        "dec25": 4.69,
+        "mar26": 5.04
+      },
+      "valueCr": 88
+    },
+    {
+      "company": "Sri Lakshmi Saraswathi Textiles (Arni) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.52,
+        "aug25": null,
+        "sep25": 5.52,
+        "dec25": 5.52,
+        "mar26": 5.52
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Star Paper Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.15,
+        "aug25": null,
+        "sep25": 1.15,
+        "dec25": 1.15,
+        "mar26": 1.15
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "TCPL Packaging Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.05,
+        "aug25": null,
+        "sep25": 9.05,
+        "dec25": 9.05,
+        "mar26": 9.05
+      },
+      "valueCr": 215
+    },
+    {
+      "company": "Triveni Engineering & Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.61,
+        "aug25": null,
+        "sep25": 4.61,
+        "dec25": 4.61,
+        "mar26": 4.62
+      },
+      "valueCr": 422
+    },
+    {
+      "company": "Uttam Sugar Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.79,
+        "aug25": null,
+        "sep25": 5.81,
+        "dec25": 5.82,
+        "mar26": 5.86
+      },
+      "valueCr": 58
+    },
+    {
+      "company": "Vardhman Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.76,
+        "aug25": null,
+        "sep25": 6.76,
+        "dec25": 6.76,
+        "mar26": 6.76
+      },
+      "valueCr": 72
+    },
+    {
+      "company": "Nahar Poly Films Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": null,
+        "sep25": 1.17,
+        "dec25": 1.17,
+        "mar26": 1.17
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Oriana Power Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.99,
+        "dec25": null,
+        "mar26": 1.99
+      },
+      "valueCr": 84
+    },
+    {
+      "company": "Sarla Performance Fibers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.19,
+        "aug25": null,
+        "sep25": 4.19,
+        "dec25": 4.19,
+        "mar26": 4.19
+      },
+      "valueCr": 31
+    },
+    {
+      "company": "The Karnataka Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.51,
+        "aug25": null,
+        "sep25": 1.51,
+        "dec25": 1.51,
+        "mar26": 1.51
+      },
+      "valueCr": 138
+    },
+    {
+      "company": "Ecoplast Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.85,
+        "aug25": null,
+        "sep25": 1.85,
+        "dec25": 1.85,
+        "mar26": 1.85
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Kamat Hotels (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.34,
+        "sep25": 1.34,
+        "dec25": 1.34,
+        "mar26": 3.3
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Sanghvi Movers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1,
+        "mar26": 1.01
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "Rockingdeals Circular Economy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 3.04
+      },
+      "valueCr": 5
+    }
+  ]
+}

@@ -77,9 +77,6 @@ a {
 }
 
 .topbar {
-  position: sticky;
-  top: 0;
-  z-index: 40;
   display: grid;
   grid-template-columns: auto minmax(320px, 1fr) auto;
   gap: 20px;
@@ -850,7 +847,7 @@ select {
 
 .tab-panel {
   display: none;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 16px;
 }
 
 .tab-panel.is-active {

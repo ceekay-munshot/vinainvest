@@ -418,6 +418,96 @@ const investors = [
       { company: "Laurus Labs", sector: "Healthcare", jun25: 0.92, aug25: 0.92, sep25: 0.92, dec25: 0.92, mar26: null, valueCr: 0, status: "Exited" },
       { company: "ICICI Lombard", sector: "Financials", jun25: 0.51, aug25: 0.51, sep25: 0.51, dec25: 0.51, mar26: 0.51, valueCr: 540, status: "Unchanged" }
     ]
+  },
+  {
+    id: "sunil-singhania",
+    name: "Sunil Singhania",
+    initials: "SS",
+    fund: "Abakkus Fund",
+    type: "Individual",
+    worthCr: 1950,
+    holdingsCount: 23,
+    sectorFocus: ["Other","Industrials","Consumer"],
+    activity: "High",
+    description: "Portfolio anchored in other, industrials, consumer with 23 disclosed live positions.",
+    bio: "Tracked public-equity portfolio with 23 active holdings and a current disclosed value of ₹1,950 Cr.",
+    activeSince: "—",
+    style: "Diversified equity",
+    concentration: "High",
+    keySectors: "Other, Industrials, Consumer",
+    kpis: [
+      { label: "Total Portfolio Value", value: "₹1,950 Cr", note: "Latest market value estimate" },
+      { label: "Active Holdings", value: "23", note: "Disclosed live positions" },
+      { label: "New Additions", value: "01", note: "Positions initiated this quarter" },
+      { label: "Increased Stakes", value: "01", note: "Meaningful ownership increases" },
+      { label: "Reduced Stakes", value: "06", note: "Portfolio trims" },
+      { label: "Exits / Inactive", value: "04", note: "Exited or filing due" }
+    ],
+    topHoldings: [
+      { company: "IIFL Capital Services Ltd.", sector: "Financials", value: "₹248 Cr" },
+      { company: "Dynamatic Technologies Ltd.", sector: "Industrials", value: "₹236 Cr" },
+      { company: "Jubilant Pharmova Ltd.", sector: "Healthcare", value: "₹173 Cr" },
+      { company: "SPR Auto Technologies Ltd.", sector: "Other", value: "₹158 Cr" }
+    ],
+    sectorAllocation: [
+      { sector: "Other", value: 39, amount: "₹785 Cr", color: "#173a69" },
+      { sector: "Industrials", value: 18, amount: "₹344 Cr", color: "#1f5ea8" },
+      { sector: "Consumer", value: 14, amount: "₹269 Cr", color: "#317a85" },
+      { sector: "Financials", value: 13, amount: "₹248 Cr", color: "#5d7392" },
+      { sector: "Others", value: 16, amount: "₹303 Cr", color: "#9db0c8" }
+    ],
+    timeline: [
+      { date: "18 Apr 2026", title: "New disclosure in Sejal Glass Ltd.", body: "Fresh 4.39% position adds other exposure." },
+      { date: "07 Apr 2026", title: "Increased position in The Anup Engineering Ltd.", body: "Stake moved to 3.58% from 3.55%." },
+      { date: "28 Mar 2026", title: "Reduced IIFL Capital Services Ltd. stake", body: "Trimmed ownership while retaining a residual position." },
+      { date: "16 Mar 2026", title: "Exited Sarda Energy & Minerals Ltd.", body: "Position no longer disclosed in the latest filing." }
+    ],
+    concentrationSummary: {
+      title: "Top 5 holdings account for 50% of portfolio value",
+      body: "Portfolio carries meaningful concentration in the top names while retaining breadth elsewhere.",
+      topFive: 50,
+      topTen: 76
+    },
+    themeSummary: {
+      title: "Concentrated conviction book",
+      body: "The current mix leans into other, industrials, consumer. Turnover is measured rather than tactical, with sizing weighted toward the highest-conviction names."
+    },
+    notes: [
+      { title: "Portfolio profile", body: "High concentration with primary exposure across other, industrials, consumer." },
+      { title: "Watch item", body: "Track whether top sector exposure expands or trims further in the next disclosure cycle." },
+      { title: "Research angle", body: "Cross-check incremental adds against earnings momentum and management commentary." }
+    ],
+    holdings: [
+      { company: "BirlaNu Ltd.", sector: "Industrials", jun25: null, aug25: null, sep25: null, dec25: null, mar26: null, valueCr: 0, status: "Unchanged" },
+      { company: "Carysil Ltd.", sector: "Consumer", jun25: 5.34, aug25: null, sep25: 5.34, dec25: 5.34, mar26: 5.34, valueCr: 137, status: "Unchanged" },
+      { company: "DCM Shriram Industries Ltd.", sector: "Conglomerate", jun25: 2.86, aug25: null, sep25: 2.86, dec25: 2.86, mar26: 2.86, valueCr: 10, status: "Unchanged" },
+      { company: "Dynamatic Technologies Ltd.", sector: "Industrials", jun25: 2.94, aug25: null, sep25: 2.94, dec25: 2.94, mar26: 2.94, valueCr: 236, status: "Unchanged" },
+      { company: "H.G. Infra Engineering Ltd.", sector: "Infrastructure", jun25: 1.36, aug25: null, sep25: 1.36, dec25: 1.36, mar26: 1.36, valueCr: 53, status: "Unchanged" },
+      { company: "Hindware Home Innovation Ltd.", sector: "Consumer", jun25: 4.56, aug25: null, sep25: 4.56, dec25: 4.56, mar26: 4.56, valueCr: 86, status: "Unchanged" },
+      { company: "IIFL Capital Services Ltd.", sector: "Financials", jun25: 2.5, aug25: null, sep25: 2.5, dec25: 2.49, mar26: 2.49, valueCr: 248, status: "Reduced" },
+      { company: "Ion Exchange (India) Ltd.", sector: "Industrials", jun25: 1.92, aug25: null, sep25: 1.85, dec25: 1.85, mar26: 1.85, valueCr: 108, status: "Reduced" },
+      { company: "J Kumar Infraprojects Ltd.", sector: "Other", jun25: 2.48, aug25: null, sep25: 2.48, dec25: 2.48, mar26: 2.48, valueCr: 97, status: "Unchanged" },
+      { company: "Jubilant Pharmova Ltd.", sector: "Healthcare", jun25: 1.15, aug25: null, sep25: 1.15, dec25: 1.15, mar26: 1.15, valueCr: 173, status: "Unchanged" },
+      { company: "Mastek Ltd.", sector: "Technology", jun25: 2.81, aug25: null, sep25: 2.85, dec25: 2.77, mar26: 1.27, valueCr: 67, status: "Reduced" },
+      { company: "Rupa & Company Ltd.", sector: "Consumer", jun25: 4.2, aug25: null, sep25: 3.98, dec25: 3.98, mar26: 3.72, valueCr: 46, status: "Reduced" },
+      { company: "Sarda Energy & Minerals Ltd.", sector: "Other", jun25: 1.45, aug25: null, sep25: 1.06, dec25: null, mar26: null, valueCr: 0, status: "Exited" },
+      { company: "Siyaram Silk Mills Ltd.", sector: "Other", jun25: 1.59, aug25: null, sep25: 1.59, dec25: 1.59, mar26: 1.59, valueCr: 41, status: "Unchanged" },
+      { company: "SPR Auto Technologies Ltd.", sector: "Other", jun25: 1.03, aug25: null, sep25: 1.03, dec25: 1.03, mar26: 1.03, valueCr: 158, status: "Unchanged" },
+      { company: "Stylam Industries Ltd.", sector: "Other", jun25: 2.09, aug25: null, sep25: 2.09, dec25: 2.09, mar26: 2.09, valueCr: 79, status: "Unchanged" },
+      { company: "Technocraft Industries (India) Ltd.", sector: "Other", jun25: 2.36, aug25: null, sep25: null, dec25: 2.36, mar26: null, valueCr: 0, status: "Exited" },
+      { company: "The Anup Engineering Ltd.", sector: "Other", jun25: 3.55, aug25: null, sep25: 3.55, dec25: 3.55, mar26: 3.58, valueCr: 151, status: "Increased" },
+      { company: "TTK Healthcare Ltd.", sector: "Other", jun25: 1.13, aug25: null, sep25: 1.13, dec25: null, mar26: null, valueCr: 0, status: "Exited" },
+      { company: "Ethos Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: null, mar26: null, valueCr: 0, status: "Unchanged" },
+      { company: "Himatsingka Seide Ltd.", sector: "Other", jun25: 5.53, aug25: null, sep25: 5.53, dec25: 5.53, mar26: 4.33, valueCr: 48, status: "Reduced" },
+      { company: "Mangal Electrical Industries Ltd.", sector: "Other", jun25: null, aug25: 2.89, sep25: 2.89, dec25: 2.89, mar26: 2.89, valueCr: 23, status: "Unchanged" },
+      { company: "Indogulf Cropsciences Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 4.02, dec25: 4.02, mar26: 4.02, valueCr: 16, status: "Unchanged" },
+      { company: "Jaro Institute of Technology Management and Research Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 2.28, dec25: 2.28, mar26: 2.28, valueCr: 21, status: "Unchanged" },
+      { company: "M&B Engineering Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 2.03, dec25: 2.03, mar26: 2.03, valueCr: 37, status: "Unchanged" },
+      { company: "Suven Life Sciences Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 1.31, dec25: 1.31, mar26: 1.13, valueCr: 60, status: "Reduced" },
+      { company: "DCM Shriram Fine Chemicals Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: 2.86, mar26: null, valueCr: 0, status: "Exited" },
+      { company: "DCM Shriram International Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: 2.86, mar26: 2.86, valueCr: 16, status: "Unchanged" },
+      { company: "Sejal Glass Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 4.39, valueCr: 38, status: "New" }
+    ]
   }
 ];
 

@@ -1,0 +1,70 @@
+name: Seed all investors (bulk scrape)
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-scrape investors that already have a detail file"
+        required: false
+        type: boolean
+        default: false
+      limit:
+        description: "Cap how many investors to process (blank = all). Useful for a dry-run."
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seed-all-investors
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run bulk seed
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          extra=""
+          if [ "${{ inputs.force }}" = "true" ]; then extra="$extra --force true"; fi
+          if [ -n "${{ inputs.limit }}" ]; then extra="$extra --limit ${{ inputs.limit }}"; fi
+          node scripts/seed-all-investors.mjs $extra
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/investors scripts/sectors.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Bulk seed investor detail files"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push attempt $attempt failed, retrying..."
+            sleep $((attempt * 2))
+          done
+          echo "Failed to push after 3 attempts."
+          exit 1

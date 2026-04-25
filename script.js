@@ -257,6 +257,7 @@ function concentrationLabel(allocation) {
 
 const directoryView = document.querySelector("#directory-view");
 const profileView = document.querySelector("#profile-view");
+const consensusView = document.querySelector("#consensus-view");
 const investorGrid = document.querySelector("#investor-grid");
 const globalSearchInput = document.querySelector("#global-search");
 const selectionSummary = document.querySelector("#selection-summary");
@@ -328,7 +329,12 @@ const state = {
     direction: "desc"
   },
   bookmarks: new Set(),
-  bookmarksOnly: false
+  bookmarksOnly: false,
+  consensusFilters: {
+    sector: "All Sectors",
+    minHolders: "All",
+    sort: "Aggregate Value"
+  }
 };
 
 const BOOKMARKS_KEY = "vinainvest_bookmarks_v1";
@@ -1077,6 +1083,7 @@ function renderHoldingsTable(investor) {
 function openProfileView() {
   directoryView.classList.remove("is-active");
   profileView.classList.add("is-active");
+  consensusView.classList.remove("is-active");
   activateTab("overview-panel");
   syncGlobalSearch();
   renderProfile(state.selectedInvestorId);
@@ -1085,10 +1092,146 @@ function openProfileView() {
 
 function openDirectoryView() {
   profileView.classList.remove("is-active");
+  consensusView.classList.remove("is-active");
   directoryView.classList.add("is-active");
   syncGlobalSearch();
   renderDirectory();
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function openConsensusView() {
+  directoryView.classList.remove("is-active");
+  profileView.classList.remove("is-active");
+  consensusView.classList.add("is-active");
+  populateConsensusFilters();
+  renderConsensusView();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function buildConsensusData() {
+  const map = new Map();
+  for (const investor of investors) {
+    if (!Array.isArray(investor.holdings)) continue;
+    for (const h of investor.holdings) {
+      if (h.status === "Exited") continue;
+      const key = normalizeCompanyName(h.company);
+      if (!key) continue;
+      if (!map.has(key)) {
+        map.set(key, {
+          key,
+          displayName: h.company.trim(),
+          sector: h.sector || "Other",
+          holders: [],
+          totalValueCr: 0,
+          stakeSum: 0,
+          stakeCount: 0
+        });
+      }
+      const entry = map.get(key);
+      entry.holders.push({ investor, holding: h });
+      entry.totalValueCr += h.valueCr;
+      if (h.mar26 !== null && h.mar26 !== undefined) {
+        entry.stakeSum += h.mar26;
+        entry.stakeCount += 1;
+      }
+    }
+  }
+  return [...map.values()].map((e) => ({
+    key: e.key,
+    displayName: e.displayName,
+    sector: e.sector,
+    holderCount: e.holders.length,
+    totalValueCr: e.totalValueCr,
+    avgStake: e.stakeCount ? e.stakeSum / e.stakeCount : 0,
+    holders: e.holders.sort((a, b) => b.holding.valueCr - a.holding.valueCr)
+  }));
+}
+
+function populateConsensusFilters() {
+  const data = buildConsensusData();
+  const sectors = ["All Sectors", ...new Set(data.map((d) => d.sector))].sort((a, b) => {
+    if (a === "All Sectors") return -1;
+    if (b === "All Sectors") return 1;
+    return a.localeCompare(b);
+  });
+  const sectorEl = document.querySelector("#consensus-sector-filter");
+  if (sectorEl) {
+    sectorEl.innerHTML = sectors.map((s) => `<option>${s}</option>`).join("");
+    if (!sectors.includes(state.consensusFilters.sector)) state.consensusFilters.sector = "All Sectors";
+    sectorEl.value = state.consensusFilters.sector;
+  }
+  const minEl = document.querySelector("#consensus-min-holders-filter");
+  if (minEl) minEl.value = state.consensusFilters.minHolders;
+  const sortEl = document.querySelector("#consensus-sort");
+  if (sortEl) sortEl.value = state.consensusFilters.sort;
+}
+
+function renderConsensusView() {
+  const all = buildConsensusData();
+  const minHoldersMap = { All: 1, "2+": 2, "3+": 3, "5+": 5, "10+": 10 };
+  const minHolders = minHoldersMap[state.consensusFilters.minHolders] || 1;
+  const filtered = all.filter((row) => {
+    const sectorOk = state.consensusFilters.sector === "All Sectors" || row.sector === state.consensusFilters.sector;
+    return sectorOk && row.holderCount >= minHolders;
+  });
+  const sorted = filtered.sort((a, b) => {
+    switch (state.consensusFilters.sort) {
+      case "Holder Count":
+        return b.holderCount - a.holderCount || b.totalValueCr - a.totalValueCr;
+      case "Avg Stake %":
+        return b.avgStake - a.avgStake;
+      case "Alphabetical":
+        return a.displayName.localeCompare(b.displayName);
+      case "Aggregate Value":
+      default:
+        return b.totalValueCr - a.totalValueCr;
+    }
+  });
+
+  document.querySelector("#consensus-stock-count").textContent = String(all.length).padStart(2, "0");
+  document.querySelector("#consensus-total-value").textContent = currencyCr(all.reduce((s, x) => s + x.totalValueCr, 0));
+  document.querySelector("#consensus-multi-count").textContent = String(all.filter((x) => x.holderCount >= 2).length).padStart(2, "0");
+
+  const resultsCopy = document.querySelector("#consensus-results-copy");
+  if (resultsCopy) {
+    resultsCopy.textContent = `${sorted.length} stock${sorted.length === 1 ? "" : "s"} match the current filters.`;
+  }
+
+  const body = document.querySelector("#consensus-body");
+  if (!body) return;
+  if (!sorted.length) {
+    body.innerHTML = `
+      <tr>
+        <td colspan="7">
+          <div class="change-card">
+            <strong>No stocks match the current filters.</strong>
+            <p>Relax sector or min-holders to broaden the consensus universe.</p>
+          </div>
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  body.innerHTML = sorted
+    .map((row, i) => {
+      const topHolders = row.holders.slice(0, 4)
+        .map((h) => `<span class="holder-chip" title="${escAttr(h.investor.name || h.investor.fund)} · ${escAttr(currencyCr(h.holding.valueCr))}" data-investor-id="${escAttr(h.investor.id)}">${escAttr(h.investor.initials)}</span>`)
+        .join("");
+      const moreCount = row.holders.length > 4 ? `<span class="holder-chip holder-chip--more">+${row.holders.length - 4}</span>` : "";
+      return `
+        <tr>
+          <td class="is-numeric">${i + 1}</td>
+          <td><a class="company-link stock-link" href="#" data-stock="${escAttr(row.displayName)}">${row.displayName}</a></td>
+          <td>${row.sector}</td>
+          <td class="is-numeric">${row.holderCount}</td>
+          <td class="is-numeric">${currencyCr(row.totalValueCr)}</td>
+          <td class="is-numeric">${row.avgStake.toFixed(2)}%</td>
+          <td><div class="holders-stack">${topHolders}${moreCount}</div></td>
+        </tr>
+      `;
+    })
+    .join("");
 }
 
 function toggleCompareDrawer(forceState) {
@@ -1210,6 +1353,22 @@ function attachGlobalEvents() {
 
   document.querySelector("#back-to-directory").addEventListener("click", openDirectoryView);
   document.querySelector("#home-brand").addEventListener("click", openDirectoryView);
+  document.querySelector("#consensus-button").addEventListener("click", openConsensusView);
+  document.querySelector("#back-from-consensus").addEventListener("click", openDirectoryView);
+
+  const consensusFilters = [
+    ["#consensus-sector-filter", "sector"],
+    ["#consensus-min-holders-filter", "minHolders"],
+    ["#consensus-sort", "sort"]
+  ];
+  consensusFilters.forEach(([sel, key]) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    el.addEventListener("change", () => {
+      state.consensusFilters[key] = el.value;
+      renderConsensusView();
+    });
+  });
 
   document.querySelector("#reset-directory-filters").addEventListener("click", () => {
     state.directoryFilters = {
@@ -1253,7 +1412,7 @@ function attachGlobalEvents() {
       return;
     }
     const investorEl = event.target.closest("[data-investor-id]");
-    if (investorEl && document.querySelector("#stock-detail-drawer").classList.contains("is-open")) {
+    if (investorEl && investorEl.dataset.investorId) {
       const id = investorEl.dataset.investorId;
       closeStockDetail();
       state.selectedInvestorId = id;

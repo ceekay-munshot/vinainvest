@@ -43,6 +43,7 @@
 
         <div class="topbar-actions">
           <button class="ghost-button" type="button" id="saved-screens-button" aria-pressed="false">Saved Screens</button>
+          <button class="ghost-button" type="button" id="consensus-button">Consensus</button>
           <button class="ghost-button" type="button">Exports</button>
           <button class="primary-button" type="button" id="compare-button">
             Compare Investors
@@ -394,6 +395,91 @@
               </article>
             </div>
           </section>
+        </section>
+
+        <section class="view view--consensus" id="consensus-view" aria-labelledby="consensus-title">
+          <div class="page-toolbar">
+            <button class="ghost-button ghost-button--compact" id="back-from-consensus" type="button">
+              <span aria-hidden="true">←</span>
+              Investor Directory
+            </button>
+          </div>
+
+          <div class="page-intro">
+            <div>
+              <p class="eyebrow">Cross-Investor Intelligence</p>
+              <h1 id="consensus-title">Most-held stocks across tracked investors</h1>
+              <p class="page-subtitle">
+                Smart-money convergence: stocks held by multiple tracked investors, ranked by aggregate disclosed value and breadth of ownership.
+              </p>
+            </div>
+            <div class="summary-pill-grid">
+              <article class="summary-pill">
+                <span>Unique Stocks</span>
+                <strong id="consensus-stock-count">00</strong>
+              </article>
+              <article class="summary-pill">
+                <span>Aggregate Value</span>
+                <strong id="consensus-total-value">₹0 Cr</strong>
+              </article>
+              <article class="summary-pill">
+                <span>Multi-Holder</span>
+                <strong id="consensus-multi-count">00</strong>
+              </article>
+            </div>
+          </div>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">Consensus Universe</p>
+                <h2>Stocks ranked by aggregate value across holders</h2>
+                <p id="consensus-results-copy" class="page-subtitle"></p>
+              </div>
+              <div class="consensus-controls">
+                <label class="field-block">
+                  <span class="field-label">Sector</span>
+                  <select id="consensus-sector-filter"></select>
+                </label>
+                <label class="field-block">
+                  <span class="field-label">Min holders</span>
+                  <select id="consensus-min-holders-filter">
+                    <option>All</option>
+                    <option>2+</option>
+                    <option>3+</option>
+                    <option>5+</option>
+                    <option>10+</option>
+                  </select>
+                </label>
+                <label class="field-block">
+                  <span class="field-label">Sort by</span>
+                  <select id="consensus-sort">
+                    <option>Aggregate Value</option>
+                    <option>Holder Count</option>
+                    <option>Avg Stake %</option>
+                    <option>Alphabetical</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table consensus-table">
+                <thead>
+                  <tr>
+                    <th class="is-numeric">#</th>
+                    <th>Company</th>
+                    <th>Sector</th>
+                    <th class="is-numeric">Holders</th>
+                    <th class="is-numeric">Aggregate Value</th>
+                    <th class="is-numeric">Avg Stake %</th>
+                    <th>Top Holders</th>
+                  </tr>
+                </thead>
+                <tbody id="consensus-body"></tbody>
+              </table>
+            </div>
+          </article>
         </section>
 
     <aside class="compare-drawer" id="compare-drawer" aria-hidden="true">

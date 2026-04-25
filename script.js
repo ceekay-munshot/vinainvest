@@ -327,7 +327,8 @@ const state = {
     key: "valueCr",
     direction: "desc"
   },
-  bookmarks: new Set()
+  bookmarks: new Set(),
+  bookmarksOnly: false
 };
 
 const BOOKMARKS_KEY = "vinainvest_bookmarks_v1";
@@ -438,7 +439,9 @@ function applyDirectoryFilters() {
       state.directoryFilters.activity === "All Activity" ||
       investor.activity === state.directoryFilters.activity;
 
-    return matchesSearch && matchesType && matchesWorth && matchesHoldings && matchesSector && matchesActivity;
+    const matchesBookmark = !state.bookmarksOnly || state.bookmarks.has(investor.id);
+
+    return matchesSearch && matchesType && matchesWorth && matchesHoldings && matchesSector && matchesActivity && matchesBookmark;
   });
 
   result = result.sort((a, b) => {
@@ -523,6 +526,7 @@ function updateDirectoryStats(filteredInvestors) {
 function renderActiveFilterChips(filteredInvestors) {
   const active = [];
 
+  if (state.bookmarksOnly) active.push("★ Bookmarked only");
   if (state.directorySearch) active.push(`Search: ${state.directorySearch}`);
   Object.entries(state.directoryFilters).forEach(([key, value]) => {
     const defaultValue = {
@@ -569,11 +573,18 @@ function renderDirectory() {
   const pagination = document.querySelector("#directory-pagination");
 
   if (!filteredInvestors.length) {
+    const emptyKicker = state.bookmarksOnly ? "Saved Screens" : "No Results";
+    const emptyTitle = state.bookmarksOnly && state.bookmarks.size === 0
+      ? "You haven't bookmarked any investors yet."
+      : "No investors match the current screen.";
+    const emptyBody = state.bookmarksOnly && state.bookmarks.size === 0
+      ? "Open an investor profile and click Bookmark to save it here."
+      : "Relax one or more filters to broaden the directory view.";
     investorGrid.innerHTML = `
       <article class="panel">
-        <p class="panel-kicker">No Results</p>
-        <h2>No investors match the current screen.</h2>
-        <p class="page-subtitle">Relax one or more filters to broaden the directory view.</p>
+        <p class="panel-kicker">${emptyKicker}</p>
+        <h2>${emptyTitle}</h2>
+        <p class="page-subtitle">${emptyBody}</p>
       </article>
     `;
     if (pagination) pagination.hidden = true;
@@ -1091,8 +1102,10 @@ function attachGlobalEvents() {
     };
     state.directorySearch = "";
     state.directoryVisibleCount = DIRECTORY_PAGE_SIZE;
+    state.bookmarksOnly = false;
     populateDirectoryFilters();
     syncGlobalSearch();
+    updateSavedScreensButton();
     renderDirectory();
   });
 
@@ -1116,8 +1129,31 @@ function attachGlobalEvents() {
     else state.bookmarks.add(id);
     saveBookmarks();
     updateBookmarkButton();
+    updateSavedScreensButton();
     renderDirectory();
   });
+
+  document.querySelector("#saved-screens-button").addEventListener("click", () => {
+    state.bookmarksOnly = !state.bookmarksOnly;
+    state.directoryVisibleCount = DIRECTORY_PAGE_SIZE;
+    updateSavedScreensButton();
+    if (!directoryView.classList.contains("is-active")) openDirectoryView();
+    else renderDirectory();
+  });
+  updateSavedScreensButton();
+}
+
+function updateSavedScreensButton() {
+  const btn = document.querySelector("#saved-screens-button");
+  if (!btn) return;
+  const count = state.bookmarks.size;
+  btn.textContent = state.bookmarksOnly
+    ? `Showing Saved (${count})`
+    : count > 0
+      ? `Saved Screens (${count})`
+      : "Saved Screens";
+  btn.classList.toggle("is-active", state.bookmarksOnly);
+  btn.setAttribute("aria-pressed", String(state.bookmarksOnly));
 }
 
 async function handleRefreshClick() {

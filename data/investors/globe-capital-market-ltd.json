@@ -1,0 +1,141 @@
+{
+  "lastScrapedAt": "2026-04-25T10:06:17.090Z",
+  "worthCr": 64,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Nexus Surgical And Medicare Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.38,
+        "aug25": null,
+        "sep25": 2.38,
+        "dec25": 2.38,
+        "mar26": 2.38
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Pasupati Fincap Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.31,
+        "aug25": null,
+        "sep25": 1.31,
+        "dec25": 1.31,
+        "mar26": 1.31
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Perfect-Octave Media Projects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": 1.13,
+        "mar26": 1.13
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "PS IT Infrastructure & Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": null,
+        "sep25": 1.25,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Raama Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.09,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "SMC Global Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Maral Overseas Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.56,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.56,
+        "mar26": 1.56
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Kesoram Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.12,
+        "aug25": null,
+        "sep25": 1.59,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ujjivan Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.14,
+        "aug25": null,
+        "sep25": 1.01,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Timex Group India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.04,
+        "sep25": null,
+        "dec25": 1.41,
+        "mar26": 1.47
+      },
+      "valueCr": 50
+    },
+    {
+      "company": "Bhilwara Technical Textiles Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 5.1,
+        "dec25": 5.1,
+        "mar26": 5.1
+      },
+      "valueCr": 10
+    }
+  ]
+}

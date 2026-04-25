@@ -1,5 +1,6 @@
 let investors = [];
 const QUARTER_KEYS = ["jun25", "aug25", "sep25", "dec25", "mar26"];
+const DIRECTORY_PAGE_SIZE = 12;
 const SECTOR_PALETTE = ["#173a69", "#1f5ea8", "#317a85", "#5d7392", "#9db0c8", "#7a4a86", "#b07a3a", "#3a7a5d"];
 
 async function loadInvestors() {
@@ -318,6 +319,7 @@ const state = {
     activity: "All Activity",
     sort: "Net Worth"
   },
+  directoryVisibleCount: DIRECTORY_PAGE_SIZE,
   holdingsSearch: "",
   holdingsSector: "All Sectors",
   holdingsStatus: "All Statuses",
@@ -529,6 +531,8 @@ function renderDirectory() {
   renderActiveFilterChips(filteredInvestors);
   renderSelectionSummary();
 
+  const pagination = document.querySelector("#directory-pagination");
+
   if (!filteredInvestors.length) {
     investorGrid.innerHTML = `
       <article class="panel">
@@ -537,10 +541,15 @@ function renderDirectory() {
         <p class="page-subtitle">Relax one or more filters to broaden the directory view.</p>
       </article>
     `;
+    if (pagination) pagination.hidden = true;
     return;
   }
 
-  investorGrid.innerHTML = filteredInvestors.map(directoryCard).join("");
+  const total = filteredInvestors.length;
+  const visible = Math.min(state.directoryVisibleCount, total);
+  const visibleInvestors = filteredInvestors.slice(0, visible);
+
+  investorGrid.innerHTML = visibleInvestors.map(directoryCard).join("");
 
   investorGrid.querySelectorAll(".investor-card").forEach((card) => {
     const { id } = card.dataset;
@@ -557,6 +566,27 @@ function renderDirectory() {
       openProfileView();
     });
   });
+
+  if (pagination) {
+    if (visible < total) {
+      const remaining = total - visible;
+      const nextChunk = Math.min(DIRECTORY_PAGE_SIZE, remaining);
+      pagination.hidden = false;
+      pagination.innerHTML = `
+        <p class="directory-pagination__count">Showing ${visible} of ${total}</p>
+        <button class="ghost-button directory-pagination__more" type="button">
+          Load ${nextChunk} more
+        </button>
+      `;
+      pagination.querySelector(".directory-pagination__more").addEventListener("click", () => {
+        state.directoryVisibleCount = visible + nextChunk;
+        renderDirectory();
+      });
+    } else {
+      pagination.hidden = true;
+      pagination.innerHTML = "";
+    }
+  }
 }
 
 function statusBadge(status) {
@@ -972,6 +1002,7 @@ function attachGlobalEvents() {
   Object.keys(filterEls).forEach((key) => {
     filterEls[key].addEventListener("change", () => {
       state.directoryFilters[key] = filterEls[key].value;
+      state.directoryVisibleCount = DIRECTORY_PAGE_SIZE;
       renderDirectory();
     });
   });
@@ -979,6 +1010,7 @@ function attachGlobalEvents() {
   globalSearchInput.addEventListener("input", (event) => {
     if (directoryView.classList.contains("is-active")) {
       state.directorySearch = event.target.value.trim();
+      state.directoryVisibleCount = DIRECTORY_PAGE_SIZE;
       renderDirectory();
     } else {
       state.holdingsSearch = event.target.value.trim();
@@ -1015,6 +1047,7 @@ function attachGlobalEvents() {
       sort: "Net Worth"
     };
     state.directorySearch = "";
+    state.directoryVisibleCount = DIRECTORY_PAGE_SIZE;
     populateDirectoryFilters();
     syncGlobalSearch();
     renderDirectory();

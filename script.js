@@ -1,6 +1,6 @@
 let investors = [];
 const QUARTER_KEYS = ["jun25", "aug25", "sep25", "dec25", "mar26"];
-const DIRECTORY_PAGE_SIZE = 12;
+const DIRECTORY_PAGE_SIZE = 6;
 const SECTOR_PALETTE = ["#173a69", "#1f5ea8", "#317a85", "#5d7392", "#9db0c8", "#7a4a86", "#b07a3a", "#3a7a5d"];
 
 async function loadInvestors() {

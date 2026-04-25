@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Investor name (e.g., Sunil Singhania)"
-        required: true
+        description: "Investor name (e.g., Sunil Singhania) — leave blank if fund-only"
+        required: false
         type: string
       fund:
-        description: "Fund / firm name (e.g., Abakkus Fund)"
-        required: true
+        description: "Fund / firm name (e.g., Abakkus Fund) — leave blank if individual-only"
+        required: false
         type: string
       url:
         description: "Source URL (e.g., https://ticker.finology.in/investor/...)"
@@ -71,16 +71,21 @@ jobs:
       - name: Verify script.js still parses
         run: node --check script.js
 
+      - name: Verify investors.json is valid
+        run: node -e "JSON.parse(require('fs').readFileSync('investors.json','utf8'))"
+
       - name: Commit and push to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add script.js scripts/sectors.json
+          git add investors.json data/investors scripts/sectors.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "Add $INV_NAME ($INV_FUND) to investor dashboard"
+          label="${INV_NAME:-$INV_FUND}"
+          [ -n "$INV_NAME" ] && [ -n "$INV_FUND" ] && label="$INV_NAME ($INV_FUND)"
+          git commit -m "Add $label to investor dashboard"
           for attempt in 1 2 3; do
             git pull --rebase origin main
             if git push origin HEAD:main; then

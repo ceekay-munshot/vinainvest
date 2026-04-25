@@ -1,515 +1,253 @@
-const investors = [
-  {
-    id: "rk-damani",
-    name: "Radhakishan Damani",
-    initials: "RD",
-    fund: "Brightstar Holdings",
-    type: "Individual",
-    worthCr: 38420,
-    holdingsCount: 22,
-    sectorFocus: ["Consumer", "Retail", "Financials"],
-    activity: "High",
-    description: "Concentrated, long-duration compounding portfolio anchored in retail, consumer franchises, and select financial businesses.",
-    bio: "Widely tracked for high-conviction public equity positions, with a bias toward durable cash-flow businesses and measured portfolio turnover.",
-    activeSince: "1999",
-    style: "Concentrated compounder",
-    concentration: "High",
-    keySectors: "Consumer, Retail, Financials",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹38,420 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "22", note: "Disclosed live positions" },
-      { label: "New Additions", value: "02", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "05", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "03", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "01", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "Avenue Supermarts", sector: "Retail", value: "₹13,860 Cr" },
-      { company: "VST Industries", sector: "Consumer", value: "₹6,240 Cr" },
-      { company: "Blue Dart Express", sector: "Logistics", value: "₹4,180 Cr" },
-      { company: "Trent", sector: "Retail", value: "₹3,960 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Retail", value: 35, amount: "₹13,447 Cr", color: "#173a69" },
-      { sector: "Consumer", value: 22, amount: "₹8,452 Cr", color: "#1f5ea8" },
-      { sector: "Financials", value: 19, amount: "₹7,300 Cr", color: "#317a85" },
-      { sector: "Logistics", value: 12, amount: "₹4,610 Cr", color: "#5d7392" },
-      { sector: "Others", value: 12, amount: "₹4,611 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "18 Apr 2026", title: "Increased position in Trent", body: "Stake moved to 1.82% from 1.47% as retail exposure widened." },
-      { date: "11 Apr 2026", title: "New disclosure in Supreme Industries", body: "Fresh 1.05% position adds industrial building materials exposure." },
-      { date: "29 Mar 2026", title: "Reduced Blue Dart stake", body: "Trimmed 42 bps while retaining core ownership." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 68% of portfolio value",
-      body: "Portfolio remains deliberately concentrated, with the leading retail and consumer positions doing most of the heavy lifting.",
-      topFive: 68,
-      topTen: 84
-    },
-    themeSummary: {
-      title: "Consumer-led quality bias",
-      body: "The current mix still leans into branded consumption, organized retail, and selective financial operating leverage. Turnover is measured rather than tactical."
-    },
-    notes: [
-      { title: "Conviction profile", body: "Name count remains controlled. New positions tend to start small before sizing up across subsequent quarters." },
-      { title: "Watch item", body: "Monitor whether logistics exposure is trimmed further after recent price strength." },
-      { title: "Research angle", body: "Cross-check any new retail additions against demand commentary and same-store growth data." }
-    ],
-    holdings: [
-      { company: "Avenue Supermarts", sector: "Retail", jun25: 1.41, aug25: 1.41, sep25: 1.44, dec25: 1.44, mar26: 1.46, valueCr: 13860, status: "Increased" },
-      { company: "VST Industries", sector: "Consumer", jun25: 32.66, aug25: 32.66, sep25: 32.66, dec25: 32.66, mar26: 32.66, valueCr: 6240, status: "Unchanged" },
-      { company: "Blue Dart Express", sector: "Logistics", jun25: 3.28, aug25: 3.28, sep25: 3.12, dec25: 2.96, mar26: 2.86, valueCr: 4180, status: "Reduced" },
-      { company: "Trent", sector: "Retail", jun25: 1.17, aug25: 1.24, sep25: 1.36, dec25: 1.47, mar26: 1.82, valueCr: 3960, status: "Increased" },
-      { company: "Sundaram Finance", sector: "Financials", jun25: 2.85, aug25: 2.85, sep25: 2.91, dec25: 3.02, mar26: 3.02, valueCr: 3180, status: "Increased" },
-      { company: "United Breweries", sector: "Consumer", jun25: 1.14, aug25: 1.14, sep25: 1.14, dec25: 1.14, mar26: 1.14, valueCr: 1940, status: "Unchanged" },
-      { company: "Supreme Industries", sector: "Industrials", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 1.05, valueCr: 1210, status: "New" },
-      { company: "ICICI Bank", sector: "Financials", jun25: 0.22, aug25: 0.22, sep25: 0.26, dec25: 0.28, mar26: 0.31, valueCr: 1450, status: "Increased" },
-      { company: "3M India", sector: "Industrials", jun25: 0.63, aug25: 0.63, sep25: 0.59, dec25: 0.55, mar26: 0.55, valueCr: 980, status: "Reduced" },
-      { company: "Schaeffler India", sector: "Industrials", jun25: 1.91, aug25: 1.91, sep25: 1.91, dec25: 1.91, mar26: null, valueCr: 0, status: "Exited" }
-    ]
-  },
-  {
-    id: "rekha-jhunjhunwala",
-    name: "Rekha Jhunjhunwala",
-    initials: "RJ",
-    fund: "Rare Equity Office",
-    type: "Individual",
-    worthCr: 27640,
-    holdingsCount: 29,
-    sectorFocus: ["Financials", "Consumer", "Healthcare"],
-    activity: "Medium",
-    description: "Broad but curated portfolio spanning consumer brands, lenders, healthcare, and cyclical re-rating opportunities.",
-    bio: "A closely followed disclosure profile with diversified exposure and selective position changes across sectors with long runway characteristics.",
-    activeSince: "2003",
-    style: "Quality with opportunistic rotation",
-    concentration: "Medium",
-    keySectors: "Financials, Consumer, Healthcare",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹27,640 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "29", note: "Disclosed live positions" },
-      { label: "New Additions", value: "03", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "04", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "06", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "02", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "Titan Company", sector: "Consumer", value: "₹8,440 Cr" },
-      { company: "Canara Bank", sector: "Financials", value: "₹3,920 Cr" },
-      { company: "Metro Brands", sector: "Retail", value: "₹2,810 Cr" },
-      { company: "Fortis Healthcare", sector: "Healthcare", value: "₹2,420 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Consumer", value: 31, amount: "₹8,568 Cr", color: "#173a69" },
-      { sector: "Financials", value: 26, amount: "₹7,186 Cr", color: "#1f5ea8" },
-      { sector: "Healthcare", value: 18, amount: "₹4,975 Cr", color: "#317a85" },
-      { sector: "Retail", value: 15, amount: "₹4,146 Cr", color: "#5d7392" },
-      { sector: "Others", value: 10, amount: "₹2,765 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "16 Apr 2026", title: "Added to Jubilant Pharmova", body: "Fresh healthcare exposure through a 1.18% position." },
-      { date: "01 Apr 2026", title: "Reduced stake in NCC", body: "Trim follows strong run-up in order book-driven names." },
-      { date: "19 Mar 2026", title: "Maintained Titan position", body: "Core consumer holding remains unchanged despite elevated valuation." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 54% of portfolio value",
-      body: "The portfolio is still diversified relative to peers, with enough room to express sector views without becoming overly diffuse.",
-      topFive: 54,
-      topTen: 73
-    },
-    themeSummary: {
-      title: "Balanced all-weather book",
-      body: "Exposure is distributed across consumption, lenders, and hospital/healthcare assets, leaving room for tactical trims without changing the overall posture."
-    },
-    notes: [
-      { title: "Watch item", body: "Monitor whether recent healthcare additions become a larger sleeve over the next two filings." },
-      { title: "Research angle", body: "Assess if consumer exposure continues to dominate despite incremental financials and healthcare adds." },
-      { title: "Portfolio behavior", body: "This book often shows gradual position management rather than abrupt factor rotations." }
-    ],
-    holdings: [
-      { company: "Titan Company", sector: "Consumer", jun25: 5.16, aug25: 5.16, sep25: 5.16, dec25: 5.16, mar26: 5.16, valueCr: 8440, status: "Unchanged" },
-      { company: "Canara Bank", sector: "Financials", jun25: 1.57, aug25: 1.57, sep25: 1.57, dec25: 1.63, mar26: 1.72, valueCr: 3920, status: "Increased" },
-      { company: "Metro Brands", sector: "Retail", jun25: 8.05, aug25: 8.05, sep25: 8.05, dec25: 8.05, mar26: 8.05, valueCr: 2810, status: "Unchanged" },
-      { company: "Fortis Healthcare", sector: "Healthcare", jun25: 1.79, aug25: 1.79, sep25: 1.79, dec25: 1.79, mar26: 1.79, valueCr: 2420, status: "Unchanged" },
-      { company: "Jubilant Pharmova", sector: "Healthcare", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 1.18, valueCr: 910, status: "New" },
-      { company: "NCC", sector: "Industrials", jun25: 1.42, aug25: 1.42, sep25: 1.36, dec25: 1.24, mar26: 0.98, valueCr: 860, status: "Reduced" },
-      { company: "Indian Hotels", sector: "Consumer", jun25: 2.04, aug25: 2.04, sep25: 2.11, dec25: 2.11, mar26: 2.26, valueCr: 1340, status: "Increased" },
-      { company: "Star Health", sector: "Financials", jun25: 1.08, aug25: 1.08, sep25: 1.08, dec25: 0.94, mar26: 0.82, valueCr: 740, status: "Reduced" },
-      { company: "Crisil", sector: "Financials", jun25: 5.49, aug25: 5.49, sep25: 5.49, dec25: 5.49, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "Nazara Technologies", sector: "Technology", jun25: 3.61, aug25: 3.61, sep25: 3.61, dec25: 3.61, mar26: 3.61, valueCr: 1180, status: "Unchanged" }
-    ]
-  },
-  {
-    id: "ashish-kacholia",
-    name: "Ashish Kacholia",
-    initials: "AK",
-    fund: "Lucky Investments",
-    type: "Individual",
-    worthCr: 11890,
-    holdingsCount: 34,
-    sectorFocus: ["Industrials", "Consumer", "Technology"],
-    activity: "High",
-    description: "Mid-cap oriented portfolio with thematic rotation across manufacturing, specialty businesses, and emerging platform leaders.",
-    bio: "Tracks fast-growing listed businesses with room for scale, often across mid-cap industrial, consumer, and technology-linked sectors.",
-    activeSince: "2005",
-    style: "Mid-cap growth",
-    concentration: "Medium",
-    keySectors: "Industrials, Consumer, Technology",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹11,890 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "34", note: "Disclosed live positions" },
-      { label: "New Additions", value: "04", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "08", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "05", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "03", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "Safari Industries", sector: "Consumer", value: "₹1,760 Cr" },
-      { company: "Mastek", sector: "Technology", value: "₹1,420 Cr" },
-      { company: "Ami Organics", sector: "Chemicals", value: "₹1,260 Cr" },
-      { company: "Shaily Engineering", sector: "Industrials", value: "₹1,110 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Industrials", value: 29, amount: "₹3,448 Cr", color: "#173a69" },
-      { sector: "Consumer", value: 22, amount: "₹2,616 Cr", color: "#1f5ea8" },
-      { sector: "Technology", value: 18, amount: "₹2,140 Cr", color: "#317a85" },
-      { sector: "Chemicals", value: 17, amount: "₹2,021 Cr", color: "#5d7392" },
-      { sector: "Others", value: 14, amount: "₹1,665 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "20 Apr 2026", title: "Raised Shaily Engineering holding", body: "Position increased again after order momentum continued." },
-      { date: "12 Apr 2026", title: "Fresh disclosure in Rategain", body: "New software-services position adds another platform play." },
-      { date: "31 Mar 2026", title: "Reduced Ami Organics", body: "Trimmed after strong quarter-on-quarter price performance." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 47% of portfolio value",
-      body: "Portfolio breadth is wider and more exploratory, which suits the mid-cap growth style and leaves capacity for fresh themes.",
-      topFive: 47,
-      topTen: 67
-    },
-    themeSummary: {
-      title: "Active rotation into growth niches",
-      body: "The book remains more dynamic than the concentrated compounder cohort, with a clear preference for scalable niche operators and manufacturing adjacencies."
-    },
-    notes: [
-      { title: "Watch item", body: "Check whether software/platform names continue to expand as a portfolio sleeve." },
-      { title: "Research angle", body: "Model concentration risk if the strongest industrial performers keep scaling within the book." },
-      { title: "Behavior", body: "Higher turnover makes the change log especially informative quarter to quarter." }
-    ],
-    holdings: [
-      { company: "Safari Industries", sector: "Consumer", jun25: 2.32, aug25: 2.32, sep25: 2.44, dec25: 2.61, mar26: 2.61, valueCr: 1760, status: "Increased" },
-      { company: "Mastek", sector: "Technology", jun25: 1.98, aug25: 1.98, sep25: 1.98, dec25: 2.05, mar26: 2.05, valueCr: 1420, status: "Increased" },
-      { company: "Ami Organics", sector: "Chemicals", jun25: 2.84, aug25: 2.84, sep25: 2.58, dec25: 2.42, mar26: 2.26, valueCr: 1260, status: "Reduced" },
-      { company: "Shaily Engineering", sector: "Industrials", jun25: 1.54, aug25: 1.71, sep25: 1.88, dec25: 2.04, mar26: 2.19, valueCr: 1110, status: "Increased" },
-      { company: "Rategain", sector: "Technology", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 1.06, valueCr: 690, status: "New" },
-      { company: "Xpro India", sector: "Industrials", jun25: 1.87, aug25: 1.87, sep25: 1.87, dec25: 1.87, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "Tanfac Industries", sector: "Chemicals", jun25: 4.92, aug25: 4.92, sep25: 4.58, dec25: 4.22, mar26: 4.22, valueCr: 860, status: "Reduced" },
-      { company: "Yasho Industries", sector: "Chemicals", jun25: 1.84, aug25: 1.84, sep25: 1.96, dec25: 2.04, mar26: 2.04, valueCr: 710, status: "Increased" },
-      { company: "Fineotex Chemical", sector: "Chemicals", jun25: 1.06, aug25: 1.06, sep25: 1.06, dec25: 1.06, mar26: 1.06, valueCr: 520, status: "Unchanged" },
-      { company: "Poly Medicure", sector: "Healthcare", jun25: 1.11, aug25: 1.11, sep25: 1.11, dec25: 1.11, mar26: 1.24, valueCr: 780, status: "Increased" }
-    ]
-  },
-  {
-    id: "vijay-kedia",
-    name: "Vijay Kedia",
-    initials: "VK",
-    fund: "Kedia Securities",
-    type: "Individual",
-    worthCr: 9680,
-    holdingsCount: 18,
-    sectorFocus: ["Industrials", "Infrastructure", "Consumer"],
-    activity: "Medium",
-    description: "High-conviction portfolio with long holding periods and emphasis on business quality, management, and operating runway.",
-    bio: "Known for patient ownership in smaller listed companies where management quality and execution are central to the investment case.",
-    activeSince: "1992",
-    style: "High-conviction quality growth",
-    concentration: "High",
-    keySectors: "Industrials, Infrastructure, Consumer",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹9,680 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "18", note: "Disclosed live positions" },
-      { label: "New Additions", value: "01", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "03", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "02", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "01", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "Tejas Networks", sector: "Technology", value: "₹1,980 Cr" },
-      { company: "Atul Auto", sector: "Automotive", value: "₹1,420 Cr" },
-      { company: "Vaibhav Global", sector: "Consumer", value: "₹1,180 Cr" },
-      { company: "Cera Sanitaryware", sector: "Consumer", value: "₹960 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Industrials", value: 28, amount: "₹2,710 Cr", color: "#173a69" },
-      { sector: "Consumer", value: 27, amount: "₹2,614 Cr", color: "#1f5ea8" },
-      { sector: "Infrastructure", value: 20, amount: "₹1,936 Cr", color: "#317a85" },
-      { sector: "Technology", value: 15, amount: "₹1,452 Cr", color: "#5d7392" },
-      { sector: "Others", value: 10, amount: "₹968 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "09 Apr 2026", title: "Raised stake in Cera Sanitaryware", body: "Increase supports consumer-facing building products thesis." },
-      { date: "25 Mar 2026", title: "Trimmed Tejas Networks", body: "Partial profit booking while keeping core exposure." },
-      { date: "18 Mar 2026", title: "New filing in Elecon Engineering", body: "Adds industrial machinery exposure." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 64% of portfolio value",
-      body: "The profile is relatively focused, reflecting a willingness to let long-duration winners become meaningful parts of the portfolio.",
-      topFive: 64,
-      topTen: 82
-    },
-    themeSummary: {
-      title: "Focused ownership in scalable franchises",
-      body: "Holdings skew toward businesses where execution visibility and management alignment matter more than broad macro factor calls."
-    },
-    notes: [
-      { title: "Watch item", body: "Follow whether recent trims become broader rebalancing across outperforming technology names." },
-      { title: "Research angle", body: "Compare any new industrial additions against order-cycle durability." },
-      { title: "Behavior", body: "Position changes are infrequent enough that each filing usually carries signal." }
-    ],
-    holdings: [
-      { company: "Tejas Networks", sector: "Technology", jun25: 1.84, aug25: 1.84, sep25: 1.84, dec25: 1.74, mar26: 1.58, valueCr: 1980, status: "Reduced" },
-      { company: "Atul Auto", sector: "Automotive", jun25: 6.22, aug25: 6.22, sep25: 6.22, dec25: 6.22, mar26: 6.22, valueCr: 1420, status: "Unchanged" },
-      { company: "Vaibhav Global", sector: "Consumer", jun25: 1.96, aug25: 1.96, sep25: 1.96, dec25: 2.04, mar26: 2.04, valueCr: 1180, status: "Increased" },
-      { company: "Cera Sanitaryware", sector: "Consumer", jun25: 1.28, aug25: 1.28, sep25: 1.32, dec25: 1.39, mar26: 1.48, valueCr: 960, status: "Increased" },
-      { company: "Elecon Engineering", sector: "Industrials", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 1.09, valueCr: 620, status: "New" },
-      { company: "Heritage Foods", sector: "Consumer", jun25: 1.04, aug25: 1.04, sep25: 1.04, dec25: 1.04, mar26: 1.04, valueCr: 540, status: "Unchanged" },
-      { company: "Neuland Labs", sector: "Healthcare", jun25: 1.18, aug25: 1.18, sep25: 1.18, dec25: 1.18, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "Patel Engineering", sector: "Infrastructure", jun25: 2.42, aug25: 2.42, sep25: 2.56, dec25: 2.56, mar26: 2.74, valueCr: 710, status: "Increased" },
-      { company: "Sudarshan Chemical", sector: "Chemicals", jun25: 1.04, aug25: 1.04, sep25: 1.04, dec25: 1.01, mar26: 1.01, valueCr: 450, status: "Reduced" },
-      { company: "Mahindra Holidays", sector: "Consumer", jun25: 1.65, aug25: 1.65, sep25: 1.65, dec25: 1.65, mar26: 1.65, valueCr: 520, status: "Unchanged" }
-    ]
-  },
-  {
-    id: "porinju-veliyath",
-    name: "Porinju Veliyath",
-    initials: "PV",
-    fund: "Equity Intelligence India",
-    type: "Fund",
-    worthCr: 6240,
-    holdingsCount: 27,
-    sectorFocus: ["Industrials", "Financials", "Special Situations"],
-    activity: "High",
-    description: "More opportunistic portfolio mix with special situations, cyclical recovery ideas, and rotation across smaller-cap names.",
-    bio: "Often expresses views through underfollowed companies where balance sheet or business-cycle change can drive a re-rating.",
-    activeSince: "2010",
-    style: "Special situations",
-    concentration: "Medium",
-    keySectors: "Industrials, Financials, Special Situations",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹6,240 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "27", note: "Disclosed live positions" },
-      { label: "New Additions", value: "05", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "06", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "07", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "02", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "Dhanlaxmi Bank", sector: "Financials", value: "₹920 Cr" },
-      { company: "Precision Camshafts", sector: "Automotive", value: "₹760 Cr" },
-      { company: "Kerala Ayurveda", sector: "Healthcare", value: "₹520 Cr" },
-      { company: "Geojit Financial", sector: "Financials", value: "₹460 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Industrials", value: 24, amount: "₹1,498 Cr", color: "#173a69" },
-      { sector: "Financials", value: 24, amount: "₹1,498 Cr", color: "#1f5ea8" },
-      { sector: "Healthcare", value: 18, amount: "₹1,123 Cr", color: "#317a85" },
-      { sector: "Automotive", value: 16, amount: "₹998 Cr", color: "#5d7392" },
-      { sector: "Others", value: 18, amount: "₹1,123 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "17 Apr 2026", title: "Added Kerala Ayurveda", body: "New thematic healthcare position disclosed at 2.14%." },
-      { date: "04 Apr 2026", title: "Raised Dhanlaxmi Bank holding", body: "Increase extends existing financials thesis." },
-      { date: "22 Mar 2026", title: "Reduced Geojit exposure", body: "Trimmed after a strong move but position remains active." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 42% of portfolio value",
-      body: "Portfolio breadth is higher and conviction is spread across a more eclectic set of names, reducing single-position dominance.",
-      topFive: 42,
-      topTen: 60
-    },
-    themeSummary: {
-      title: "Event-driven and cyclical posture",
-      body: "This mix looks for inflection more than stability, so change status and fresh filings are particularly important context for the team."
-    },
-    notes: [
-      { title: "Watch item", body: "Track whether recent healthcare additions are one-off or the start of a larger sleeve." },
-      { title: "Research angle", body: "Map position changes against balance-sheet improvement and recovery catalysts." },
-      { title: "Behavior", body: "Higher change velocity means quarter-to-quarter portfolio snapshots can shift meaningfully." }
-    ],
-    holdings: [
-      { company: "Dhanlaxmi Bank", sector: "Financials", jun25: 7.88, aug25: 7.88, sep25: 8.04, dec25: 8.36, mar26: 8.91, valueCr: 920, status: "Increased" },
-      { company: "Precision Camshafts", sector: "Automotive", jun25: 4.14, aug25: 4.14, sep25: 4.14, dec25: 4.14, mar26: 4.14, valueCr: 760, status: "Unchanged" },
-      { company: "Kerala Ayurveda", sector: "Healthcare", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 2.14, valueCr: 520, status: "New" },
-      { company: "Geojit Financial", sector: "Financials", jun25: 4.62, aug25: 4.62, sep25: 4.28, dec25: 4.02, mar26: 3.58, valueCr: 460, status: "Reduced" },
-      { company: "Accelya Solutions", sector: "Technology", jun25: 1.04, aug25: 1.04, sep25: 1.04, dec25: 1.04, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "S H Kelkar", sector: "Consumer", jun25: 2.41, aug25: 2.41, sep25: 2.41, dec25: 2.41, mar26: 2.41, valueCr: 430, status: "Unchanged" },
-      { company: "Federal-Mogul Goetze", sector: "Automotive", jun25: 2.56, aug25: 2.56, sep25: 2.81, dec25: 2.81, mar26: 3.12, valueCr: 380, status: "Increased" },
-      { company: "J Kumar Infraprojects", sector: "Infrastructure", jun25: 1.88, aug25: 1.88, sep25: 1.88, dec25: 2.02, mar26: 2.02, valueCr: 320, status: "Increased" },
-      { company: "Techno Electric", sector: "Industrials", jun25: 1.74, aug25: 1.74, sep25: 1.60, dec25: 1.60, mar26: 1.42, valueCr: 290, status: "Reduced" },
-      { company: "Cupid", sector: "Healthcare", jun25: 3.04, aug25: 3.04, sep25: 3.04, dec25: 3.04, mar26: 3.04, valueCr: 260, status: "Unchanged" }
-    ]
-  },
-  {
-    id: "nemish-shah",
-    name: "Nemish Shah",
-    initials: "NS",
-    fund: "ENAM Asset Circle",
-    type: "Fund",
-    worthCr: 15210,
-    holdingsCount: 25,
-    sectorFocus: ["Technology", "Financials", "Industrials"],
-    activity: "Low",
-    description: "Institutional-style portfolio with disciplined exposure across scalable technology, financial, and industrial franchises.",
-    bio: "A steadier disclosure profile with high-quality public market positions and relatively modest quarterly turnover.",
-    activeSince: "1997",
-    style: "Institutional quality growth",
-    concentration: "Medium",
-    keySectors: "Technology, Financials, Industrials",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹15,210 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "25", note: "Disclosed live positions" },
-      { label: "New Additions", value: "01", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "02", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "02", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "01", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "LTIMindtree", sector: "Technology", value: "₹3,640 Cr" },
-      { company: "SBI Cards", sector: "Financials", value: "₹2,480 Cr" },
-      { company: "AIA Engineering", sector: "Industrials", value: "₹1,910 Cr" },
-      { company: "Persistent Systems", sector: "Technology", value: "₹1,720 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Technology", value: 34, amount: "₹5,171 Cr", color: "#173a69" },
-      { sector: "Financials", value: 24, amount: "₹3,650 Cr", color: "#1f5ea8" },
-      { sector: "Industrials", value: 21, amount: "₹3,194 Cr", color: "#317a85" },
-      { sector: "Healthcare", value: 11, amount: "₹1,673 Cr", color: "#5d7392" },
-      { sector: "Others", value: 10, amount: "₹1,522 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "08 Apr 2026", title: "Fresh filing in Max Financial", body: "New financial-services position initiated at 1.01%." },
-      { date: "28 Mar 2026", title: "Trimmed LTIMindtree", body: "Minor trim after a sharp technology rally." },
-      { date: "15 Mar 2026", title: "Raised AIA Engineering", body: "Increase supports continued confidence in industrial exports." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 58% of portfolio value",
-      body: "The portfolio is balanced enough to look institutional, but still concentrated enough for each top position to matter.",
-      topFive: 58,
-      topTen: 77
-    },
-    themeSummary: {
-      title: "Measured quality-first exposure",
-      body: "This book reads as deliberately curated rather than opportunistic, with low turnover and a preference for scalable, durable operators."
-    },
-    notes: [
-      { title: "Watch item", body: "Monitor whether the new financial-services position is scaled up across future filings." },
-      { title: "Research angle", body: "Cross-reference technology trims against relative valuation and broader sector weight." },
-      { title: "Behavior", body: "Low change velocity makes this profile useful as a stability benchmark in compare mode." }
-    ],
-    holdings: [
-      { company: "LTIMindtree", sector: "Technology", jun25: 1.96, aug25: 1.96, sep25: 1.96, dec25: 1.84, mar26: 1.76, valueCr: 3640, status: "Reduced" },
-      { company: "SBI Cards", sector: "Financials", jun25: 1.84, aug25: 1.84, sep25: 1.84, dec25: 1.84, mar26: 1.84, valueCr: 2480, status: "Unchanged" },
-      { company: "AIA Engineering", sector: "Industrials", jun25: 1.21, aug25: 1.21, sep25: 1.21, dec25: 1.34, mar26: 1.46, valueCr: 1910, status: "Increased" },
-      { company: "Persistent Systems", sector: "Technology", jun25: 0.94, aug25: 0.94, sep25: 0.94, dec25: 0.94, mar26: 0.94, valueCr: 1720, status: "Unchanged" },
-      { company: "Max Financial", sector: "Financials", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 1.01, valueCr: 690, status: "New" },
-      { company: "Divi's Labs", sector: "Healthcare", jun25: 0.41, aug25: 0.41, sep25: 0.41, dec25: 0.41, mar26: 0.41, valueCr: 780, status: "Unchanged" },
-      { company: "Coforge", sector: "Technology", jun25: 0.78, aug25: 0.78, sep25: 0.78, dec25: 0.74, mar26: 0.74, valueCr: 920, status: "Reduced" },
-      { company: "SKF India", sector: "Industrials", jun25: 0.66, aug25: 0.66, sep25: 0.73, dec25: 0.81, mar26: 0.81, valueCr: 620, status: "Increased" },
-      { company: "Laurus Labs", sector: "Healthcare", jun25: 0.92, aug25: 0.92, sep25: 0.92, dec25: 0.92, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "ICICI Lombard", sector: "Financials", jun25: 0.51, aug25: 0.51, sep25: 0.51, dec25: 0.51, mar26: 0.51, valueCr: 540, status: "Unchanged" }
-    ]
-  },
-  {
-    id: "sunil-singhania",
-    name: "Sunil Singhania",
-    initials: "SS",
-    fund: "Abakkus Fund",
-    type: "Individual",
-    worthCr: 1950,
-    holdingsCount: 23,
-    sectorFocus: ["Other","Industrials","Consumer"],
-    activity: "High",
-    description: "Portfolio anchored in other, industrials, consumer with 23 disclosed live positions.",
-    bio: "Tracked public-equity portfolio with 23 active holdings and a current disclosed value of ₹1,950 Cr.",
-    activeSince: "—",
-    style: "Diversified equity",
-    concentration: "High",
-    keySectors: "Other, Industrials, Consumer",
-    kpis: [
-      { label: "Total Portfolio Value", value: "₹1,950 Cr", note: "Latest market value estimate" },
-      { label: "Active Holdings", value: "23", note: "Disclosed live positions" },
-      { label: "New Additions", value: "01", note: "Positions initiated this quarter" },
-      { label: "Increased Stakes", value: "01", note: "Meaningful ownership increases" },
-      { label: "Reduced Stakes", value: "06", note: "Portfolio trims" },
-      { label: "Exits / Inactive", value: "04", note: "Exited or filing due" }
-    ],
-    topHoldings: [
-      { company: "IIFL Capital Services Ltd.", sector: "Financials", value: "₹248 Cr" },
-      { company: "Dynamatic Technologies Ltd.", sector: "Industrials", value: "₹236 Cr" },
-      { company: "Jubilant Pharmova Ltd.", sector: "Healthcare", value: "₹173 Cr" },
-      { company: "SPR Auto Technologies Ltd.", sector: "Other", value: "₹158 Cr" }
-    ],
-    sectorAllocation: [
-      { sector: "Other", value: 39, amount: "₹785 Cr", color: "#173a69" },
-      { sector: "Industrials", value: 18, amount: "₹344 Cr", color: "#1f5ea8" },
-      { sector: "Consumer", value: 14, amount: "₹269 Cr", color: "#317a85" },
-      { sector: "Financials", value: 13, amount: "₹248 Cr", color: "#5d7392" },
-      { sector: "Others", value: 16, amount: "₹303 Cr", color: "#9db0c8" }
-    ],
-    timeline: [
-      { date: "18 Apr 2026", title: "New disclosure in Sejal Glass Ltd.", body: "Fresh 4.39% position adds other exposure." },
-      { date: "07 Apr 2026", title: "Increased position in The Anup Engineering Ltd.", body: "Stake moved to 3.58% from 3.55%." },
-      { date: "28 Mar 2026", title: "Reduced IIFL Capital Services Ltd. stake", body: "Trimmed ownership while retaining a residual position." },
-      { date: "16 Mar 2026", title: "Exited Sarda Energy & Minerals Ltd.", body: "Position no longer disclosed in the latest filing." }
-    ],
-    concentrationSummary: {
-      title: "Top 5 holdings account for 50% of portfolio value",
-      body: "Portfolio carries meaningful concentration in the top names while retaining breadth elsewhere.",
-      topFive: 50,
-      topTen: 76
-    },
-    themeSummary: {
-      title: "Concentrated conviction book",
-      body: "The current mix leans into other, industrials, consumer. Turnover is measured rather than tactical, with sizing weighted toward the highest-conviction names."
-    },
-    notes: [
-      { title: "Portfolio profile", body: "High concentration with primary exposure across other, industrials, consumer." },
-      { title: "Watch item", body: "Track whether top sector exposure expands or trims further in the next disclosure cycle." },
-      { title: "Research angle", body: "Cross-check incremental adds against earnings momentum and management commentary." }
-    ],
-    holdings: [
-      { company: "BirlaNu Ltd.", sector: "Industrials", jun25: null, aug25: null, sep25: null, dec25: null, mar26: null, valueCr: 0, status: "Unchanged" },
-      { company: "Carysil Ltd.", sector: "Consumer", jun25: 5.34, aug25: null, sep25: 5.34, dec25: 5.34, mar26: 5.34, valueCr: 137, status: "Unchanged" },
-      { company: "DCM Shriram Industries Ltd.", sector: "Conglomerate", jun25: 2.86, aug25: null, sep25: 2.86, dec25: 2.86, mar26: 2.86, valueCr: 10, status: "Unchanged" },
-      { company: "Dynamatic Technologies Ltd.", sector: "Industrials", jun25: 2.94, aug25: null, sep25: 2.94, dec25: 2.94, mar26: 2.94, valueCr: 236, status: "Unchanged" },
-      { company: "H.G. Infra Engineering Ltd.", sector: "Infrastructure", jun25: 1.36, aug25: null, sep25: 1.36, dec25: 1.36, mar26: 1.36, valueCr: 53, status: "Unchanged" },
-      { company: "Hindware Home Innovation Ltd.", sector: "Consumer", jun25: 4.56, aug25: null, sep25: 4.56, dec25: 4.56, mar26: 4.56, valueCr: 86, status: "Unchanged" },
-      { company: "IIFL Capital Services Ltd.", sector: "Financials", jun25: 2.5, aug25: null, sep25: 2.5, dec25: 2.49, mar26: 2.49, valueCr: 248, status: "Reduced" },
-      { company: "Ion Exchange (India) Ltd.", sector: "Industrials", jun25: 1.92, aug25: null, sep25: 1.85, dec25: 1.85, mar26: 1.85, valueCr: 108, status: "Reduced" },
-      { company: "J Kumar Infraprojects Ltd.", sector: "Other", jun25: 2.48, aug25: null, sep25: 2.48, dec25: 2.48, mar26: 2.48, valueCr: 97, status: "Unchanged" },
-      { company: "Jubilant Pharmova Ltd.", sector: "Healthcare", jun25: 1.15, aug25: null, sep25: 1.15, dec25: 1.15, mar26: 1.15, valueCr: 173, status: "Unchanged" },
-      { company: "Mastek Ltd.", sector: "Technology", jun25: 2.81, aug25: null, sep25: 2.85, dec25: 2.77, mar26: 1.27, valueCr: 67, status: "Reduced" },
-      { company: "Rupa & Company Ltd.", sector: "Consumer", jun25: 4.2, aug25: null, sep25: 3.98, dec25: 3.98, mar26: 3.72, valueCr: 46, status: "Reduced" },
-      { company: "Sarda Energy & Minerals Ltd.", sector: "Other", jun25: 1.45, aug25: null, sep25: 1.06, dec25: null, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "Siyaram Silk Mills Ltd.", sector: "Other", jun25: 1.59, aug25: null, sep25: 1.59, dec25: 1.59, mar26: 1.59, valueCr: 41, status: "Unchanged" },
-      { company: "SPR Auto Technologies Ltd.", sector: "Other", jun25: 1.03, aug25: null, sep25: 1.03, dec25: 1.03, mar26: 1.03, valueCr: 158, status: "Unchanged" },
-      { company: "Stylam Industries Ltd.", sector: "Other", jun25: 2.09, aug25: null, sep25: 2.09, dec25: 2.09, mar26: 2.09, valueCr: 79, status: "Unchanged" },
-      { company: "Technocraft Industries (India) Ltd.", sector: "Other", jun25: 2.36, aug25: null, sep25: null, dec25: 2.36, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "The Anup Engineering Ltd.", sector: "Other", jun25: 3.55, aug25: null, sep25: 3.55, dec25: 3.55, mar26: 3.58, valueCr: 151, status: "Increased" },
-      { company: "TTK Healthcare Ltd.", sector: "Other", jun25: 1.13, aug25: null, sep25: 1.13, dec25: null, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "Ethos Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: null, mar26: null, valueCr: 0, status: "Unchanged" },
-      { company: "Himatsingka Seide Ltd.", sector: "Other", jun25: 5.53, aug25: null, sep25: 5.53, dec25: 5.53, mar26: 4.33, valueCr: 48, status: "Reduced" },
-      { company: "Mangal Electrical Industries Ltd.", sector: "Other", jun25: null, aug25: 2.89, sep25: 2.89, dec25: 2.89, mar26: 2.89, valueCr: 23, status: "Unchanged" },
-      { company: "Indogulf Cropsciences Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 4.02, dec25: 4.02, mar26: 4.02, valueCr: 16, status: "Unchanged" },
-      { company: "Jaro Institute of Technology Management and Research Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 2.28, dec25: 2.28, mar26: 2.28, valueCr: 21, status: "Unchanged" },
-      { company: "M&B Engineering Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 2.03, dec25: 2.03, mar26: 2.03, valueCr: 37, status: "Unchanged" },
-      { company: "Suven Life Sciences Ltd.", sector: "Other", jun25: null, aug25: null, sep25: 1.31, dec25: 1.31, mar26: 1.13, valueCr: 60, status: "Reduced" },
-      { company: "DCM Shriram Fine Chemicals Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: 2.86, mar26: null, valueCr: 0, status: "Exited" },
-      { company: "DCM Shriram International Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: 2.86, mar26: 2.86, valueCr: 16, status: "Unchanged" },
-      { company: "Sejal Glass Ltd.", sector: "Other", jun25: null, aug25: null, sep25: null, dec25: null, mar26: 4.39, valueCr: 38, status: "New" }
-    ]
+let investors = [];
+const QUARTER_KEYS = ["jun25", "aug25", "sep25", "dec25", "mar26"];
+const SECTOR_PALETTE = ["#173a69", "#1f5ea8", "#317a85", "#5d7392", "#9db0c8", "#7a4a86", "#b07a3a", "#3a7a5d"];
+
+async function loadInvestors() {
+  const registryRes = await fetch("./investors.json", { cache: "no-store" });
+  if (!registryRes.ok) throw new Error("investors.json fetch failed");
+  const registry = await registryRes.json();
+  const enriched = await Promise.all(
+    registry.map(async (entry) => {
+      const slug = slugifyInvestorKey(entry.name || entry.fund);
+      try {
+        const detailRes = await fetch(`./data/investors/${slug}.json`, { cache: "no-store" });
+        if (!detailRes.ok) return null;
+        const detail = await detailRes.json();
+        return enrichInvestor(entry, detail, slug);
+      } catch (err) {
+        console.error(`Failed to load investor ${slug}:`, err);
+        return null;
+      }
+    })
+  );
+  return enriched.filter(Boolean);
+}
+
+function slugifyInvestorKey(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function initialsFor(s) {
+  const out = String(s || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0].toUpperCase())
+    .join("");
+  return out || "—";
+}
+
+function pad2(n) {
+  return String(n || 0).padStart(2, "0");
+}
+
+function enrichInvestor(reg, detail, slug) {
+  const rawHoldings = Array.isArray(detail.holdings) ? detail.holdings : [];
+  const holdings = rawHoldings.map((h) => {
+    const stakes = h.stakes || {};
+    return {
+      company: h.company,
+      sector: h.sector || "Other",
+      jun25: stakes.jun25 ?? null,
+      aug25: stakes.aug25 ?? null,
+      sep25: stakes.sep25 ?? null,
+      dec25: stakes.dec25 ?? null,
+      mar26: stakes.mar26 ?? null,
+      valueCr: Number(h.valueCr) || 0,
+      status: computeHoldingStatus(stakes)
+    };
+  });
+
+  const totalValue = holdings.reduce((s, h) => s + h.valueCr, 0);
+  const sectorTotals = aggregateBySector(holdings);
+  const sectorFocus = sectorTotals.slice(0, 3).map((s) => s.sector);
+  const counts = countStatuses(holdings);
+  const holdingsActive = holdings.filter((h) => h.status !== "Exited").length;
+
+  const sectorAllocation = buildSectorAllocation(sectorTotals, totalValue);
+  const concentration = concentrationLabel(sectorAllocation);
+  const concentrationSummary = buildConcentrationSummary(holdings, totalValue);
+  const themeSummary = buildThemeSummary(sectorFocus, concentration);
+  const timeline = buildTimeline(holdings);
+  const notes = buildNotes(sectorFocus, concentration);
+
+  const worthCr = Number(detail.worthCr) || 0;
+  const topHoldings = holdings
+    .filter((h) => h.valueCr > 0)
+    .sort((a, b) => b.valueCr - a.valueCr)
+    .slice(0, 4)
+    .map((h) => ({ company: h.company, sector: h.sector, value: currencyCr(h.valueCr) }));
+
+  const kpis = [
+    { label: "Total Portfolio Value", value: currencyCr(worthCr), note: "Latest market value estimate" },
+    { label: "Active Holdings", value: pad2(holdingsActive), note: "Disclosed live positions" },
+    { label: "New Additions", value: pad2(counts.New || 0), note: "Positions initiated this quarter" },
+    { label: "Increased Stakes", value: pad2(counts.Increased || 0), note: "Meaningful ownership increases" },
+    { label: "Reduced Stakes", value: pad2(counts.Reduced || 0), note: "Portfolio trims" },
+    { label: "Exits / Inactive", value: pad2(counts.Exited || 0), note: "Exited or filing due" }
+  ];
+
+  const focusList = sectorFocus.join(", ").toLowerCase() || "diversified sectors";
+
+  return {
+    id: slug,
+    name: reg.name || "",
+    fund: reg.fund || "",
+    initials: initialsFor(reg.name || reg.fund),
+    type: detail.type || "Individual",
+    sourceUrl: reg.url || "",
+    lastScrapedAt: detail.lastScrapedAt || null,
+    worthCr,
+    holdingsCount: holdingsActive,
+    sectorFocus,
+    activity: activityLabel(counts),
+    description: `Portfolio anchored in ${focusList} with ${holdingsActive} disclosed live positions.`,
+    bio: `Tracked public-equity portfolio with ${holdingsActive} active holdings and a current disclosed value of ${currencyCr(worthCr)}.`,
+    activeSince: detail.activeSince || "—",
+    style: detail.style || "Diversified equity",
+    concentration,
+    keySectors: sectorFocus.join(", ") || "—",
+    kpis,
+    topHoldings,
+    sectorAllocation,
+    timeline,
+    concentrationSummary,
+    themeSummary,
+    notes,
+    holdings
+  };
+}
+
+function computeHoldingStatus(stakes) {
+  const series = QUARTER_KEYS.map((k) => stakes[k] ?? null);
+  const present = series.map((v) => v !== null);
+  if (present.every((p) => !p)) return "Unchanged";
+
+  const latest = series[series.length - 1];
+  const earlier = series.slice(0, -1);
+  const earlierPresent = earlier.some((v) => v !== null);
+
+  if (latest === null && earlierPresent) return "Exited";
+  if (latest !== null && !earlierPresent) return "New";
+
+  const earliest = series.find((v) => v !== null);
+  if (earliest === undefined || latest === null) return "Unchanged";
+  const diff = latest - earliest;
+  if (Math.abs(diff) < 0.005) return "Unchanged";
+  return diff > 0 ? "Increased" : "Reduced";
+}
+
+function aggregateBySector(holdings) {
+  const map = new Map();
+  for (const h of holdings) map.set(h.sector, (map.get(h.sector) || 0) + h.valueCr);
+  return [...map.entries()].map(([sector, value]) => ({ sector, value })).sort((a, b) => b.value - a.value);
+}
+
+function buildSectorAllocation(sectorTotals, totalValue) {
+  if (totalValue <= 0) return [];
+  const top = sectorTotals.slice(0, 4);
+  const rest = sectorTotals.slice(4);
+  const restSum = rest.reduce((s, x) => s + x.value, 0);
+  const entries = top.map((s, i) => ({
+    sector: s.sector,
+    value: Math.round((s.value / totalValue) * 100),
+    amount: currencyCr(s.value),
+    color: SECTOR_PALETTE[i]
+  }));
+  if (restSum > 0) {
+    entries.push({
+      sector: "Others",
+      value: Math.round((restSum / totalValue) * 100),
+      amount: currencyCr(restSum),
+      color: SECTOR_PALETTE[Math.min(top.length, SECTOR_PALETTE.length - 1)]
+    });
   }
-];
+  const drift = 100 - entries.reduce((s, e) => s + e.value, 0);
+  if (entries.length && drift !== 0) entries[0].value += drift;
+  return entries;
+}
+
+function buildConcentrationSummary(holdings, totalValue) {
+  if (totalValue <= 0) {
+    return { title: "Insufficient data", body: "Holdings have no disclosed market value.", topFive: 0, topTen: 0 };
+  }
+  const sorted = [...holdings].sort((a, b) => b.valueCr - a.valueCr);
+  const top5 = sorted.slice(0, 5).reduce((s, h) => s + h.valueCr, 0);
+  const top10 = sorted.slice(0, 10).reduce((s, h) => s + h.valueCr, 0);
+  const top5Pct = Math.round((top5 / totalValue) * 100);
+  const top10Pct = Math.round((top10 / totalValue) * 100);
+  const body = top5Pct > 60
+    ? "Portfolio is deliberately concentrated, with the leading positions doing most of the heavy lifting."
+    : top5Pct > 45
+      ? "Portfolio carries meaningful concentration in the top names while retaining breadth elsewhere."
+      : "Portfolio is broadly diversified with no single position dominating the book.";
+  return { title: `Top 5 holdings account for ${top5Pct}% of portfolio value`, body, topFive: top5Pct, topTen: top10Pct };
+}
+
+function buildThemeSummary(sectorFocus, concentration) {
+  const sectorList = sectorFocus.join(", ").toLowerCase() || "diversified sectors";
+  if (concentration === "High") {
+    return { title: "Concentrated conviction book", body: `The current mix leans into ${sectorList}. Turnover is measured rather than tactical.` };
+  }
+  if (concentration === "Medium") {
+    return { title: "Balanced sector exposure", body: `Exposure is distributed across ${sectorList}, leaving room for tactical trims without changing the overall posture.` };
+  }
+  return { title: "Diversified opportunity book", body: `Wider breadth across ${sectorList} suits an exploratory style.` };
+}
+
+function buildTimeline(holdings) {
+  const today = new Date();
+  const fmt = (d) => d.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+  const recent = (offset) => { const d = new Date(today); d.setDate(d.getDate() - offset); return fmt(d); };
+  const events = [];
+  const news = holdings.filter((h) => h.status === "New").slice(0, 1);
+  const ups = holdings.filter((h) => h.status === "Increased").sort((a, b) => (b.mar26 || 0) - (a.mar26 || 0)).slice(0, 1);
+  const downs = holdings.filter((h) => h.status === "Reduced").slice(0, 1);
+  const exits = holdings.filter((h) => h.status === "Exited").slice(0, 1);
+  for (const h of news) events.push({ date: recent(7), title: `New disclosure in ${h.company}`, body: `Fresh ${h.mar26 != null ? h.mar26.toFixed(2) : "0.00"}% position adds ${h.sector.toLowerCase()} exposure.` });
+  for (const h of ups) {
+    const earlier = [h.jun25, h.aug25, h.sep25, h.dec25].find((v) => v !== null);
+    events.push({ date: recent(18), title: `Increased position in ${h.company}`, body: `Stake moved to ${h.mar26 != null ? h.mar26.toFixed(2) : "—"}% from ${earlier !== undefined && earlier !== null ? earlier.toFixed(2) : "—"}%.` });
+  }
+  for (const h of downs) events.push({ date: recent(28), title: `Reduced ${h.company} stake`, body: "Trimmed ownership while retaining a residual position." });
+  for (const h of exits) events.push({ date: recent(40), title: `Exited ${h.company}`, body: "Position no longer disclosed in the latest filing." });
+  if (!events.length) events.push({ date: recent(14), title: "Portfolio largely unchanged", body: "No material position-level changes disclosed in the most recent filing." });
+  return events;
+}
+
+function buildNotes(sectorFocus, concentration) {
+  const focusList = sectorFocus.join(", ").toLowerCase() || "diversified sectors";
+  return [
+    { title: "Portfolio profile", body: `${concentration} concentration with primary exposure across ${focusList}.` },
+    { title: "Watch item", body: "Track whether top sector exposure expands or trims further in the next disclosure cycle." },
+    { title: "Research angle", body: "Cross-check incremental adds against earnings momentum and management commentary." }
+  ];
+}
+
+function countStatuses(holdings) {
+  const c = { New: 0, Increased: 0, Reduced: 0, Unchanged: 0, Exited: 0 };
+  for (const h of holdings) c[h.status] = (c[h.status] || 0) + 1;
+  return c;
+}
+
+function activityLabel(counts) {
+  const churn = (counts.New || 0) + (counts.Increased || 0) + (counts.Reduced || 0) + (counts.Exited || 0);
+  if (churn >= 6) return "High";
+  if (churn >= 3) return "Medium";
+  return "Low";
+}
+
+function concentrationLabel(allocation) {
+  if (!allocation.length) return "Medium";
+  const top = allocation[0].value;
+  if (top >= 35) return "High";
+  if (top >= 22) return "Medium";
+  return "Low";
+}
 
 const directoryView = document.querySelector("#directory-view");
 const profileView = document.querySelector("#profile-view");
@@ -564,8 +302,8 @@ const compareList = document.querySelector("#compare-list");
 const drawerBackdrop = document.querySelector("#drawer-backdrop");
 
 const state = {
-  selectedInvestorId: investors[0].id,
-  compareIds: [investors[0].id, investors[1].id],
+  selectedInvestorId: null,
+  compareIds: [],
   directorySearch: "",
   directoryFilters: {
     type: "All Types",
@@ -588,7 +326,7 @@ const directoryOptions = {
   type: ["All Types", "Individual", "Fund"],
   worth: ["All Net Worth", "Above ₹25,000 Cr", "₹10,000 Cr to ₹25,000 Cr", "Below ₹10,000 Cr"],
   holdings: ["All Counts", "10 to 20", "21 to 30", "31+"],
-  sector: ["All Sectors", ...new Set(investors.flatMap((investor) => investor.sectorFocus))],
+  sector: ["All Sectors"],
   activity: ["All Activity", "High", "Medium", "Low"],
   sort: ["Net Worth", "Latest Activity", "Alphabetically", "Number of Holdings"]
 };
@@ -630,8 +368,8 @@ function applyDirectoryFilters() {
     const search = state.directorySearch.toLowerCase();
     const matchesSearch =
       !search ||
-      investor.name.toLowerCase().includes(search) ||
-      investor.fund.toLowerCase().includes(search) ||
+      (investor.name || "").toLowerCase().includes(search) ||
+      (investor.fund || "").toLowerCase().includes(search) ||
       investor.sectorFocus.join(" ").toLowerCase().includes(search) ||
       investor.holdings.some((holding) => holding.company.toLowerCase().includes(search));
 
@@ -670,7 +408,7 @@ function applyDirectoryFilters() {
   result = result.sort((a, b) => {
     switch (state.directoryFilters.sort) {
       case "Alphabetically":
-        return a.name.localeCompare(b.name);
+        return (a.name || a.fund || "").localeCompare(b.name || b.fund || "");
       case "Latest Activity":
         return latestActivityScore(b.activity) - latestActivityScore(a.activity);
       case "Number of Holdings":
@@ -695,8 +433,8 @@ function directoryCard(investor) {
       <div class="investor-card__top">
         <div class="portrait-ring" data-initials="${investor.initials}" aria-hidden="true"></div>
         <div class="investor-card__meta">
-          <h3 class="investor-card__name">${investor.name}</h3>
-          <strong>${investor.fund}</strong>
+          <h3 class="investor-card__name">${investor.name || investor.fund}</h3>
+          <strong>${investor.name && investor.fund ? investor.fund : ""}</strong>
           <p class="investor-card__summary">${investor.description}</p>
         </div>
       </div>
@@ -774,8 +512,8 @@ function renderSelectionSummary() {
   }
 
   selectionSummary.innerHTML = `
-    <strong>${investor.name}</strong>
-    <p>${investor.fund}</p>
+    <strong>${investor.name || investor.fund}</strong>
+    <p>${investor.name && investor.fund ? investor.fund : ""}</p>
     <p>${currencyCr(investor.worthCr)} across ${investor.holdingsCount} active holdings.</p>
   `;
 }
@@ -847,10 +585,11 @@ function buildDonutGradient(allocation) {
 
 function renderProfile(investorId) {
   const investor = investors.find((item) => item.id === investorId) ?? investors[0];
+  if (!investor) return;
   state.selectedInvestorId = investor.id;
 
-  profileEls.title.textContent = investor.name;
-  profileEls.fund.textContent = investor.fund;
+  profileEls.title.textContent = investor.name || investor.fund;
+  profileEls.fund.textContent = investor.name && investor.fund ? investor.fund : "";
   profileEls.summary.textContent = investor.bio;
   profileEls.portrait.dataset.initials = investor.initials;
   profileEls.worth.textContent = currencyCr(investor.worthCr);
@@ -1169,8 +908,8 @@ function renderCompareDrawer() {
           <div class="compare-item__top">
             <div class="portrait-ring" data-initials="${investor.initials}" aria-hidden="true"></div>
             <div>
-              <strong>${investor.name}</strong>
-              <div class="mini-list__sub">${investor.fund}</div>
+              <strong>${investor.name || investor.fund}</strong>
+              <div class="mini-list__sub">${investor.name && investor.fund ? investor.fund : ""}</div>
             </div>
             <button class="text-button compare-remove" type="button" data-id="${investor.id}">Remove</button>
           </div>
@@ -2084,7 +1823,18 @@ function setupAgentsEvents() {
   });
 }
 
-function init() {
+async function init() {
+  try {
+    investors = await loadInvestors();
+  } catch (err) {
+    console.error("Failed to load investors:", err);
+    investors = [];
+  }
+  if (investors.length) {
+    state.selectedInvestorId = investors[0].id;
+    state.compareIds = investors.slice(0, 2).map((inv) => inv.id);
+    directoryOptions.sector = ["All Sectors", ...new Set(investors.flatMap((inv) => inv.sectorFocus))];
+  }
   populateDirectoryFilters();
   setupTabs();
   attachGlobalEvents();
@@ -2093,7 +1843,9 @@ function init() {
   setupAgentsEvents();
   syncGlobalSearch();
   renderDirectory();
-  renderProfile(state.selectedInvestorId);
+  if (state.selectedInvestorId) {
+    renderProfile(state.selectedInvestorId);
+  }
 }
 
 init();

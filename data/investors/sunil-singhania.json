@@ -1,0 +1,357 @@
+{
+  "lastScrapedAt": null,
+  "worthCr": 1950,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "BirlaNu Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Carysil Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 5.34,
+        "aug25": null,
+        "sep25": 5.34,
+        "dec25": 5.34,
+        "mar26": 5.34
+      },
+      "valueCr": 137
+    },
+    {
+      "company": "DCM Shriram Industries Ltd.",
+      "sector": "Conglomerate",
+      "stakes": {
+        "jun25": 2.86,
+        "aug25": null,
+        "sep25": 2.86,
+        "dec25": 2.86,
+        "mar26": 2.86
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Dynamatic Technologies Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 2.94,
+        "aug25": null,
+        "sep25": 2.94,
+        "dec25": 2.94,
+        "mar26": 2.94
+      },
+      "valueCr": 236
+    },
+    {
+      "company": "H.G. Infra Engineering Ltd.",
+      "sector": "Infrastructure",
+      "stakes": {
+        "jun25": 1.36,
+        "aug25": null,
+        "sep25": 1.36,
+        "dec25": 1.36,
+        "mar26": 1.36
+      },
+      "valueCr": 53
+    },
+    {
+      "company": "Hindware Home Innovation Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 4.56,
+        "aug25": null,
+        "sep25": 4.56,
+        "dec25": 4.56,
+        "mar26": 4.56
+      },
+      "valueCr": 86
+    },
+    {
+      "company": "IIFL Capital Services Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 2.5,
+        "aug25": null,
+        "sep25": 2.5,
+        "dec25": 2.49,
+        "mar26": 2.49
+      },
+      "valueCr": 248
+    },
+    {
+      "company": "Ion Exchange (India) Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 1.92,
+        "aug25": null,
+        "sep25": 1.85,
+        "dec25": 1.85,
+        "mar26": 1.85
+      },
+      "valueCr": 108
+    },
+    {
+      "company": "J Kumar Infraprojects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.48,
+        "aug25": null,
+        "sep25": 2.48,
+        "dec25": 2.48,
+        "mar26": 2.48
+      },
+      "valueCr": 97
+    },
+    {
+      "company": "Jubilant Pharmova Ltd.",
+      "sector": "Healthcare",
+      "stakes": {
+        "jun25": 1.15,
+        "aug25": null,
+        "sep25": 1.15,
+        "dec25": 1.15,
+        "mar26": 1.15
+      },
+      "valueCr": 173
+    },
+    {
+      "company": "Mastek Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 2.81,
+        "aug25": null,
+        "sep25": 2.85,
+        "dec25": 2.77,
+        "mar26": 1.27
+      },
+      "valueCr": 67
+    },
+    {
+      "company": "Rupa & Company Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 4.2,
+        "aug25": null,
+        "sep25": 3.98,
+        "dec25": 3.98,
+        "mar26": 3.72
+      },
+      "valueCr": 46
+    },
+    {
+      "company": "Sarda Energy & Minerals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.45,
+        "aug25": null,
+        "sep25": 1.06,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Siyaram Silk Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.59,
+        "aug25": null,
+        "sep25": 1.59,
+        "dec25": 1.59,
+        "mar26": 1.59
+      },
+      "valueCr": 41
+    },
+    {
+      "company": "SPR Auto Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": null,
+        "sep25": 1.03,
+        "dec25": 1.03,
+        "mar26": 1.03
+      },
+      "valueCr": 158
+    },
+    {
+      "company": "Stylam Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.09,
+        "aug25": null,
+        "sep25": 2.09,
+        "dec25": 2.09,
+        "mar26": 2.09
+      },
+      "valueCr": 79
+    },
+    {
+      "company": "Technocraft Industries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.36,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.36,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "The Anup Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.55,
+        "aug25": null,
+        "sep25": 3.55,
+        "dec25": 3.55,
+        "mar26": 3.58
+      },
+      "valueCr": 151
+    },
+    {
+      "company": "TTK Healthcare Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ethos Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Himatsingka Seide Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.53,
+        "aug25": null,
+        "sep25": 5.53,
+        "dec25": 5.53,
+        "mar26": 4.33
+      },
+      "valueCr": 48
+    },
+    {
+      "company": "Mangal Electrical Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 2.89,
+        "sep25": 2.89,
+        "dec25": 2.89,
+        "mar26": 2.89
+      },
+      "valueCr": 23
+    },
+    {
+      "company": "Indogulf Cropsciences Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 4.02,
+        "dec25": 4.02,
+        "mar26": 4.02
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Jaro Institute of Technology Management and Research Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.28,
+        "dec25": 2.28,
+        "mar26": 2.28
+      },
+      "valueCr": 21
+    },
+    {
+      "company": "M&B Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.03,
+        "dec25": 2.03,
+        "mar26": 2.03
+      },
+      "valueCr": 37
+    },
+    {
+      "company": "Suven Life Sciences Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.31,
+        "dec25": 1.31,
+        "mar26": 1.13
+      },
+      "valueCr": 60
+    },
+    {
+      "company": "DCM Shriram Fine Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.86,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "DCM Shriram International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.86,
+        "mar26": 2.86
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Sejal Glass Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 4.39
+      },
+      "valueCr": 38
+    }
+  ]
+}

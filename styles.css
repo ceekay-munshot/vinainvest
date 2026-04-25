@@ -335,9 +335,18 @@ select:focus-visible,
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
-  align-items: end;
+  align-items: center;
   padding: 32px;
   margin-bottom: 24px;
+}
+
+.page-intro h1 {
+  max-width: none;
+}
+
+.page-intro .page-subtitle {
+  max-width: 70ch;
+  margin-top: 12px;
 }
 
 .eyebrow,

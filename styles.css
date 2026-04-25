@@ -269,6 +269,33 @@ select:focus-visible,
   min-width: 180px;
 }
 
+.bookmark-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(244, 184, 50, 0.18);
+  color: #b07a3a;
+  font-size: 1rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.investor-card {
+  position: relative;
+}
+
+.ghost-button.is-bookmarked {
+  background: rgba(244, 184, 50, 0.18);
+  color: #8a5a1f;
+  border-color: rgba(244, 184, 50, 0.5);
+}
+
 .ghost-button,
 .primary-button,
 .text-button,

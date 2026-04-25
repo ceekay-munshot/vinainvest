@@ -326,8 +326,37 @@ const state = {
   holdingsSort: {
     key: "valueCr",
     direction: "desc"
-  }
+  },
+  bookmarks: new Set()
 };
+
+const BOOKMARKS_KEY = "vinainvest_bookmarks_v1";
+
+function loadBookmarks() {
+  try {
+    const raw = localStorage.getItem(BOOKMARKS_KEY);
+    return new Set(raw ? JSON.parse(raw) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveBookmarks() {
+  try {
+    localStorage.setItem(BOOKMARKS_KEY, JSON.stringify([...state.bookmarks]));
+  } catch {
+    /* ignore quota / disabled storage */
+  }
+}
+
+function updateBookmarkButton() {
+  const btn = document.querySelector("#profile-bookmark");
+  if (!btn) return;
+  const isBookmarked = state.bookmarks.has(state.selectedInvestorId);
+  btn.textContent = isBookmarked ? "★ Bookmarked" : "☆ Bookmark";
+  btn.classList.toggle("is-bookmarked", isBookmarked);
+  btn.setAttribute("aria-pressed", String(isBookmarked));
+}
 
 const directoryOptions = {
   type: ["All Types", "Individual", "Fund"],
@@ -435,8 +464,14 @@ function directoryCard(investor) {
     .map((sector) => `<span class="sector-chip">${sector}</span>`)
     .join("");
 
+  const isBookmarked = state.bookmarks.has(investor.id);
+  const bookmarkBadge = isBookmarked
+    ? '<span class="bookmark-badge" title="Bookmarked" aria-label="Bookmarked">★</span>'
+    : "";
+
   return `
     <article class="investor-card ${state.selectedInvestorId === investor.id ? "is-selected" : ""}" data-id="${investor.id}">
+      ${bookmarkBadge}
       <div class="investor-card__top">
         <div class="portrait-ring" data-initials="${investor.initials}" aria-hidden="true"></div>
         <div class="investor-card__meta">
@@ -622,6 +657,7 @@ function renderProfile(investorId) {
   const investor = investors.find((item) => item.id === investorId) ?? investors[0];
   if (!investor) return;
   state.selectedInvestorId = investor.id;
+  updateBookmarkButton();
 
   profileEls.title.textContent = investor.name || investor.fund;
   profileEls.fund.textContent = investor.name && investor.fund ? investor.fund : "";
@@ -1072,6 +1108,16 @@ function attachGlobalEvents() {
   drawerBackdrop.addEventListener("click", () => toggleCompareDrawer(false));
 
   document.querySelector("#profile-refresh").addEventListener("click", handleRefreshClick);
+
+  document.querySelector("#profile-bookmark").addEventListener("click", () => {
+    const id = state.selectedInvestorId;
+    if (!id) return;
+    if (state.bookmarks.has(id)) state.bookmarks.delete(id);
+    else state.bookmarks.add(id);
+    saveBookmarks();
+    updateBookmarkButton();
+    renderDirectory();
+  });
 }
 
 async function handleRefreshClick() {
@@ -1126,6 +1172,7 @@ function showRefreshStatus(el, message, tone, allowHtml = false) {
 
 
 async function init() {
+  state.bookmarks = loadBookmarks();
   try {
     investors = await loadInvestors();
   } catch (err) {

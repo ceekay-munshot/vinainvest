@@ -182,7 +182,7 @@
             <div class="hero-card__meta">
               <div class="meta-grid" id="profile-meta-grid"></div>
               <div class="hero-actions">
-                <button class="ghost-button" type="button">Bookmark</button>
+                <button class="ghost-button" type="button" id="profile-bookmark">Bookmark</button>
                 <button class="ghost-button" type="button" id="profile-compare">Compare</button>
                 <button class="ghost-button" type="button" id="profile-refresh" title="Re-scrape latest holdings from source URL">Refresh</button>
                 <button class="ghost-button" type="button">Export</button>
@@ -202,7 +202,7 @@
                     <p class="panel-kicker">Top Holdings</p>
                     <h2>Largest positions by current value</h2>
                   </div>
-                  <button class="text-button" type="button">View full table</button>
+                  <button class="text-button" type="button" id="view-full-holdings" data-tab-target="holdings-panel">View full table</button>
                 </div>
                 <div class="mini-list" id="top-holdings-list"></div>
               </article>

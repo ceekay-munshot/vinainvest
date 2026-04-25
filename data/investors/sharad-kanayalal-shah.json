@@ -1,0 +1,345 @@
+{
+  "lastScrapedAt": "2026-04-25T11:28:41.421Z",
+  "worthCr": 113,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Ambalal Sarabhai Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.06,
+        "aug25": null,
+        "sep25": 1.28,
+        "dec25": 1.34,
+        "mar26": 1.42
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Aspinwall And Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": null,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.18
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Barak Valley Cements Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.3,
+        "aug25": null,
+        "sep25": 1.3,
+        "dec25": 1.3,
+        "mar26": 1.3
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Brahmaputra Infrastructure Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": null,
+        "sep25": 1.09,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Cenlub Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1,
+        "aug25": null,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Diamines & Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.54,
+        "aug25": null,
+        "sep25": 3.54,
+        "dec25": 3.54,
+        "mar26": 3.29
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Gujarat Apollo Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.38,
+        "aug25": null,
+        "sep25": 2.38,
+        "dec25": 2.56,
+        "mar26": 2.56
+      },
+      "valueCr": 14
+    },
+    {
+      "company": "High Energy Batteries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Indo-National Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.36,
+        "aug25": null,
+        "sep25": 5.36,
+        "dec25": 5.36,
+        "mar26": 5.36
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "JostS Engineering Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 11.21,
+        "aug25": null,
+        "sep25": 4.44,
+        "dec25": 4.44,
+        "mar26": 4.44
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Mazda Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.06,
+        "aug25": null,
+        "sep25": 3.06,
+        "dec25": 3.06,
+        "mar26": 3.06
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Mercury Laboratories Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.11,
+        "aug25": null,
+        "sep25": 1.11,
+        "dec25": 1.11,
+        "mar26": 1.11
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "MM Rubber Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.93,
+        "aug25": null,
+        "sep25": 1.93,
+        "dec25": 1.93,
+        "mar26": 1.93
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Prevest Denpro Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": null,
+        "sep25": 1.08,
+        "dec25": 1.08,
+        "mar26": 1.08
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Samrat Pharmachem Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": 1.13,
+        "mar26": 1.13
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "SPEL Semiconductor Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.17
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "The Sandesh Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": null,
+        "sep25": 1.25,
+        "dec25": 1.25,
+        "mar26": 1.25
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Veljan Denison Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "WEP Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.57,
+        "aug25": null,
+        "sep25": 7.57,
+        "dec25": null,
+        "mar26": 7.6
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "WH Brady & Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": null,
+        "sep25": 1.09,
+        "dec25": 1.09,
+        "mar26": 1.15
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "DMR Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.05,
+        "dec25": null,
+        "mar26": 1.05
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Laffans Petrochemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.06,
+        "aug25": null,
+        "sep25": 1.06,
+        "dec25": 1.06,
+        "mar26": 1.06
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rasandik Engineering Industries India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1,
+        "aug25": null,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Revathi Equipment India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.02,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.1
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Kanchi Karpooram Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.12,
+        "dec25": 1.12,
+        "mar26": 1.09
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Timescan Logistics (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1,
+        "dec25": null,
+        "mar26": 1
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ahlada Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.43
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Panasonic Carbon India Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.02
+      },
+      "valueCr": 2
+    }
+  ]
+}

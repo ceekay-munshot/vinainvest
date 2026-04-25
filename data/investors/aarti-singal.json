@@ -1,0 +1,93 @@
+{
+  "lastScrapedAt": "2026-04-25T11:08:53.149Z",
+  "worthCr": 2,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Blue Chip India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": null,
+        "sep25": 1.08,
+        "dec25": 1.08,
+        "mar26": 1.08
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Dalmia Industrial Development Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.48,
+        "aug25": null,
+        "sep25": 1.48,
+        "dec25": 1.48,
+        "mar26": 1.48
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Greencrest Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.23,
+        "aug25": null,
+        "sep25": 1.23,
+        "dec25": 1.23,
+        "mar26": 1.23
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "JMJ Fintech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.69,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mukta Agriculture Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.15,
+        "aug25": null,
+        "sep25": 4.15,
+        "dec25": 4.15,
+        "mar26": 4.15
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mystic Electronics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.06,
+        "aug25": null,
+        "sep25": 5.06,
+        "dec25": 5.06,
+        "mar26": 5.06
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Premier Capital Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.01,
+        "aug25": null,
+        "sep25": 3.01,
+        "dec25": 3.01,
+        "mar26": 3.01
+      },
+      "valueCr": 1
+    }
+  ]
+}

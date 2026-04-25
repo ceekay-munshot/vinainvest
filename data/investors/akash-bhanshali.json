@@ -1,0 +1,213 @@
+{
+  "lastScrapedAt": "2026-04-25T11:10:02.860Z",
+  "worthCr": 6280,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Amber Enterprises India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.47,
+        "aug25": null,
+        "sep25": 1.39,
+        "dec25": 1.15,
+        "mar26": 1.15
+      },
+      "valueCr": 313
+    },
+    {
+      "company": "Dilip Buildcon Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": 1.13,
+        "mar26": 1.13
+      },
+      "valueCr": 83
+    },
+    {
+      "company": "Genus Power Infrastructures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.19,
+        "aug25": null,
+        "sep25": 1.19,
+        "dec25": 1.19,
+        "mar26": 1.19
+      },
+      "valueCr": 104
+    },
+    {
+      "company": "Greenlam Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.84,
+        "aug25": null,
+        "sep25": 2.84,
+        "dec25": 2.84,
+        "mar26": 3.23
+      },
+      "valueCr": 184
+    },
+    {
+      "company": "Gujarat Fluorochemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.75,
+        "aug25": null,
+        "sep25": 4.75,
+        "dec25": 4.75,
+        "mar26": 4.75
+      },
+      "valueCr": 1766
+    },
+    {
+      "company": "Laurus Labs Ltd.",
+      "sector": "Healthcare",
+      "stakes": {
+        "jun25": 1.32,
+        "aug25": null,
+        "sep25": 1.32,
+        "dec25": 1.32,
+        "mar26": 1.32
+      },
+      "valueCr": 796
+    },
+    {
+      "company": "Natco Pharma Ltd.",
+      "sector": "Healthcare",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.01,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 197
+    },
+    {
+      "company": "One97 Communications Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.24,
+        "aug25": null,
+        "sep25": 1.24,
+        "dec25": 1.24,
+        "mar26": 1.24
+      },
+      "valueCr": 909
+    },
+    {
+      "company": "Praxis Home Retail Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.94,
+        "aug25": null,
+        "sep25": 2.15,
+        "dec25": 2.14,
+        "mar26": 2.14
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Ramkrishna Forgings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.24,
+        "aug25": null,
+        "sep25": 2.24,
+        "dec25": 2.24,
+        "mar26": 2.23
+      },
+      "valueCr": 221
+    },
+    {
+      "company": "Schneider Electric Infrastructure Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.3,
+        "aug25": null,
+        "sep25": 2.3,
+        "dec25": 2.3,
+        "mar26": 1.97
+      },
+      "valueCr": 557
+    },
+    {
+      "company": "Shilpa Medicare Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.52,
+        "aug25": null,
+        "sep25": 1.52,
+        "dec25": 1.52,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sudarshan Chemical Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.13,
+        "aug25": null,
+        "sep25": 7.13,
+        "dec25": 7.13,
+        "mar26": 7.13
+      },
+      "valueCr": 487
+    },
+    {
+      "company": "Welspun Corp Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Welspun Living Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.44,
+        "aug25": null,
+        "sep25": 1.44,
+        "dec25": 1.44,
+        "mar26": 1.44
+      },
+      "valueCr": 180
+    },
+    {
+      "company": "Inox Wind Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 1.75,
+        "aug25": null,
+        "sep25": 1.75,
+        "dec25": 1.75,
+        "mar26": 1.75
+      },
+      "valueCr": 303
+    },
+    {
+      "company": "Aptus Value Housing Finance India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.37
+      },
+      "valueCr": 176
+    }
+  ]
+}

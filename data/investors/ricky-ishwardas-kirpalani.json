@@ -1,0 +1,57 @@
+{
+  "lastScrapedAt": "2026-04-25T11:23:34.997Z",
+  "worthCr": 560,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Consolidated Finvest & Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.2,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kama Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.7,
+        "aug25": null,
+        "sep25": 4.71,
+        "dec25": 4.71,
+        "mar26": 4.71
+      },
+      "valueCr": 375
+    },
+    {
+      "company": "Nalwa Sons Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.96,
+        "aug25": null,
+        "sep25": 2.97,
+        "dec25": 2.97,
+        "mar26": 2.97
+      },
+      "valueCr": 86
+    },
+    {
+      "company": "Uflex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.49,
+        "aug25": null,
+        "sep25": 3.49,
+        "dec25": 3.49,
+        "mar26": 3.49
+      },
+      "valueCr": 99
+    }
+  ]
+}

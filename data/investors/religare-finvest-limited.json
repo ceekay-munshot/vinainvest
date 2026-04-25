@@ -1,0 +1,189 @@
+{
+  "lastScrapedAt": "2026-04-25T11:23:23.523Z",
+  "worthCr": 41,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Befound Movement Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.32,
+        "aug25": null,
+        "sep25": 9.32,
+        "dec25": 9.32,
+        "mar26": 9.32
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Checkpoint Trends Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 11.78,
+        "aug25": null,
+        "sep25": 11.78,
+        "dec25": 11.78,
+        "mar26": 11.78
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Garnet International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.7,
+        "aug25": null,
+        "sep25": 7.7,
+        "dec25": 7.7,
+        "mar26": 7.7
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Gini Silk Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.22,
+        "aug25": null,
+        "sep25": 8.22,
+        "dec25": 8.22,
+        "mar26": 8.22
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "IEC Education Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.9,
+        "aug25": null,
+        "sep25": 2.9,
+        "dec25": 2.9,
+        "mar26": 2.9
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Interworld Digital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.12,
+        "aug25": null,
+        "sep25": 2.12,
+        "dec25": 2.12,
+        "mar26": 2.12
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "JMD Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.78,
+        "aug25": null,
+        "sep25": 5.78,
+        "dec25": 5.78,
+        "mar26": 5.78
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Mahan Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.3,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mathew Easow Research Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.62,
+        "aug25": null,
+        "sep25": 9.62,
+        "dec25": 9.62,
+        "mar26": 9.62
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "North Eastern Carrying Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 12.08,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 12.08
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Pankaj Polymers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.16,
+        "aug25": null,
+        "sep25": 2.16,
+        "dec25": 2.16,
+        "mar26": 2.16
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Sanguine Media Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.36,
+        "aug25": null,
+        "sep25": 9.36,
+        "dec25": 9.36,
+        "mar26": 9.36
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Solid Stone Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.5,
+        "aug25": null,
+        "sep25": 4.5,
+        "dec25": 4.5,
+        "mar26": 4.5
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Bang Overseas Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.14,
+        "aug25": null,
+        "sep25": 4.14,
+        "dec25": 4.14,
+        "mar26": 4.14
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Orosil Smiths India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.42,
+        "aug25": null,
+        "sep25": 4.42,
+        "dec25": 4.42,
+        "mar26": 4.42
+      },
+      "valueCr": 1
+    }
+  ]
+}

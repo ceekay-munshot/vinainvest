@@ -1,0 +1,237 @@
+{
+  "lastScrapedAt": "2026-04-25T11:19:02.101Z",
+  "worthCr": 81,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Aimco Pesticides Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.45,
+        "aug25": 2.45,
+        "sep25": 2.45,
+        "dec25": 2.45,
+        "mar26": 2.45
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Alufluoride Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.05,
+        "aug25": 2.05,
+        "sep25": 2.05,
+        "dec25": 2.05,
+        "mar26": 2.05
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "AVI Polymers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.22,
+        "aug25": 1.22,
+        "sep25": 1.22,
+        "dec25": 1.22,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Daikaffil Chemicals India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.67,
+        "aug25": 1.67,
+        "sep25": 1.67,
+        "dec25": 1.67,
+        "mar26": 1.67
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Elnet Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": 1.25,
+        "sep25": 1.25,
+        "dec25": 1.25,
+        "mar26": 1.25
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Facor Alloys Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.28,
+        "aug25": 1.28,
+        "sep25": 1.28,
+        "dec25": 1.28,
+        "mar26": 1.28
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Jauss Polymers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.16,
+        "aug25": 2.16,
+        "sep25": 2.16,
+        "dec25": 2.16,
+        "mar26": 2.16
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Madhya Pradesh Today Media Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": 1.09,
+        "sep25": 1.09,
+        "dec25": 1.09,
+        "mar26": 1.09
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Natraj Proteins Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": 1.07,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": 1.07
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Shivalik Bimetal Controls Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": 1.04,
+        "sep25": 1.04,
+        "dec25": 1.04,
+        "mar26": 1.04
+      },
+      "valueCr": 36
+    },
+    {
+      "company": "Sunshield Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": 1.09,
+        "sep25": 1.09,
+        "dec25": 1.25,
+        "mar26": 1.25
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Tyche Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.46,
+        "aug25": 1.46,
+        "sep25": 1.47,
+        "dec25": 1.46,
+        "mar26": 1.46
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Universal Starch-Chem Allied Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.79,
+        "aug25": 1.79,
+        "sep25": 1.79,
+        "dec25": 1.79,
+        "mar26": 1.79
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Ascensive Educare Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.47,
+        "dec25": null,
+        "mar26": 1.47
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Haryana Capfin Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.15,
+        "aug25": 1.15,
+        "sep25": 1.15,
+        "dec25": 1.15,
+        "mar26": 1.15
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Jagsonpal Pharmaceuticals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": 1.17,
+        "sep25": 1.16,
+        "dec25": 1.16,
+        "mar26": 1.16
+      },
+      "valueCr": 15
+    },
+    {
+      "company": "Cargotrans Maritime Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.28,
+        "dec25": null,
+        "mar26": 1.01
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Tarapur Transformers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": 1.03,
+        "sep25": 1.03,
+        "dec25": 1.03,
+        "mar26": 1.03
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Timescan Logistics (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.14,
+        "dec25": null,
+        "mar26": 1.14
+      },
+      "valueCr": 0
+    }
+  ]
+}

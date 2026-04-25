@@ -1,0 +1,201 @@
+{
+  "lastScrapedAt": "2026-04-25T11:14:45.062Z",
+  "worthCr": 1179,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Balu Forge Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.12,
+        "aug25": null,
+        "sep25": 8.12,
+        "dec25": 8.12,
+        "mar26": 8.04
+      },
+      "valueCr": 426
+    },
+    {
+      "company": "Gensol Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "OK Play India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 26.36,
+        "aug25": null,
+        "sep25": 26.36,
+        "dec25": 26.36,
+        "mar26": 26.36
+      },
+      "valueCr": 55
+    },
+    {
+      "company": "Paramount Communications Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.4,
+        "aug25": null,
+        "sep25": 3.4,
+        "dec25": 3.4,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Pritika Auto Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.42,
+        "aug25": null,
+        "sep25": 7.42,
+        "dec25": 13.22,
+        "mar26": 13.22
+      },
+      "valueCr": 29
+    },
+    {
+      "company": "Servotech Renewable Power System Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.54,
+        "aug25": null,
+        "sep25": 4.54,
+        "dec25": 4.54,
+        "mar26": 4.54
+      },
+      "valueCr": 93
+    },
+    {
+      "company": "Toyam Sports Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 37.04,
+        "aug25": null,
+        "sep25": 37.04,
+        "dec25": 37.04,
+        "mar26": 37.04
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Trescon Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.28,
+        "aug25": null,
+        "sep25": 2.28,
+        "dec25": 2.28,
+        "mar26": 2.32
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Algoquant Fintech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.8,
+        "aug25": null,
+        "sep25": 6.8,
+        "dec25": 6.8,
+        "mar26": 6.8
+      },
+      "valueCr": 104
+    },
+    {
+      "company": "Inspire Films Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 8.84,
+        "dec25": null,
+        "mar26": 8.84
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Krishival Foods Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 21.84,
+        "aug25": null,
+        "sep25": 21.84,
+        "dec25": 21.84,
+        "mar26": 19
+      },
+      "valueCr": 163
+    },
+    {
+      "company": "Gennex Laboratories Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.06,
+        "aug25": null,
+        "sep25": 0.06,
+        "dec25": 0.06,
+        "mar26": 0.06
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "One Point One Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.62,
+        "aug25": null,
+        "sep25": 3.62,
+        "dec25": 3.62,
+        "mar26": 3.62
+      },
+      "valueCr": 51
+    },
+    {
+      "company": "Pioneer Embroideries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 16.22,
+        "aug25": null,
+        "sep25": 16.22,
+        "dec25": 16.22,
+        "mar26": 16.22
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Rathi Steel & Power Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.18,
+        "aug25": null,
+        "sep25": 7.18,
+        "dec25": 7.18,
+        "mar26": 7.18
+      },
+      "valueCr": 14
+    },
+    {
+      "company": "Cellecor Gadgets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 26.1,
+        "dec25": null,
+        "mar26": 26.1
+      },
+      "valueCr": 210
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T11:16:38.475Z",
+  "worthCr": 1,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Banas Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": 1.13,
+        "mar26": 1.13
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Tilak Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.43,
+        "aug25": null,
+        "sep25": 1.43,
+        "dec25": 1.43,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

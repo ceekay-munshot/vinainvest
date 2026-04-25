@@ -1,0 +1,657 @@
+{
+  "lastScrapedAt": "2026-04-25T11:13:00.494Z",
+  "worthCr": 159,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Amrutanjan Health Care Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": null,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.12
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Aplab Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Arrow Greentech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": 1.18,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.2
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Bombay Cycle & Motor Agency Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.02,
+        "sep25": null,
+        "dec25": 1.02,
+        "mar26": 1.02
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Borosil Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.02,
+        "sep25": 1.02,
+        "dec25": 1.03,
+        "mar26": 1.03
+      },
+      "valueCr": 30
+    },
+    {
+      "company": "Borosil Scientific Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.05,
+        "aug25": 1.05,
+        "sep25": 1.07,
+        "dec25": 1.08,
+        "mar26": 1.09
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Chandni Machines Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": 1.08,
+        "sep25": 1.08,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Delton Cables Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Diamines & Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.51,
+        "aug25": 1.51,
+        "sep25": 1.52,
+        "dec25": 1.54,
+        "mar26": 1.66
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Elegant Marbles & Grani Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": 1.09,
+        "sep25": 1.13,
+        "dec25": 1.18,
+        "mar26": 1.42
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Gujarat Apollo Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.82,
+        "aug25": 1.82,
+        "sep25": 1.82,
+        "dec25": 2.05,
+        "mar26": 2.05
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Gujarat Themis Biosyn Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Hipolin Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.63,
+        "aug25": 1.63,
+        "sep25": 1.63,
+        "dec25": 1.66,
+        "mar26": 1.76
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "ICDS Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.34,
+        "aug25": 1.34,
+        "sep25": 1.4,
+        "dec25": 1.4,
+        "mar26": 1.54
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Indo Borax & Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.11,
+        "aug25": 1.11,
+        "sep25": 1.14,
+        "dec25": 1.14,
+        "mar26": 1.15
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Ishan Dyes and Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.67,
+        "aug25": 1.67,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kilitch Drugs (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.11,
+        "aug25": 3.11,
+        "sep25": 3.64,
+        "dec25": 3.64,
+        "mar26": 3.64
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Lippi Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": 1.07,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Majestic Auto Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.89,
+        "aug25": 2.89,
+        "sep25": 3.03,
+        "dec25": 3.16,
+        "mar26": 3.27
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Multibase India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Octavius Plantations Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": 1.17,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Organic Coatings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.61,
+        "aug25": 2.61,
+        "sep25": 2.61,
+        "dec25": 1.9,
+        "mar26": 1.38
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Saboo Sodium Chloro Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.02,
+        "sep25": 1.02,
+        "dec25": 1.04,
+        "mar26": 1.04
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "SSPDL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.32,
+        "aug25": 2.32,
+        "sep25": 2.32,
+        "dec25": 2.32,
+        "mar26": 2.41
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sunshield Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.02,
+        "sep25": 1.02,
+        "dec25": 1.02,
+        "mar26": 1.02
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Tai Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": 1.08,
+        "sep25": 1.08,
+        "dec25": 1.08,
+        "mar26": 1.33
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Terai Tea Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.09,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Tranway21 Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.21,
+        "aug25": null,
+        "sep25": 3.21,
+        "dec25": 3.21,
+        "mar26": 3.3
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Williamson Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Aditya Ispat Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Chowgule Steamships Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": 1.03,
+        "sep25": 1.03,
+        "dec25": 1.05,
+        "mar26": 1.11
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "First Fintec Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.92,
+        "aug25": 1.92,
+        "sep25": 1.92,
+        "dec25": 1.92,
+        "mar26": 1.92
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Poona Dal & Oil Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.02,
+        "sep25": 1.02,
+        "dec25": 1.02,
+        "mar26": 1.05
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Skyline Millars Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": 1.01,
+        "sep25": 1.01,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Spectrum Foods Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.67,
+        "aug25": 1.67,
+        "sep25": 1.67,
+        "dec25": 2.17,
+        "mar26": 2.68
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Acrow India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.54,
+        "aug25": 1.54,
+        "sep25": 1.54,
+        "dec25": 1.54,
+        "mar26": 1.58
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Jaipan Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.31,
+        "aug25": 1.31,
+        "sep25": 1.31,
+        "dec25": 1.31,
+        "mar26": 1.02
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "PCS Technology Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.67,
+        "aug25": 1.67,
+        "sep25": 1.7,
+        "dec25": 1.7,
+        "mar26": 1.72
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Cella Space Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.98,
+        "aug25": 2.48,
+        "sep25": 2.8,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "LWS Knitwear Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.4,
+        "aug25": 1.4,
+        "sep25": 1.4,
+        "dec25": 1.4,
+        "mar26": 1.4
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ritesh International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.02,
+        "sep25": 1.02,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Omax Autos Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.17,
+        "sep25": 1.17,
+        "dec25": 1.56,
+        "mar26": 1.65
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "VMS Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.06,
+        "sep25": 1.23,
+        "dec25": 1.27,
+        "mar26": 1.33
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Banaras Beads Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.01,
+        "dec25": 1.01,
+        "mar26": 1.06
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Indo-National Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.02,
+        "dec25": 1.07,
+        "mar26": 1.15
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "JostS Engineering Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.05,
+        "dec25": 1.05,
+        "mar26": 1.05
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Gagan Gases Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.13,
+        "mar26": 1.22
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Stanpacks (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.16,
+        "mar26": 2.17
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Inter State Oil Carrier Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.08
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Magnum Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.11
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Panasonic Energy India Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Semac Construction Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.03
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Sunil Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.02
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "WEP Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.22
+      },
+      "valueCr": 1
+    }
+  ]
+}

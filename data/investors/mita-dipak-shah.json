@@ -1,0 +1,81 @@
+{
+  "lastScrapedAt": "2026-04-25T11:22:22.286Z",
+  "worthCr": 31,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Acrow India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.42,
+        "aug25": null,
+        "sep25": 2.42,
+        "dec25": 2.42,
+        "mar26": 2.42
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Apcotex Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.12,
+        "aug25": null,
+        "sep25": 1.12,
+        "dec25": 1.12,
+        "mar26": 1.12
+      },
+      "valueCr": 23
+    },
+    {
+      "company": "ASI Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": null,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.18
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Banaras Beads Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.34,
+        "aug25": null,
+        "sep25": 2.34,
+        "dec25": 2.34,
+        "mar26": 2.35
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Elnet Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": null,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": 1.07
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Jumbo Bag Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.03,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

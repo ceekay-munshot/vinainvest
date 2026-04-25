@@ -1,0 +1,237 @@
+{
+  "lastScrapedAt": "2026-04-25T10:57:04.940Z",
+  "worthCr": 2068,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Bombay Dyeing And Manufacturing Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.65,
+        "aug25": 1.65,
+        "sep25": 1.65,
+        "dec25": 1.59,
+        "mar26": 1.52
+      },
+      "valueCr": 35
+    },
+    {
+      "company": "Choice International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.93,
+        "aug25": 9.24,
+        "sep25": 8.93,
+        "dec25": 7.21,
+        "mar26": 7.21
+      },
+      "valueCr": 1126
+    },
+    {
+      "company": "Indostar Capital Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.47,
+        "aug25": 2.48,
+        "sep25": 2.47,
+        "dec25": 2.09,
+        "mar26": 2.09
+      },
+      "valueCr": 66
+    },
+    {
+      "company": "IRIS RegTech Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.22,
+        "aug25": 5.22,
+        "sep25": 5.21,
+        "dec25": 5.21,
+        "mar26": 5.21
+      },
+      "valueCr": 25
+    },
+    {
+      "company": "Kopran Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.46,
+        "aug25": 1.46,
+        "sep25": 1.46,
+        "dec25": 1.46,
+        "mar26": 1.72
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "MKVentures Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 74.36,
+        "aug25": null,
+        "sep25": 74.36,
+        "dec25": 74.36,
+        "mar26": 74.36
+      },
+      "valueCr": 296
+    },
+    {
+      "company": "Niyogin Fintech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.52,
+        "aug25": 4.52,
+        "sep25": 4.51,
+        "dec25": 4.51,
+        "mar26": 4.51
+      },
+      "valueCr": 24
+    },
+    {
+      "company": "Rashi Peripherals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.44,
+        "aug25": 2.44,
+        "sep25": 2.44,
+        "dec25": 2.44,
+        "mar26": 2.44
+      },
+      "valueCr": 74
+    },
+    {
+      "company": "Repro India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.32,
+        "aug25": 3.32,
+        "sep25": 3.32,
+        "dec25": 3.31,
+        "mar26": 3.31
+      },
+      "valueCr": 17
+    },
+    {
+      "company": "Samhi Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sangam (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.86,
+        "aug25": 4.86,
+        "sep25": 4.86,
+        "dec25": 4.86,
+        "mar26": 4.86
+      },
+      "valueCr": 125
+    },
+    {
+      "company": "Unicommerce eSolutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.78,
+        "aug25": 1.78,
+        "sep25": 1.65,
+        "dec25": 1.63,
+        "mar26": 1.48
+      },
+      "valueCr": 17
+    },
+    {
+      "company": "Waaree Energies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Nazara Technologies Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": 1.25,
+        "sep25": 1.18,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "SG Finserve Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.7,
+        "aug25": 1.7,
+        "sep25": 1.7,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Windsor Machines Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.71,
+        "aug25": 7.71,
+        "sep25": 7.71,
+        "dec25": 7.48,
+        "mar26": 7.36
+      },
+      "valueCr": 183
+    },
+    {
+      "company": "Aptech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.06
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Simplex Infrastructures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.21
+      },
+      "valueCr": 21
+    },
+    {
+      "company": "Subam Papers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 7.04
+      },
+      "valueCr": 40
+    }
+  ]
+}

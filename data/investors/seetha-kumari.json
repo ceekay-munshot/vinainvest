@@ -1,0 +1,129 @@
+{
+  "lastScrapedAt": "2026-04-25T11:27:47.189Z",
+  "worthCr": 270,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Nilkamal Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.84,
+        "aug25": 4.77,
+        "sep25": 5.46,
+        "dec25": 5.46,
+        "mar26": null
+      },
+      "valueCr": 106
+    },
+    {
+      "company": "Poddar Pigments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.87,
+        "aug25": 2.92,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Summit Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.71,
+        "aug25": 1.71,
+        "sep25": 1.71,
+        "dec25": 1.71,
+        "mar26": null
+      },
+      "valueCr": 30
+    },
+    {
+      "company": "The Sandesh Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.95,
+        "aug25": 1.95,
+        "sep25": 1.95,
+        "dec25": 1.95,
+        "mar26": null
+      },
+      "valueCr": 15
+    },
+    {
+      "company": "Huhtamaki India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 3.56,
+        "sep25": 1.44,
+        "dec25": 1.44,
+        "mar26": null
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Jindal Poly Films Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 4.95,
+        "sep25": 4.82,
+        "dec25": 2.41,
+        "mar26": null
+      },
+      "valueCr": 73
+    },
+    {
+      "company": "Nath Bio-Genes (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.6,
+        "sep25": 2.79,
+        "dec25": 2.79,
+        "mar26": null
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Prima Plastics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 4.93,
+        "sep25": 4.93,
+        "dec25": 4.93,
+        "mar26": null
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Khaitan (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.17,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Wim Plast Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.65,
+        "dec25": 2.65,
+        "mar26": null
+      },
+      "valueCr": 12
+    }
+  ]
+}

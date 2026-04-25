@@ -1,0 +1,213 @@
+{
+  "lastScrapedAt": "2026-04-25T11:09:35.721Z",
+  "worthCr": 897,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Camlin Fine Sciences Ltd.",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 1.3,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Dollar Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.06,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Genus Power Infrastructures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.32,
+        "aug25": 1.32,
+        "sep25": 1.32,
+        "dec25": 1.31,
+        "mar26": 1.31
+      },
+      "valueCr": 115
+    },
+    {
+      "company": "Kirloskar Electric Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.52,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 38
+    },
+    {
+      "company": "Maral Overseas Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.89,
+        "aug25": null,
+        "sep25": 1.74,
+        "dec25": 1.74,
+        "mar26": 1.74
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Navin Fluorine International Ltd.",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 334
+    },
+    {
+      "company": "Omaxe Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.39,
+        "aug25": null,
+        "sep25": 1.49,
+        "dec25": 1.5,
+        "mar26": 1.5
+      },
+      "valueCr": 23
+    },
+    {
+      "company": "Skipper Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.59,
+        "aug25": null,
+        "sep25": 1.51,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Time Technoplast Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.06,
+        "aug25": null,
+        "sep25": 1.06,
+        "dec25": 1.03,
+        "mar26": 1.11
+      },
+      "valueCr": 101
+    },
+    {
+      "company": "Vascon Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.44,
+        "aug25": null,
+        "sep25": 1.44,
+        "dec25": 1.42,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Annapurna Swadisht Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.29,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Elecon Engineering Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.78,
+        "aug25": null,
+        "sep25": 1.78,
+        "dec25": 1.78,
+        "mar26": 1.78
+      },
+      "valueCr": 205
+    },
+    {
+      "company": "SRM Contractors Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.53,
+        "aug25": null,
+        "sep25": 1.65,
+        "dec25": 1.59,
+        "mar26": 1.59
+      },
+      "valueCr": 19
+    },
+    {
+      "company": "Service Care Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 3.38
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Mamata Machinery Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.63,
+        "sep25": 1.63,
+        "dec25": 1.75,
+        "mar26": 1.85
+      },
+      "valueCr": 18
+    },
+    {
+      "company": "Thirumalai Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.12,
+        "sep25": 1.03,
+        "dec25": 1.08,
+        "mar26": 1.08
+      },
+      "valueCr": 25
+    },
+    {
+      "company": "DAM Capital Advisors Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.2,
+        "dec25": 1.13,
+        "mar26": 1.14
+      },
+      "valueCr": 13
+    }
+  ]
+}

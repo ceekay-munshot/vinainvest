@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T11:18:15.351Z",
+  "worthCr": 0,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Rite Zone Chemcon India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.06,
+        "dec25": 1.06,
+        "mar26": 1.06
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Brisk Technovision Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.04
+      },
+      "valueCr": 0
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "lastScrapedAt": "2026-04-25T11:27:09.348Z",
+  "worthCr": 227,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "ABC India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.37,
+        "aug25": null,
+        "sep25": 3.37,
+        "dec25": 3.37,
+        "mar26": 3.37
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Bengal & Assam Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.91,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.97
+      },
+      "valueCr": 136
+    },
+    {
+      "company": "HBG Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.38,
+        "aug25": null,
+        "sep25": 1.28,
+        "dec25": 1.25,
+        "mar26": 1.25
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Infomedia Press Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.21,
+        "aug25": null,
+        "sep25": 1.21,
+        "dec25": 1.21,
+        "mar26": 1.21
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kanoria Chemicals & Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.73,
+        "aug25": null,
+        "sep25": 2.77,
+        "dec25": 2.77,
+        "mar26": 2.79
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Vadilal Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Balaji Telefilms Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 4.32,
+        "dec25": 4.31,
+        "mar26": 4.28
+      },
+      "valueCr": 53
+    },
+    {
+      "company": "Amines & Plasticizers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.09,
+        "mar26": 1.25
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "AK Capital Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.34
+      },
+      "valueCr": 14
+    }
+  ]
+}

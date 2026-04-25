@@ -1,0 +1,45 @@
+{
+  "lastScrapedAt": "2026-04-25T10:48:19.260Z",
+  "worthCr": 1168,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "R Systems International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 20.53,
+        "aug25": null,
+        "sep25": 20.49,
+        "dec25": 20.49,
+        "mar26": 20.47
+      },
+      "valueCr": 648
+    },
+    {
+      "company": "Virat Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 66.1,
+        "aug25": null,
+        "sep25": 66.1,
+        "dec25": 66.1,
+        "mar26": 66.1
+      },
+      "valueCr": 509
+    },
+    {
+      "company": "Dhampur Bio Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.48,
+        "mar26": null
+      },
+      "valueCr": 12
+    }
+  ]
+}

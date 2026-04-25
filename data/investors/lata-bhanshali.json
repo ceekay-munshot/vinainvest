@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T11:18:38.575Z",
+  "worthCr": 388,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Ramkrishna Forgings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.91,
+        "aug25": null,
+        "sep25": 2.91,
+        "dec25": 2.91,
+        "mar26": 2.9
+      },
+      "valueCr": 288
+    },
+    {
+      "company": "Sudarshan Chemical Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.46,
+        "aug25": null,
+        "sep25": 1.46,
+        "dec25": 1.46,
+        "mar26": 1.46
+      },
+      "valueCr": 100
+    }
+  ]
+}

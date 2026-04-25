@@ -1,0 +1,45 @@
+{
+  "lastScrapedAt": "2026-04-25T11:11:03.082Z",
+  "worthCr": 112,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Apcotex Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.48,
+        "aug25": null,
+        "sep25": 0.48,
+        "dec25": 0.48,
+        "mar26": 0.48
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Care Ratings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.18,
+        "aug25": null,
+        "sep25": 2.17,
+        "dec25": 2.17,
+        "mar26": 2.17
+      },
+      "valueCr": 102
+    },
+    {
+      "company": "Indian Energy Exchange Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 1.05,
+        "aug25": null,
+        "sep25": 1.05,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

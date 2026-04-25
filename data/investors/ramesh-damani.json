@@ -1,0 +1,69 @@
+{
+  "lastScrapedAt": "2026-04-25T11:04:06.835Z",
+  "worthCr": 46,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Goldiam International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.16,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Panama Petrochem Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.12,
+        "aug25": 1.12,
+        "sep25": 1.12,
+        "dec25": 1.12,
+        "mar26": 1.12
+      },
+      "valueCr": 18
+    },
+    {
+      "company": "Vadivarhe Speciality Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.48,
+        "aug25": 1.48,
+        "sep25": 1.48,
+        "dec25": 1.48,
+        "mar26": 1.48
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Protean e-Gov Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.05,
+        "aug25": 1.05,
+        "sep25": 1.05,
+        "dec25": 1.05,
+        "mar26": 1.05
+      },
+      "valueCr": 22
+    },
+    {
+      "company": "Wim Plast Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 5
+    }
+  ]
+}

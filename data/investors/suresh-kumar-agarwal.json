@@ -1,0 +1,249 @@
+{
+  "lastScrapedAt": "2026-04-25T11:30:45.960Z",
+  "worthCr": 309,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Bansisons Tea Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.32,
+        "aug25": 0.32,
+        "sep25": 0.32,
+        "dec25": 0.32,
+        "mar26": 0.32
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Brand Concepts Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.29,
+        "aug25": 1.29,
+        "sep25": 1.16,
+        "dec25": 1.16,
+        "mar26": 1.16
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Fineotex Chemical Ltd.",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 1.22,
+        "aug25": 1.22,
+        "sep25": 1.22,
+        "dec25": 1.21,
+        "mar26": 1.2
+      },
+      "valueCr": 32
+    },
+    {
+      "company": "Jindal Drilling & Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.37,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "NIIT Learning Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "RGF Capital Markets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rupa & Company Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.35,
+        "aug25": 1.35,
+        "sep25": 1.35,
+        "dec25": 1.35,
+        "mar26": 1.35
+      },
+      "valueCr": 17
+    },
+    {
+      "company": "Stove Kraft Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.81,
+        "aug25": 2.81,
+        "sep25": 2.81,
+        "dec25": 2.81,
+        "mar26": 2.81
+      },
+      "valueCr": 50
+    },
+    {
+      "company": "Ugro Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Worldwide Aluminium Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.04,
+        "aug25": 0.04,
+        "sep25": 0.04,
+        "dec25": 0.04,
+        "mar26": 0.04
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kalyani Commercials Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.92,
+        "aug25": 1.92,
+        "sep25": 1.92,
+        "dec25": 1.92,
+        "mar26": 1.92
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Advait Energy Transitions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.67,
+        "aug25": null,
+        "sep25": 1.08,
+        "dec25": 1.08,
+        "mar26": 1.08
+      },
+      "valueCr": 24
+    },
+    {
+      "company": "Naman Industries Proxima Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.26,
+        "aug25": null,
+        "sep25": 8.26,
+        "dec25": null,
+        "mar26": 8.26
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Thomas Scott (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.43,
+        "aug25": 2.1,
+        "sep25": 2.1,
+        "dec25": 2.1,
+        "mar26": 2.1
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Z-Tech (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 3.49,
+        "sep25": null,
+        "dec25": 3.46,
+        "mar26": 3.46
+      },
+      "valueCr": 31
+    },
+    {
+      "company": "Icodex Publishing Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.92,
+        "dec25": null,
+        "mar26": 1.92
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Man Industries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 3.04,
+        "dec25": 3.04,
+        "mar26": 2.99
+      },
+      "valueCr": 124
+    },
+    {
+      "company": "V-Marc India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.04,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Finbud Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 4.72
+      },
+      "valueCr": 12
+    },
+    {
+      "company": "Tricom Fruit Products Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.03
+      },
+      "valueCr": 0
+    }
+  ]
+}

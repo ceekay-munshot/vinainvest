@@ -1,0 +1,105 @@
+{
+  "lastScrapedAt": "2026-04-25T11:21:53.935Z",
+  "worthCr": 2298,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Cosco (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.2,
+        "aug25": null,
+        "sep25": 2.2,
+        "dec25": 2.2,
+        "mar26": 2.2
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "CP Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.73,
+        "aug25": null,
+        "sep25": 4.73,
+        "dec25": 4.72,
+        "mar26": 3.16
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Gandhi Special Tubes Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": null,
+        "sep25": 1.08,
+        "dec25": null,
+        "mar26": 1.08
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Hester Biosciences Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.88,
+        "aug25": null,
+        "sep25": 2.88,
+        "dec25": 2.88,
+        "mar26": 2.88
+      },
+      "valueCr": 37
+    },
+    {
+      "company": "ITL Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.93,
+        "aug25": null,
+        "sep25": 2.93,
+        "dec25": 2.93,
+        "mar26": 2.93
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Linde India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.99,
+        "aug25": null,
+        "sep25": 1.99,
+        "dec25": 1.98,
+        "mar26": 1.97
+      },
+      "valueCr": 1213
+    },
+    {
+      "company": "Career Point Edutech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.73,
+        "aug25": null,
+        "sep25": 4.73,
+        "dec25": 4.72,
+        "mar26": 4.72
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Enviro Infra Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 27.88
+      },
+      "valueCr": 1011
+    }
+  ]
+}

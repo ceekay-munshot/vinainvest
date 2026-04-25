@@ -1,0 +1,69 @@
+{
+  "lastScrapedAt": "2026-04-25T11:18:25.478Z",
+  "worthCr": 427,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Deccan Cements Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kama Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.49,
+        "aug25": 4.49,
+        "sep25": 4.49,
+        "dec25": 4.49,
+        "mar26": 4.49
+      },
+      "valueCr": 358
+    },
+    {
+      "company": "Nalwa Sons Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.36,
+        "aug25": 2.36,
+        "sep25": 2.36,
+        "dec25": 2.36,
+        "mar26": 2.36
+      },
+      "valueCr": 69
+    },
+    {
+      "company": "Uflex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.4,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Polyplex Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.26,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "lastScrapedAt": "2026-04-25T11:23:42.040Z",
+  "worthCr": 3,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "CFSL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 14.6,
+        "aug25": null,
+        "sep25": 14.6,
+        "dec25": 14.6,
+        "mar26": 14.6
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Superior Industrial Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.08,
+        "aug25": null,
+        "sep25": 1.08,
+        "dec25": 1.08,
+        "mar26": 1.08
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Transglobe Foods Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.71,
+        "aug25": null,
+        "sep25": 4.71,
+        "dec25": 4.71,
+        "mar26": 4.71
+      },
+      "valueCr": 0
+    }
+  ]
+}

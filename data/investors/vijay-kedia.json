@@ -1,0 +1,285 @@
+{
+  "lastScrapedAt": "2026-04-25T11:07:50.788Z",
+  "worthCr": 1188,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Affordable Robotic & Automation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.93,
+        "aug25": 9.93,
+        "sep25": 7.39,
+        "dec25": 7.39,
+        "mar26": 7.39
+      },
+      "valueCr": 15
+    },
+    {
+      "company": "Atul Auto Ltd.",
+      "sector": "Automotive",
+      "stakes": {
+        "jun25": 20.91,
+        "aug25": 20.91,
+        "sep25": 20.91,
+        "dec25": 20.91,
+        "mar26": 18.2
+      },
+      "valueCr": 252
+    },
+    {
+      "company": "Elecon Engineering Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.05,
+        "aug25": 1,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 115
+    },
+    {
+      "company": "Global Vectra Helicorp Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3,
+        "aug25": 3,
+        "sep25": 4.86,
+        "dec25": 4.86,
+        "mar26": 4.86
+      },
+      "valueCr": 12
+    },
+    {
+      "company": "Innovators Facade Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 10.66,
+        "aug25": 10.66,
+        "sep25": 10.66,
+        "dec25": 10.66,
+        "mar26": 10.66
+      },
+      "valueCr": 27
+    },
+    {
+      "company": "Mahindra Holidays & Resorts India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1,
+        "aug25": 1,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 52
+    },
+    {
+      "company": "Neuland Laboratories Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": 1.01,
+        "sep25": 1.01,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 187
+    },
+    {
+      "company": "Om Infra Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.49,
+        "aug25": null,
+        "sep25": 2.49,
+        "dec25": 2.49,
+        "mar26": 2.49
+      },
+      "valueCr": 22
+    },
+    {
+      "company": "Patel Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 28
+    },
+    {
+      "company": "Precision Camshafts Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.1,
+        "aug25": 1.05,
+        "sep25": 1.05,
+        "dec25": null,
+        "mar26": 1.05
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Repro India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.33,
+        "aug25": 6.33,
+        "sep25": 6.33,
+        "dec25": 6.32,
+        "mar26": 6.32
+      },
+      "valueCr": 32
+    },
+    {
+      "company": "Siyaram Silk Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1,
+        "aug25": 1,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "Sudarshan Chemical Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.27,
+        "aug25": 1.27,
+        "sep25": 1.27,
+        "dec25": 1.27,
+        "mar26": 1.27
+      },
+      "valueCr": 87
+    },
+    {
+      "company": "Tejas Networks Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Vaibhav Global Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 2.03,
+        "aug25": 2.03,
+        "sep25": 2.02,
+        "dec25": 2.02,
+        "mar26": 2.02
+      },
+      "valueCr": 73
+    },
+    {
+      "company": "TAC Infosec Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 10.95,
+        "aug25": null,
+        "sep25": 9.58,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "TechD Cybersecurity Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 5.26,
+        "dec25": 5.26,
+        "mar26": 5.26
+      },
+      "valueCr": 20
+    },
+    {
+      "company": "Yatharth Hospital & Trauma Care Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": 1
+      },
+      "valueCr": 69
+    },
+    {
+      "company": "Advait Energy Transitions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.14,
+        "mar26": 1.14
+      },
+      "valueCr": 25
+    },
+    {
+      "company": "Exato Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 3.48,
+        "mar26": 7.09
+      },
+      "valueCr": 28
+    },
+    {
+      "company": "Mahamaya Lifesciences Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 4.53
+      },
+      "valueCr": 20
+    },
+    {
+      "company": "SPML Infra Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.88
+      },
+      "valueCr": 32
+    },
+    {
+      "company": "Websol Energy System Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.02
+      },
+      "valueCr": 49
+    }
+  ]
+}

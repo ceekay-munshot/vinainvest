@@ -1,0 +1,213 @@
+{
+  "lastScrapedAt": "2026-04-25T11:26:13.709Z",
+  "worthCr": 780,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "AVG Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 16.05,
+        "aug25": null,
+        "sep25": 16.05,
+        "dec25": 14.72,
+        "mar26": 14.72
+      },
+      "valueCr": 36
+    },
+    {
+      "company": "Bampsl Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.94,
+        "aug25": null,
+        "sep25": 2.94,
+        "dec25": 2.94,
+        "mar26": 2.94
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "BCC Fuba India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": 1.04,
+        "dec25": 1.04,
+        "mar26": 2.08
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Jackson Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.53,
+        "aug25": null,
+        "sep25": 2.53,
+        "dec25": 2.53,
+        "mar26": 2.53
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Jagran Prakashan Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.02,
+        "aug25": null,
+        "sep25": 0.02,
+        "dec25": 0.02,
+        "mar26": 0.02
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kalpa Commercial Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.41,
+        "aug25": null,
+        "sep25": 3.41,
+        "dec25": 3.41,
+        "mar26": 3.41
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "KMG Milk Food Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.54,
+        "aug25": null,
+        "sep25": 1.54,
+        "dec25": 1.54,
+        "mar26": 1.54
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kontor Space Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.27,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Paragon Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 13.99,
+        "aug25": null,
+        "sep25": 13.99,
+        "dec25": 14.04,
+        "mar26": 14.21
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Plaza Wires Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 36.28,
+        "aug25": null,
+        "sep25": 36.28,
+        "dec25": 36.28,
+        "mar26": 36.28
+      },
+      "valueCr": 64
+    },
+    {
+      "company": "Prakash Woollen & Synthetic Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": null,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.18
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Roto Pumps Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.41,
+        "aug25": null,
+        "sep25": 5.41,
+        "dec25": 5.43,
+        "mar26": 5.43
+      },
+      "valueCr": 60
+    },
+    {
+      "company": "Sanco Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 21.3,
+        "aug25": null,
+        "sep25": 21.3,
+        "dec25": 25.34,
+        "mar26": 21.3
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "SG Mart Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.93,
+        "aug25": null,
+        "sep25": 8.86,
+        "dec25": 8.86,
+        "mar26": 8.86
+      },
+      "valueCr": 606
+    },
+    {
+      "company": "Krypton Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.82,
+        "aug25": null,
+        "sep25": 1.39,
+        "dec25": 1.39,
+        "mar26": 1.36
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "NEIL Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.42,
+        "aug25": null,
+        "sep25": 1.75,
+        "dec25": 1.75,
+        "mar26": 1.75
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "CWD Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.16,
+        "sep25": 1.16,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

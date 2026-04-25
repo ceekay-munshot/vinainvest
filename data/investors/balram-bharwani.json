@@ -1,0 +1,129 @@
+{
+  "lastScrapedAt": "2026-04-25T11:11:33.764Z",
+  "worthCr": 25,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Aplab Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.43,
+        "aug25": null,
+        "sep25": 4.65,
+        "dec25": 4.65,
+        "mar26": 4.65
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Chowgule Steamships Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.63,
+        "aug25": null,
+        "sep25": 2.63,
+        "dec25": 2.63,
+        "mar26": 2.63
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "High Energy Batteries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.33,
+        "aug25": null,
+        "sep25": 1.33,
+        "dec25": 1.33,
+        "mar26": 1.33
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Katare Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.7,
+        "aug25": null,
+        "sep25": 3.7,
+        "dec25": 3.7,
+        "mar26": 3.7
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Khandwala Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.08,
+        "aug25": null,
+        "sep25": 5.08,
+        "dec25": 5.08,
+        "mar26": 5.08
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Lake Shore Realty Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.47,
+        "aug25": null,
+        "sep25": 1.14,
+        "dec25": 1.05,
+        "mar26": 1.05
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Panjon Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.34,
+        "aug25": null,
+        "sep25": 1.34,
+        "dec25": 1.34,
+        "mar26": 1.34
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Trans Freight Containers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.34,
+        "aug25": null,
+        "sep25": 1.34,
+        "dec25": 1.34,
+        "mar26": 1.34
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "PCS Technology Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.01,
+        "aug25": null,
+        "sep25": 5.01,
+        "dec25": 5.01,
+        "mar26": 5.01
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Cella Space Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3,
+        "aug25": null,
+        "sep25": 3,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

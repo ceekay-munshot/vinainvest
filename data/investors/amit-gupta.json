@@ -1,0 +1,141 @@
+{
+  "lastScrapedAt": "2026-04-25T11:10:25.391Z",
+  "worthCr": 56,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "BJ Duplex Boards Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.03,
+        "aug25": null,
+        "sep25": 0.03,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Decorous Investment & Trading Co Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.93,
+        "aug25": null,
+        "sep25": 4.93,
+        "dec25": 4.93,
+        "mar26": 4.93
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Roto Pumps Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.15,
+        "aug25": null,
+        "sep25": 1.15,
+        "dec25": 1.11,
+        "mar26": 1
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "AG Universal Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 28.08,
+        "dec25": null,
+        "mar26": 28.08
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Glaam Up Jwel Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 0.1,
+        "dec25": null,
+        "mar26": 0.1
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kati Patang Lifestyle Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.16,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Veekayem Fashion And Apparels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 7.36,
+        "dec25": null,
+        "mar26": 7.54
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Chartered Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.08,
+        "aug25": null,
+        "sep25": 2.08,
+        "dec25": 1.97,
+        "mar26": 1.97
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "RNFI Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.83,
+        "dec25": 2.82,
+        "mar26": 2.82
+      },
+      "valueCr": 20
+    },
+    {
+      "company": "Regency Fincorp Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.93,
+        "aug25": null,
+        "sep25": 2.93,
+        "dec25": 2.54,
+        "mar26": 2.54
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Shree Rajasthan Syntex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.86,
+        "mar26": 1.86
+      },
+      "valueCr": 1
+    }
+  ]
+}

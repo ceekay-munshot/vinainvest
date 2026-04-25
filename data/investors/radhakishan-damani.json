@@ -1,0 +1,165 @@
+{
+  "lastScrapedAt": "2026-04-25T11:03:55.198Z",
+  "worthCr": 168796,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "3M India Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 1.48,
+        "aug25": 1.48,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Advani Hotels & Resorts (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.18,
+        "aug25": 4.18,
+        "sep25": 4.18,
+        "dec25": 4.18,
+        "mar26": 4.18
+      },
+      "valueCr": 21
+    },
+    {
+      "company": "Aptech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.03,
+        "aug25": 3.03,
+        "sep25": 3.03,
+        "dec25": 3.03,
+        "mar26": 3.03
+      },
+      "valueCr": 18
+    },
+    {
+      "company": "Avenue Supermarts Ltd.",
+      "sector": "Retail",
+      "stakes": {
+        "jun25": 57.72,
+        "aug25": 57.72,
+        "sep25": 57.72,
+        "dec25": 57.72,
+        "mar26": 57.6
+      },
+      "valueCr": 166868
+    },
+    {
+      "company": "BF Utilities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": 1.01,
+        "sep25": 1.01,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 22
+    },
+    {
+      "company": "Blue Dart Express Ltd.",
+      "sector": "Logistics",
+      "stakes": {
+        "jun25": 1.19,
+        "aug25": 1.19,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mangalam Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.17,
+        "aug25": 2.17,
+        "sep25": 2.17,
+        "dec25": null,
+        "mar26": 2.17
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Sundaram Finance Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": null,
+        "aug25": 2.37,
+        "sep25": 2.37,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Trent Ltd.",
+      "sector": "Retail",
+      "stakes": {
+        "jun25": 1.27,
+        "aug25": 1.24,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "TSF Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.88,
+        "aug25": 1.88,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "United Breweries Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.23,
+        "aug25": 1.23,
+        "sep25": 1.23,
+        "dec25": 1.23,
+        "mar26": 1.23
+      },
+      "valueCr": 480
+    },
+    {
+      "company": "VST Industries Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 29.1,
+        "aug25": 29.1,
+        "sep25": 29.1,
+        "dec25": 3.15,
+        "mar26": 29.1
+      },
+      "valueCr": 1266
+    },
+    {
+      "company": "Bhagiradha Chemicals & Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.32,
+        "aug25": 3.32,
+        "sep25": 3.32,
+        "dec25": null,
+        "mar26": 3.32
+      },
+      "valueCr": 112
+    }
+  ]
+}

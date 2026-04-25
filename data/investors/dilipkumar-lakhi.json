@@ -1,0 +1,129 @@
+{
+  "lastScrapedAt": "2026-04-25T10:49:03.365Z",
+  "worthCr": 1058,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Almondz Global Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.76,
+        "aug25": null,
+        "sep25": 1.76,
+        "dec25": 1.76,
+        "mar26": 1.76
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Aro Granite Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4,
+        "aug25": null,
+        "sep25": 4,
+        "dec25": 4,
+        "mar26": 4
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Avonmore Capital & Management Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.41,
+        "aug25": null,
+        "sep25": 2.4,
+        "dec25": 2.4,
+        "mar26": 2.4
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Diligent Media Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.05,
+        "aug25": null,
+        "sep25": 1.05,
+        "dec25": 1.05,
+        "mar26": 1.05
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "GOCL Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "NDL Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.94,
+        "aug25": null,
+        "sep25": 1.94,
+        "dec25": 1.91,
+        "mar26": 1.46
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Saboo Sodium Chloro Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Unitech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.44,
+        "aug25": null,
+        "sep25": 4.44,
+        "dec25": 4.44,
+        "mar26": 4.44
+      },
+      "valueCr": 55
+    },
+    {
+      "company": "Welspun Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.48,
+        "aug25": null,
+        "sep25": 5.4,
+        "dec25": 5.38,
+        "mar26": 5.27
+      },
+      "valueCr": 369
+    },
+    {
+      "company": "Welspun Specialty Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 23.04,
+        "aug25": null,
+        "sep25": 23.18,
+        "dec25": 23.18,
+        "mar26": 23.18
+      },
+      "valueCr": 612
+    }
+  ]
+}

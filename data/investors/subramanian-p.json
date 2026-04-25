@@ -1,0 +1,21 @@
+{
+  "lastScrapedAt": "2026-04-25T11:29:20.941Z",
+  "worthCr": 0,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Colinz Laboratories Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.12,
+        "aug25": null,
+        "sep25": 0.12,
+        "dec25": 0.12,
+        "mar26": 0.12
+      },
+      "valueCr": 0
+    }
+  ]
+}

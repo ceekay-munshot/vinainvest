@@ -1,0 +1,201 @@
+{
+  "lastScrapedAt": "2026-04-25T10:48:45.064Z",
+  "worthCr": 1631,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Confidence Petroleum India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Dynamatic Technologies Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 2.21,
+        "aug25": 2.21,
+        "sep25": 2.21,
+        "dec25": 2.21,
+        "mar26": 2.21
+      },
+      "valueCr": 177
+    },
+    {
+      "company": "Indostar Capital Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.38,
+        "aug25": 2.38,
+        "sep25": 2.02,
+        "dec25": 2.14,
+        "mar26": null
+      },
+      "valueCr": 68
+    },
+    {
+      "company": "Prataap Snacks Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.8,
+        "aug25": 2.79,
+        "sep25": 2.79,
+        "dec25": 2.79,
+        "mar26": null
+      },
+      "valueCr": 66
+    },
+    {
+      "company": "Shilpa Medicare Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.17,
+        "aug25": 2.17,
+        "sep25": 2.17,
+        "dec25": 2.17,
+        "mar26": null
+      },
+      "valueCr": 176
+    },
+    {
+      "company": "Supriya Lifescience Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.13,
+        "aug25": 2.13,
+        "sep25": 2.54,
+        "dec25": 2.98,
+        "mar26": null
+      },
+      "valueCr": 154
+    },
+    {
+      "company": "Himatsingka Seide Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.07,
+        "aug25": 4.07,
+        "sep25": 4.07,
+        "dec25": 4.07,
+        "mar26": null
+      },
+      "valueCr": 45
+    },
+    {
+      "company": "Nazara Technologies Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 1.56,
+        "aug25": 1.56,
+        "sep25": 1.56,
+        "dec25": 1.56,
+        "mar26": null
+      },
+      "valueCr": 157
+    },
+    {
+      "company": "Niyogin Fintech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.4,
+        "aug25": 7.57,
+        "sep25": 7.57,
+        "dec25": 7.57,
+        "mar26": null
+      },
+      "valueCr": 41
+    },
+    {
+      "company": "Manappuram Finance Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "RBL Bank Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.24,
+        "dec25": 1.36,
+        "mar26": 1.43
+      },
+      "valueCr": 283
+    },
+    {
+      "company": "Tilaknagar Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.21,
+        "dec25": 1.02,
+        "mar26": null
+      },
+      "valueCr": 115
+    },
+    {
+      "company": "Indiabulls Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.26,
+        "mar26": 1.26
+      },
+      "valueCr": 49
+    },
+    {
+      "company": "Utkarsh Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 3.21,
+        "mar26": 3.21
+      },
+      "valueCr": 79
+    },
+    {
+      "company": "Cemindia Projects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.04
+      },
+      "valueCr": 116
+    },
+    {
+      "company": "Ramkrishna Forgings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.06
+      },
+      "valueCr": 105
+    }
+  ]
+}

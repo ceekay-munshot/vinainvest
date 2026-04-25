@@ -1,0 +1,225 @@
+{
+  "lastScrapedAt": "2026-04-25T11:01:02.361Z",
+  "worthCr": 235,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Aeonx Digital Technology Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.61,
+        "aug25": 2.61,
+        "sep25": 2.61,
+        "dec25": 2.61,
+        "mar26": 3.04
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Ansal Buildwell Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.71,
+        "aug25": null,
+        "sep25": 2.71,
+        "dec25": 2.76,
+        "mar26": 2.82
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Aurum Proptech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.99,
+        "aug25": 6.59,
+        "sep25": 5.67,
+        "dec25": 5.67,
+        "mar26": 5.86
+      },
+      "valueCr": 81
+    },
+    {
+      "company": "Duroply Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.54,
+        "aug25": 5.54,
+        "sep25": 5.03,
+        "dec25": 5.03,
+        "mar26": 5.03
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Kaya Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.34,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Kerala Ayurveda Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.18,
+        "aug25": 4.51,
+        "sep25": 4.04,
+        "dec25": 4.03,
+        "mar26": 3.49
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Kokuyo Camlin Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": 1.01,
+        "sep25": 1.01,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Max India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Orient Bell Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.71,
+        "aug25": 4.61,
+        "sep25": 4.6,
+        "dec25": 4.92,
+        "mar26": 5.03
+      },
+      "valueCr": 21
+    },
+    {
+      "company": "RPSG Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 1.39,
+        "sep25": 1.39,
+        "dec25": 1.39,
+        "mar26": 1.39
+      },
+      "valueCr": 39
+    },
+    {
+      "company": "TAAL Tech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.7,
+        "aug25": 1.7,
+        "sep25": 1.7,
+        "dec25": 1.7,
+        "mar26": 1.7
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Apollo Sindoori Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.31,
+        "mar26": 2.35
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Sundaram Brake Linings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.06,
+        "aug25": 1.27,
+        "sep25": 1.27,
+        "dec25": 1.27,
+        "mar26": 1.27
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Fratelli Vineyards Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.16,
+        "dec25": 1.15,
+        "mar26": 1.05
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Ansal Housing Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Geojit Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.43,
+        "mar26": 1.43
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "RK Swamy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.24
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Shigan Quantum Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.16
+      },
+      "valueCr": 2
+    }
+  ]
+}

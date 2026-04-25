@@ -1,0 +1,69 @@
+{
+  "lastScrapedAt": "2026-04-25T11:22:40.604Z",
+  "worthCr": 2,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Epic Energy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.49,
+        "aug25": null,
+        "sep25": 1.49,
+        "dec25": 1.49,
+        "mar26": 1.49
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Innocorp Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.34,
+        "aug25": null,
+        "sep25": 1.34,
+        "dec25": 1.34,
+        "mar26": 1.34
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Riba Textiles Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.46,
+        "aug25": null,
+        "sep25": 1.17,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Uniroyal Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.21,
+        "aug25": null,
+        "sep25": 1.21,
+        "dec25": 1.21,
+        "mar26": 1.21
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Zenith Fibres Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.11,
+        "aug25": null,
+        "sep25": 1.11,
+        "dec25": 1.11,
+        "mar26": 1.11
+      },
+      "valueCr": 0
+    }
+  ]
+}

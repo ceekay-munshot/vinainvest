@@ -1,0 +1,117 @@
+{
+  "lastScrapedAt": "2026-04-25T11:28:54.879Z",
+  "worthCr": 171,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Datamatics Global Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.04,
+        "aug25": null,
+        "sep25": 3.04,
+        "dec25": 3.04,
+        "mar26": 3.04
+      },
+      "valueCr": 127
+    },
+    {
+      "company": "Jayshree Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.47,
+        "aug25": null,
+        "sep25": 4.47,
+        "dec25": 4.47,
+        "mar26": 4.47
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Mantra Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.38,
+        "aug25": null,
+        "sep25": 4.38,
+        "dec25": 4.38,
+        "mar26": 4.38
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "United Van Der Horst Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.7,
+        "aug25": null,
+        "sep25": 1.7,
+        "dec25": 1.7,
+        "mar26": 1.7
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "NHC Foods Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.11,
+        "aug25": null,
+        "sep25": 2.11,
+        "dec25": 1.9,
+        "mar26": 1.9
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Sical Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": null,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": 4.72
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "Supreme Infrastructure India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.21,
+        "aug25": null,
+        "sep25": 1.21,
+        "dec25": 1.21,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Xelpmoc Design And Tech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.5,
+        "aug25": null,
+        "sep25": 1.5,
+        "dec25": 1.5,
+        "mar26": 1.5
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Shree Rama Newsprint Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.35,
+        "dec25": 1.35,
+        "mar26": 1.35
+      },
+      "valueCr": 7
+    }
+  ]
+}

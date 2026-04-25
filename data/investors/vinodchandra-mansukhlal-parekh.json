@@ -1,0 +1,129 @@
+{
+  "lastScrapedAt": "2026-04-25T11:31:43.236Z",
+  "worthCr": 109,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Benares Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.55,
+        "aug25": null,
+        "sep25": 1.55,
+        "dec25": 1.55,
+        "mar26": 1.55
+      },
+      "valueCr": 20
+    },
+    {
+      "company": "Garware Technical Fibres Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.1,
+        "aug25": null,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.1
+      },
+      "valueCr": 68
+    },
+    {
+      "company": "Kandagiri Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.04,
+        "aug25": null,
+        "sep25": 2.04,
+        "dec25": 1.57,
+        "mar26": 1.57
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ras Resorts & Apart Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.79,
+        "aug25": null,
+        "sep25": 2.79,
+        "dec25": 2.79,
+        "mar26": 2.79
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sambandam Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.2,
+        "aug25": null,
+        "sep25": 3.2,
+        "dec25": 3.2,
+        "mar26": 3.2
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Shri Dinesh Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": null,
+        "sep25": 1.03,
+        "dec25": 1.03,
+        "mar26": 1.03
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "SIL Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.1,
+        "aug25": null,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.1
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Sutlej Textiles And Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.1,
+        "aug25": null,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.1
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "WH Brady & Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.55,
+        "aug25": null,
+        "sep25": 1.55,
+        "dec25": 1.55,
+        "mar26": 1.55
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Suryalakshmi Cotton Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.66,
+        "aug25": null,
+        "sep25": 1.66,
+        "dec25": 1.66,
+        "mar26": 1.66
+      },
+      "valueCr": 2
+    }
+  ]
+}

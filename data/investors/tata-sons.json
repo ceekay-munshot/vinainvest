@@ -1,0 +1,213 @@
+{
+  "lastScrapedAt": "2026-04-25T11:05:47.771Z",
+  "worthCr": 1254442,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Hemisphere Properties India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.34,
+        "aug25": null,
+        "sep25": 8.34,
+        "dec25": 8.34,
+        "mar26": 8.34
+      },
+      "valueCr": 298
+    },
+    {
+      "company": "Tata Chemicals Ltd.",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 31.9,
+        "aug25": null,
+        "sep25": 31.9,
+        "dec25": 31.9,
+        "mar26": 31.9
+      },
+      "valueCr": 5633
+    },
+    {
+      "company": "Tata Communications Ltd.",
+      "sector": "Telecom",
+      "stakes": {
+        "jun25": 14.07,
+        "aug25": null,
+        "sep25": 14.07,
+        "dec25": 14.07,
+        "mar26": 14.07
+      },
+      "valueCr": 6096
+    },
+    {
+      "company": "Tata Consultancy Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 71.74,
+        "aug25": null,
+        "sep25": 71.74,
+        "dec25": 71.74,
+        "mar26": 71.74
+      },
+      "valueCr": 622115
+    },
+    {
+      "company": "Tata Consumer Products Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 28.69,
+        "aug25": null,
+        "sep25": 28.69,
+        "dec25": 28.68,
+        "mar26": 28.68
+      },
+      "valueCr": 33324
+    },
+    {
+      "company": "Tata Elxsi Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 42.21,
+        "aug25": null,
+        "sep25": 42.21,
+        "dec25": 42.21,
+        "mar26": 42.21
+      },
+      "valueCr": 11026
+    },
+    {
+      "company": "Tata Investment Corporation Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 68.51,
+        "mar26": 68.51
+      },
+      "valueCr": 24409
+    },
+    {
+      "company": "Tata Motors Passenger Vehicles Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 40.15,
+        "aug25": null,
+        "sep25": 40.14,
+        "dec25": 40.14,
+        "mar26": 40.14
+      },
+      "valueCr": 51813
+    },
+    {
+      "company": "Tata Power Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 45.21,
+        "aug25": null,
+        "sep25": 45.21,
+        "dec25": 45.21,
+        "mar26": 45.21
+      },
+      "valueCr": 62836
+    },
+    {
+      "company": "Tata Steel Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 31.76,
+        "aug25": null,
+        "sep25": 31.76,
+        "dec25": 31.76,
+        "mar26": 31.76
+      },
+      "valueCr": 83294
+    },
+    {
+      "company": "Tata Teleservices (Maharashtra) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 19.58,
+        "aug25": null,
+        "sep25": 19.58,
+        "dec25": 19.58,
+        "mar26": 19.58
+      },
+      "valueCr": 1708
+    },
+    {
+      "company": "The Indian Hotels Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 35.66,
+        "aug25": null,
+        "sep25": 35.66,
+        "dec25": 35.66,
+        "mar26": 35.66
+      },
+      "valueCr": 32254
+    },
+    {
+      "company": "Titan Company Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 20.84,
+        "aug25": null,
+        "sep25": 20.84,
+        "dec25": 20.84,
+        "mar26": 20.84
+      },
+      "valueCr": 81611
+    },
+    {
+      "company": "Trent Ltd.",
+      "sector": "Retail",
+      "stakes": {
+        "jun25": 32.45,
+        "aug25": null,
+        "sep25": 32.45,
+        "dec25": 32.45,
+        "mar26": 32.45
+      },
+      "valueCr": 49565
+    },
+    {
+      "company": "Voltas Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 26.64,
+        "aug25": null,
+        "sep25": 26.64,
+        "dec25": 26.64,
+        "mar26": 26.64
+      },
+      "valueCr": 12902
+    },
+    {
+      "company": "Tata Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 78.8,
+        "sep25": null,
+        "dec25": 78.8,
+        "mar26": 78.8
+      },
+      "valueCr": 112796
+    },
+    {
+      "company": "Tata Motors Ltd.",
+      "sector": "Automotive",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 40.14,
+        "dec25": 40.14,
+        "mar26": 40.14
+      },
+      "valueCr": 62760
+    }
+  ]
+}

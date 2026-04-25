@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T11:03:34.066Z",
+  "worthCr": 10037,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Maharashtra Scooters Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 1.6,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.6,
+        "mar26": 1.6
+      },
+      "valueCr": 226
+    },
+    {
+      "company": "Motilal Oswal Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 21.53,
+        "aug25": null,
+        "sep25": 21.17,
+        "dec25": 21.14,
+        "mar26": 20.87
+      },
+      "valueCr": 9811
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "lastScrapedAt": "2026-04-25T11:18:08.431Z",
+  "worthCr": 663,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Aditya Birla Real Estate Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.71,
+        "aug25": null,
+        "sep25": 1.7,
+        "dec25": 1.69,
+        "mar26": 1.63
+      },
+      "valueCr": 257
+    },
+    {
+      "company": "Dai-Ichi Karkaria Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.31,
+        "aug25": null,
+        "sep25": 4.31,
+        "dec25": 4.31,
+        "mar26": 4.31
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "E.I.D. - Parry (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.37,
+        "aug25": null,
+        "sep25": 2.35,
+        "dec25": 2.25,
+        "mar26": 2.23
+      },
+      "valueCr": 335
+    },
+    {
+      "company": "Genesys International Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.1,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "NTC Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.28,
+        "aug25": null,
+        "sep25": 1.28,
+        "dec25": 1.28,
+        "mar26": 1.28
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Swelect Energy Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.9,
+        "aug25": null,
+        "sep25": 2.9,
+        "dec25": 2.82,
+        "mar26": 2.79
+      },
+      "valueCr": 28
+    },
+    {
+      "company": "Uni Abex Alloy Products Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4,
+        "aug25": null,
+        "sep25": 4,
+        "dec25": 4,
+        "mar26": 4
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "Banswara Syntex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.27,
+        "aug25": null,
+        "sep25": 1.37,
+        "dec25": 1.44,
+        "mar26": 1.54
+      },
+      "valueCr": 6
+    }
+  ]
+}

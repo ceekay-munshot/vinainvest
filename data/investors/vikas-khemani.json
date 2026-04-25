@@ -1,0 +1,105 @@
+{
+  "lastScrapedAt": "2026-04-25T11:08:09.587Z",
+  "worthCr": 787,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Chemtech Industrial Valves Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.36,
+        "aug25": null,
+        "sep25": 8.36,
+        "dec25": 8.36,
+        "mar26": 8.36
+      },
+      "valueCr": 14
+    },
+    {
+      "company": "Man Industries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.44,
+        "aug25": null,
+        "sep25": 2.18,
+        "dec25": 2.39,
+        "mar26": 2.39
+      },
+      "valueCr": 99
+    },
+    {
+      "company": "PTC Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.99,
+        "aug25": null,
+        "sep25": 2.83,
+        "dec25": 2.82,
+        "mar26": 2.61
+      },
+      "valueCr": 631
+    },
+    {
+      "company": "Chetana Education Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 4.99,
+        "dec25": 4.99,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Upsurge Investment & Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.88,
+        "aug25": null,
+        "sep25": 6.88,
+        "dec25": 6.88,
+        "mar26": 6.3
+      },
+      "valueCr": 9
+    },
+    {
+      "company": "Unified Data- Tech Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.05,
+        "dec25": null,
+        "mar26": 1.05
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Salzer Electronics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.13
+      },
+      "valueCr": 12
+    },
+    {
+      "company": "Supreme Infrastructure India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.78
+      },
+      "valueCr": 14
+    }
+  ]
+}

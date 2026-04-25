@@ -1,0 +1,153 @@
+{
+  "lastScrapedAt": "2026-04-25T11:22:58.522Z",
+  "worthCr": 27,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Amco India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.38,
+        "aug25": null,
+        "sep25": 5.38,
+        "dec25": 5.38,
+        "mar26": 5.38
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "CMX Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.4,
+        "aug25": null,
+        "sep25": 2.28,
+        "dec25": 1.94,
+        "mar26": null
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Kesar Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.17,
+        "aug25": null,
+        "sep25": 3.11,
+        "dec25": 3.06,
+        "mar26": 3.12
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Kesar Terminals & Infrastructure Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.35,
+        "aug25": null,
+        "sep25": 3.35,
+        "dec25": 3.49,
+        "mar26": 3.49
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Lake Shore Realty Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.39,
+        "aug25": null,
+        "sep25": 4.32,
+        "dec25": 4.32,
+        "mar26": 4.32
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Perfectpac Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.61,
+        "aug25": null,
+        "sep25": 1.61,
+        "dec25": 1.61,
+        "mar26": 1.61
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Regency Ceramics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.95,
+        "aug25": null,
+        "sep25": 4.97,
+        "dec25": 4.97,
+        "mar26": 4.79
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Sri Lakshmi Saraswathi Textiles (Arni) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.95,
+        "aug25": null,
+        "sep25": 2.95,
+        "dec25": 2.95,
+        "mar26": 3.12
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sri Nachammai Cotton Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.88,
+        "aug25": null,
+        "sep25": 9.88,
+        "dec25": 9.88,
+        "mar26": 9.88
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Sri Ramakrishna Mills (Coimbatore) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.88,
+        "aug25": null,
+        "sep25": 4.91,
+        "dec25": 4.94,
+        "mar26": 4.73
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Transwarranty Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.59,
+        "aug25": null,
+        "sep25": 1.73,
+        "dec25": 2.2,
+        "mar26": 2.29
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Saffron Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.92,
+        "aug25": null,
+        "sep25": 5.92,
+        "dec25": 4.88,
+        "mar26": 5.14
+      },
+      "valueCr": 1
+    }
+  ]
+}

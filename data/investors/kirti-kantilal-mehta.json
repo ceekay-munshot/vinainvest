@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T11:18:31.807Z",
+  "worthCr": 0,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Omkar Overseas Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": null,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.18
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Unishire Urban Infra Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.04,
+        "aug25": null,
+        "sep25": 0.04,
+        "dec25": 0.04,
+        "mar26": 0.04
+      },
+      "valueCr": 0
+    }
+  ]
+}

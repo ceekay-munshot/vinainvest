@@ -1,0 +1,165 @@
+{
+  "lastScrapedAt": "2026-04-25T11:26:30.730Z",
+  "worthCr": 58,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Classic Leasing & Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.33,
+        "aug25": null,
+        "sep25": 1.33,
+        "dec25": 1.33,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Lehar Footwears Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.4,
+        "aug25": 3.4,
+        "sep25": 3.4,
+        "dec25": 3.4,
+        "mar26": 3.4
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Rich Universe Network Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.65,
+        "aug25": 1.65,
+        "sep25": 1.65,
+        "dec25": 1.65,
+        "mar26": 1.65
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Shyam Metalics And Energy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.01,
+        "aug25": 0.01,
+        "sep25": 0.01,
+        "dec25": 0.01,
+        "mar26": 0.01
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "SV Trading & Agencies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": 1.17,
+        "sep25": 1.17,
+        "dec25": 1.17,
+        "mar26": 1.17
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Tamilnadu Steel Tubes Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.12,
+        "aug25": 0.12,
+        "sep25": 0.12,
+        "dec25": 0.12,
+        "mar26": 0.12
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Worldwide Aluminium Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.01,
+        "aug25": 0.01,
+        "sep25": 0.01,
+        "dec25": 0.01,
+        "mar26": 0.01
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "DRS Cargo Movers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 13.26,
+        "aug25": null,
+        "sep25": 13.26,
+        "dec25": null,
+        "mar26": 15.11
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "DRS Dilip Roadlines Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 13.78,
+        "aug25": null,
+        "sep25": 13.78,
+        "dec25": null,
+        "mar26": 15.38
+      },
+      "valueCr": 26
+    },
+    {
+      "company": "Prakash Woollen & Synthetic Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 0.51,
+        "sep25": 0.51,
+        "dec25": 0.51,
+        "mar26": 0.51
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Astonea Labs Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.31,
+        "dec25": null,
+        "mar26": 2.15
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Logica Infoway Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 2.07
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Manilam Industries India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.96
+      },
+      "valueCr": 2
+    }
+  ]
+}

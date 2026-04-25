@@ -1,0 +1,453 @@
+{
+  "lastScrapedAt": "2026-04-25T10:57:41.178Z",
+  "worthCr": 3789,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Alivus Life Sciences Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.23,
+        "aug25": 1.23,
+        "sep25": 1.23,
+        "dec25": 1.23,
+        "mar26": 1.23
+      },
+      "valueCr": 158
+    },
+    {
+      "company": "Antony Waste Handling Cell Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.93,
+        "aug25": 6.93,
+        "sep25": 6.93,
+        "dec25": 6.93,
+        "mar26": 6.93
+      },
+      "valueCr": 99
+    },
+    {
+      "company": "Apex Frozen Foods Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.65,
+        "aug25": 4.17,
+        "sep25": 4.17,
+        "dec25": 4.17,
+        "mar26": 4.17
+      },
+      "valueCr": 60
+    },
+    {
+      "company": "Calcom Vision Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.56,
+        "aug25": 6.55,
+        "sep25": 6.55,
+        "dec25": 6.55,
+        "mar26": 6.55
+      },
+      "valueCr": 8
+    },
+    {
+      "company": "Cemindia Projects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "CMS Info Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.29,
+        "aug25": 1.29,
+        "sep25": 1.29,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Dishman Carbogen Amcis Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.28,
+        "aug25": 2.28,
+        "sep25": 2.28,
+        "dec25": 2.28,
+        "mar26": 2.28
+      },
+      "valueCr": 60
+    },
+    {
+      "company": "Equitas Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.26,
+        "aug25": 1.26,
+        "sep25": 1.26,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Everest Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 9.86,
+        "aug25": 9.93,
+        "sep25": 9.93,
+        "dec25": 9.93,
+        "mar26": 9.93
+      },
+      "valueCr": 61
+    },
+    {
+      "company": "Fairchem Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.22,
+        "aug25": 3.22,
+        "sep25": 3.22,
+        "dec25": 3.22,
+        "mar26": 3.33
+      },
+      "valueCr": 23
+    },
+    {
+      "company": "Globus Spirits Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.8,
+        "aug25": 3.8,
+        "sep25": 3.8,
+        "dec25": 3.8,
+        "mar26": 3.78
+      },
+      "valueCr": 115
+    },
+    {
+      "company": "Hercules Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Indian Energy Exchange Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 1.63,
+        "aug25": 1.63,
+        "sep25": 2.48,
+        "dec25": 2.48,
+        "mar26": 2.48
+      },
+      "valueCr": 273
+    },
+    {
+      "company": "JG Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.2,
+        "aug25": 4.2,
+        "sep25": 2.62,
+        "dec25": 2.62,
+        "mar26": 2.62
+      },
+      "valueCr": 41
+    },
+    {
+      "company": "Kaveri Seed Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.34,
+        "aug25": 5.34,
+        "sep25": 5.34,
+        "dec25": 5.34,
+        "mar26": 5.34
+      },
+      "valueCr": 257
+    },
+    {
+      "company": "KPIT Technologies Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 3.11,
+        "aug25": 3.11,
+        "sep25": 3.11,
+        "dec25": 3.11,
+        "mar26": 3.11
+      },
+      "valueCr": 605
+    },
+    {
+      "company": "Marksans Pharma Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.32,
+        "aug25": 2.32,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Matrimony.Com Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.81,
+        "aug25": 7.81,
+        "sep25": 7.81,
+        "dec25": 7.81,
+        "mar26": 7.13
+      },
+      "valueCr": 63
+    },
+    {
+      "company": "Newgen Software Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.1,
+        "aug25": 4.1,
+        "sep25": 4.1,
+        "dec25": 4.08,
+        "mar26": 4.08
+      },
+      "valueCr": 269
+    },
+    {
+      "company": "NIIT Learning Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.67,
+        "aug25": 5.65,
+        "sep25": 5.64,
+        "dec25": 5.63,
+        "mar26": 5.69
+      },
+      "valueCr": 244
+    },
+    {
+      "company": "NIIT Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.7,
+        "aug25": 5.67,
+        "sep25": 5.66,
+        "dec25": 5.66,
+        "mar26": 5.71
+      },
+      "valueCr": 53
+    },
+    {
+      "company": "Radico Khaitan Ltd.",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ramkrishna Forgings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.28,
+        "aug25": 1.28,
+        "sep25": 1.28,
+        "dec25": 1.28,
+        "mar26": 1.27
+      },
+      "valueCr": 126
+    },
+    {
+      "company": "Redington Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 1.88,
+        "aug25": 1.88,
+        "sep25": 1.88,
+        "dec25": 1.88,
+        "mar26": 1.88
+      },
+      "valueCr": 318
+    },
+    {
+      "company": "Satin Creditcare Network Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.81,
+        "aug25": 1.81,
+        "sep25": 1.81,
+        "dec25": 1.81,
+        "mar26": 1.81
+      },
+      "valueCr": 33
+    },
+    {
+      "company": "SBFC Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": 1.25,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Snowman Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.68,
+        "aug25": 1.68,
+        "sep25": 1.68,
+        "dec25": 1.68,
+        "mar26": 1.68
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Star Health and Allied Insurance Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.66,
+        "aug25": 1.66,
+        "sep25": 1.66,
+        "dec25": 1.66,
+        "mar26": 1.66
+      },
+      "valueCr": 500
+    },
+    {
+      "company": "United Foodbrands Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.05,
+        "aug25": 4.05,
+        "sep25": 4.05,
+        "dec25": 4.05,
+        "mar26": 4.05
+      },
+      "valueCr": 47
+    },
+    {
+      "company": "Yatra Online Ltd",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.26,
+        "aug25": 1.26,
+        "sep25": 1.26,
+        "dec25": 1.26,
+        "mar26": 1.26
+      },
+      "valueCr": 22
+    },
+    {
+      "company": "IRM Energy Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.35,
+        "aug25": 1.38,
+        "sep25": 1.38,
+        "dec25": 1.38,
+        "mar26": 1.29
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Indef Manufacturing Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.56,
+        "aug25": 1.56,
+        "sep25": 1.56,
+        "dec25": 1.56,
+        "mar26": 1.56
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Restaurant Brands Asia Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.64,
+        "aug25": 2.64,
+        "sep25": 2.64,
+        "dec25": 2.64,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "BlackBuck Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.38,
+        "aug25": 1.36,
+        "sep25": 1.36,
+        "dec25": 1.36,
+        "mar26": null
+      },
+      "valueCr": 147
+    },
+    {
+      "company": "Medi Assist Healthcare Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 3.88,
+        "dec25": 3.87,
+        "mar26": null
+      },
+      "valueCr": 99
+    },
+    {
+      "company": "Utkarsh Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.57,
+        "mar26": 1.57
+      },
+      "valueCr": 38
+    },
+    {
+      "company": "Panacea Biotec Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.12
+      },
+      "valueCr": 25
+    }
+  ]
+}

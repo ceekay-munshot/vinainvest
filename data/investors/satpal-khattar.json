@@ -1,0 +1,81 @@
+{
+  "lastScrapedAt": "2026-04-25T11:05:16.418Z",
+  "worthCr": 187,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "DCM Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": null,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": 1.07
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Gayatri Highways Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.16,
+        "aug25": null,
+        "sep25": 2.16,
+        "dec25": 2.16,
+        "mar26": 2.16
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Gayatri Projects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.84,
+        "aug25": null,
+        "sep25": 3.84,
+        "dec25": 3.84,
+        "mar26": 3.84
+      },
+      "valueCr": 14
+    },
+    {
+      "company": "Nath Bio-Genes (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.1,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.1,
+        "mar26": 2.1
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "R.P.P. Infra Projects Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.09,
+        "aug25": null,
+        "sep25": 1.61,
+        "dec25": 1.61,
+        "mar26": 1.61
+      },
+      "valueCr": 6
+    },
+    {
+      "company": "Strides Pharma Science Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.6,
+        "aug25": null,
+        "sep25": 1.6,
+        "dec25": 1.6,
+        "mar26": 1.6
+      },
+      "valueCr": 157
+    }
+  ]
+}

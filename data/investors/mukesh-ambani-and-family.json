@@ -1,0 +1,33 @@
+{
+  "lastScrapedAt": "2026-04-25T10:57:54.912Z",
+  "worthCr": 368981,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "JIO Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 20.04,
+        "aug25": null,
+        "sep25": 20.04,
+        "dec25": 20.04,
+        "mar26": 20.04
+      },
+      "valueCr": 31251
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Conglomerate",
+      "stakes": {
+        "jun25": 19.18,
+        "aug25": null,
+        "sep25": 19.14,
+        "dec25": 19.14,
+        "mar26": 19.14
+      },
+      "valueCr": 337730
+    }
+  ]
+}

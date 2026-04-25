@@ -1,0 +1,321 @@
+{
+  "lastScrapedAt": "2026-04-25T10:48:10.792Z",
+  "worthCr": 162,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Arihant Capital Markets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 32.21,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Aro Granite Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.79,
+        "aug25": 1.67,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "BJ Duplex Boards Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.05,
+        "aug25": 0.05,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ceejay Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.33,
+        "aug25": 1.85,
+        "sep25": 3.77,
+        "dec25": 4.56,
+        "mar26": null
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "DCM Nouvelle Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.21,
+        "aug25": 2.21,
+        "sep25": 2.23,
+        "dec25": 2.23,
+        "mar26": null
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Fluidomat Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 22.46,
+        "aug25": 22.46,
+        "sep25": 22.46,
+        "dec25": 22.46,
+        "mar26": 19.46
+      },
+      "valueCr": 71
+    },
+    {
+      "company": "GeeCee Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.65,
+        "aug25": 4.77,
+        "sep25": 4.79,
+        "dec25": 4.79,
+        "mar26": null
+      },
+      "valueCr": 29
+    },
+    {
+      "company": "Kanpur Plastipack Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mahaveer Infoway Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": 31.91,
+        "sep25": 31.91,
+        "dec25": 31.91,
+        "mar26": null
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Mayur Floorings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.22,
+        "aug25": 0.22,
+        "sep25": 0.22,
+        "dec25": 0.22,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Octal Credit Capital Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.6,
+        "aug25": 1.6,
+        "sep25": 1.6,
+        "dec25": 1.6,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Pee Cee Cosma Sope Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.95,
+        "aug25": 2.95,
+        "sep25": 2.95,
+        "dec25": 2.95,
+        "mar26": null
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Rane Holdings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.26,
+        "aug25": 1.27,
+        "sep25": 1.32,
+        "dec25": 1.37,
+        "mar26": null
+      },
+      "valueCr": 22
+    },
+    {
+      "company": "RCC Cements Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.16,
+        "aug25": 2.16,
+        "sep25": 2.16,
+        "dec25": 2.16,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "RSC International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.04,
+        "aug25": 0.04,
+        "sep25": 0.04,
+        "dec25": 0.04,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sharma East India Hospitals & Medical Research Ltd",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": 1.07,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Shiva Texyarn Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.02,
+        "aug25": 1.24,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Worldwide Aluminium Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.02,
+        "aug25": 0.02,
+        "sep25": 0.02,
+        "dec25": 0.02,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Jayant Agro-Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.11,
+        "aug25": 2.11,
+        "sep25": 2.18,
+        "dec25": 2.18,
+        "mar26": null
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Jocil Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.94,
+        "aug25": 4.06,
+        "sep25": 4.29,
+        "dec25": 4.59,
+        "mar26": null
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Banswara Syntex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Genomic Valley Biotech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.5,
+        "aug25": 5.5,
+        "sep25": 5.5,
+        "dec25": 5.5,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "GS Auto International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": 1.07,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": null
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Indian Card Clothing Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.59,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "ITCONS E-Solutions Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.57
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Shreyans Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.18
+      },
+      "valueCr": 3
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "lastScrapedAt": "2026-04-25T11:22:10.662Z",
+  "worthCr": 321,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Alphageo (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Centum Electronics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.68,
+        "aug25": 1.68,
+        "sep25": 1.67,
+        "dec25": 1.67,
+        "mar26": null
+      },
+      "valueCr": 69
+    },
+    {
+      "company": "Golden Tobacco Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.19,
+        "aug25": 1.19,
+        "sep25": 1.19,
+        "dec25": 1.19,
+        "mar26": null
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Hathway Bhawani Cabletel & Datacom Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.17,
+        "aug25": 1.17,
+        "sep25": 1.17,
+        "dec25": 1.17,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "High Energy Batteries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.38,
+        "aug25": 6.38,
+        "sep25": 6.38,
+        "dec25": 6.38,
+        "mar26": null
+      },
+      "valueCr": 35
+    },
+    {
+      "company": "Manugraph India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.06,
+        "aug25": 2.06,
+        "sep25": 2.06,
+        "dec25": 2.06,
+        "mar26": null
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Nexome Capital Markets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.49,
+        "aug25": 2.49,
+        "sep25": 2.49,
+        "dec25": 2.49,
+        "mar26": 1.66
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "RSWM Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.36,
+        "aug25": 1.36,
+        "sep25": 1.36,
+        "dec25": 1.36,
+        "mar26": null
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Rubfila International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 27.96,
+        "aug25": 27.96,
+        "sep25": 27.96,
+        "dec25": 27.96,
+        "mar26": 28.46
+      },
+      "valueCr": 114
+    },
+    {
+      "company": "Transpek Industry Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.1
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Zenotech Laboratories Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.72,
+        "aug25": 1.72,
+        "sep25": 1.72,
+        "dec25": 1.72,
+        "mar26": null
+      },
+      "valueCr": 5
+    },
+    {
+      "company": "Bharat Bijlee Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.89,
+        "aug25": 1.87,
+        "sep25": 1.82,
+        "dec25": 1.82,
+        "mar26": null
+      },
+      "valueCr": 63
+    },
+    {
+      "company": "Mafatlal Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.53,
+        "dec25": 1.52,
+        "mar26": 1.52
+      },
+      "valueCr": 15
+    }
+  ]
+}

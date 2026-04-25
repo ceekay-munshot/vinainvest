@@ -1,0 +1,213 @@
+{
+  "lastScrapedAt": "2026-04-25T11:29:53.637Z",
+  "worthCr": 68,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Abhinav Leasing & Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.34,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 0.34,
+        "mar26": 0.34
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "AMS Polymers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.61,
+        "aug25": null,
+        "sep25": 4.61,
+        "dec25": 4.61,
+        "mar26": 4.61
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Kamdhenu Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.97,
+        "aug25": null,
+        "sep25": 5.96,
+        "dec25": 5.96,
+        "mar26": 5.96
+      },
+      "valueCr": 37
+    },
+    {
+      "company": "Kamdhenu Ventures Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.52,
+        "aug25": null,
+        "sep25": 8.52,
+        "dec25": 8.52,
+        "mar26": 8.14
+      },
+      "valueCr": 15
+    },
+    {
+      "company": "Mahamaya Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.52,
+        "aug25": null,
+        "sep25": 7.52,
+        "dec25": 7.52,
+        "mar26": 7.52
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Mahip Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 17.44,
+        "aug25": null,
+        "sep25": 17.44,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Oriental Trimex Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.31,
+        "aug25": null,
+        "sep25": 0.29,
+        "dec25": 0.29,
+        "mar26": 0.29
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Shri Niwas Leasing And Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.36,
+        "dec25": 1.36,
+        "mar26": 1.36
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Touchwood Entertainment Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.05,
+        "aug25": null,
+        "sep25": 3.05,
+        "dec25": 3.05,
+        "mar26": 3.05
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "Tridev InfraEstates Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.11,
+        "aug25": null,
+        "sep25": 5.11,
+        "dec25": 5.11,
+        "mar26": 5.11
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "VCU Data Management Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": null,
+        "sep25": 1.03,
+        "dec25": 1.03,
+        "mar26": 1.03
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Worldwide Aluminium Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 0.03,
+        "aug25": null,
+        "sep25": 0.03,
+        "dec25": 0.03,
+        "mar26": 0.03
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Addictive Learning Technology Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 0.03,
+        "dec25": null,
+        "mar26": 0.03
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Bampsl Securities Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 14.27,
+        "aug25": null,
+        "sep25": 14.63,
+        "dec25": 14.81,
+        "mar26": 15.36
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Nikita Greentech Recycling Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 0.12,
+        "dec25": null,
+        "mar26": 0.12
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Fujiyama Power Systems Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 4.49,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Shree Pacetronix Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.02,
+        "mar26": 1.7
+      },
+      "valueCr": 1
+    }
+  ]
+}

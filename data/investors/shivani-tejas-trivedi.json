@@ -1,0 +1,177 @@
+{
+  "lastScrapedAt": "2026-04-25T11:29:14.739Z",
+  "worthCr": 627,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "ABM Knowledgeware Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.84,
+        "aug25": 2.84,
+        "sep25": 2.84,
+        "dec25": 2.84,
+        "mar26": 2.84
+      },
+      "valueCr": 13
+    },
+    {
+      "company": "Astrazeneca Pharma India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.4,
+        "aug25": 2.4,
+        "sep25": 2.4,
+        "dec25": 2.4,
+        "mar26": 2.4
+      },
+      "valueCr": 510
+    },
+    {
+      "company": "Atul Ltd.",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 1,
+        "aug25": 1,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Centum Electronics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.35,
+        "aug25": 1.81,
+        "sep25": 1.31,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Control Print Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.54,
+        "dec25": 1.54,
+        "mar26": 1.54
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "D-Link (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.05,
+        "aug25": 2.05,
+        "sep25": 2.05,
+        "dec25": 2.05,
+        "mar26": 2.05
+      },
+      "valueCr": 33
+    },
+    {
+      "company": "KG Denim Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.25,
+        "aug25": 3.24,
+        "sep25": 3.24,
+        "dec25": 3.24,
+        "mar26": 3.24
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Nocil Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.46,
+        "aug25": 1.31,
+        "sep25": 1.25,
+        "dec25": 1.25,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sambandam Spinning Mills Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.65,
+        "aug25": 4.65,
+        "sep25": 4.65,
+        "dec25": 4.65,
+        "mar26": 4.65
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Thirumalai Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.65,
+        "aug25": 2.96,
+        "sep25": 2.19,
+        "dec25": 1.12,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Seshasayee Paper and Boards Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "High Energy Batteries (India) Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.5,
+        "dec25": 1.9,
+        "mar26": 1.9
+      },
+      "valueCr": 11
+    },
+    {
+      "company": "Tamilnadu Petroproducts Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 2.05,
+        "dec25": 2.05,
+        "mar26": 2.05
+      },
+      "valueCr": 16
+    },
+    {
+      "company": "Ultramarine & Pigments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 2.08
+      },
+      "valueCr": 25
+    }
+  ]
+}

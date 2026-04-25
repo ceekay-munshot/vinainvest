@@ -1,0 +1,93 @@
+{
+  "lastScrapedAt": "2026-04-25T11:00:06.506Z",
+  "worthCr": 3263,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Asahi India Glass Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.95,
+        "aug25": null,
+        "sep25": 5.68,
+        "dec25": 5.68,
+        "mar26": 5.68
+      },
+      "valueCr": 1208
+    },
+    {
+      "company": "Bannari Amman Sugars Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.59,
+        "aug25": null,
+        "sep25": 2.59,
+        "dec25": 2.59,
+        "mar26": 2.59
+      },
+      "valueCr": 118
+    },
+    {
+      "company": "Elgi Equipments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.69,
+        "aug25": null,
+        "sep25": 1.69,
+        "dec25": 1.69,
+        "mar26": 1.69
+      },
+      "valueCr": 293
+    },
+    {
+      "company": "Investment & Precision Castings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 10,
+        "aug25": null,
+        "sep25": 10,
+        "dec25": 10,
+        "mar26": 10
+      },
+      "valueCr": 61
+    },
+    {
+      "company": "LMW Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 10.22,
+        "aug25": null,
+        "sep25": 10.15,
+        "dec25": 10.15,
+        "mar26": 10.14
+      },
+      "valueCr": 1547
+    },
+    {
+      "company": "Vascon Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.88,
+        "aug25": null,
+        "sep25": 3.88,
+        "dec25": 3.84,
+        "mar26": 3.79
+      },
+      "valueCr": 33
+    },
+    {
+      "company": "Zodiac Clothing Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.56,
+        "aug25": null,
+        "sep25": 1.56,
+        "dec25": 1.56,
+        "mar26": 1.48
+      },
+      "valueCr": 3
+    }
+  ]
+}

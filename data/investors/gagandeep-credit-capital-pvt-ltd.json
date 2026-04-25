@@ -1,0 +1,165 @@
+{
+  "lastScrapedAt": "2026-04-25T11:15:03.756Z",
+  "worthCr": 11770,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Asahi India Glass Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.52,
+        "aug25": null,
+        "sep25": 3.36,
+        "dec25": 3.36,
+        "mar26": 3.36
+      },
+      "valueCr": 714
+    },
+    {
+      "company": "Bannari Amman Sugars Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 5.53,
+        "aug25": null,
+        "sep25": 5.53,
+        "dec25": 5.53,
+        "mar26": 5.53
+      },
+      "valueCr": 251
+    },
+    {
+      "company": "Elgi Equipments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.64,
+        "aug25": null,
+        "sep25": 4.64,
+        "dec25": 4.64,
+        "mar26": 4.64
+      },
+      "valueCr": 805
+    },
+    {
+      "company": "Grasim Industries Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 1.41,
+        "aug25": null,
+        "sep25": 1.41,
+        "dec25": 1.41,
+        "mar26": 1.46
+      },
+      "valueCr": 2718
+    },
+    {
+      "company": "IP Rings Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.93,
+        "aug25": null,
+        "sep25": 1.93,
+        "dec25": 1.93,
+        "mar26": 1.93
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "JSW Steel Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 2.03,
+        "aug25": null,
+        "sep25": 2.03,
+        "dec25": 2.03,
+        "mar26": 2.03
+      },
+      "valueCr": 6222
+    },
+    {
+      "company": "Kartik Investments Trust Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.54,
+        "aug25": null,
+        "sep25": 2.54,
+        "dec25": 2.54,
+        "mar26": 2.54
+      },
+      "valueCr": 3
+    },
+    {
+      "company": "LMW Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.64,
+        "aug25": null,
+        "sep25": 4.64,
+        "dec25": 4.64,
+        "mar26": 4.64
+      },
+      "valueCr": 709
+    },
+    {
+      "company": "Prism Johnson Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.07,
+        "aug25": null,
+        "sep25": 1.07,
+        "dec25": 1.07,
+        "mar26": 1.07
+      },
+      "valueCr": 72
+    },
+    {
+      "company": "Silver Touch Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.1,
+        "aug25": null,
+        "sep25": 7.1,
+        "dec25": 7.1,
+        "mar26": 6.7
+      },
+      "valueCr": 118
+    },
+    {
+      "company": "TVS Srichakra Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.75,
+        "aug25": null,
+        "sep25": 3.75,
+        "dec25": 3.75,
+        "mar26": 3.75
+      },
+      "valueCr": 109
+    },
+    {
+      "company": "Sanstar Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.73,
+        "aug25": null,
+        "sep25": 1.73,
+        "dec25": 1.73,
+        "mar26": 1.73
+      },
+      "valueCr": 28
+    },
+    {
+      "company": "Precot Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.58,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 2.58,
+        "mar26": 2.58
+      },
+      "valueCr": 17
+    }
+  ]
+}

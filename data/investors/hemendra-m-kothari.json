@@ -1,0 +1,45 @@
+{
+  "lastScrapedAt": "2026-04-25T10:51:33.258Z",
+  "worthCr": 771,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Alkyl Amines Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": null,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": 1.18
+      },
+      "valueCr": 89
+    },
+    {
+      "company": "EIH Associated Hotels Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.23,
+        "aug25": null,
+        "sep25": 1.23,
+        "dec25": 1.23,
+        "mar26": 1.23
+      },
+      "valueCr": 24
+    },
+    {
+      "company": "Sonata Software Ltd.",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 9.13,
+        "aug25": null,
+        "sep25": 9.13,
+        "dec25": 9.13,
+        "mar26": 9.13
+      },
+      "valueCr": 658
+    }
+  ]
+}

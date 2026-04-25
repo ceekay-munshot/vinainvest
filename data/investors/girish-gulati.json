@@ -1,0 +1,153 @@
+{
+  "lastScrapedAt": "2026-04-25T11:15:18.547Z",
+  "worthCr": 328,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Aarvi Encon Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.99,
+        "aug25": null,
+        "sep25": 3.46,
+        "dec25": 3.46,
+        "mar26": 3.46
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Ador Welding Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.46,
+        "aug25": null,
+        "sep25": 2.46,
+        "dec25": 2.46,
+        "mar26": 2.46
+      },
+      "valueCr": 42
+    },
+    {
+      "company": "Avantel Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.19,
+        "aug25": null,
+        "sep25": 1.19,
+        "dec25": null,
+        "mar26": 1.19
+      },
+      "valueCr": 49
+    },
+    {
+      "company": "Jayant Agro-Organics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.1,
+        "aug25": null,
+        "sep25": 1.1,
+        "dec25": 1.1,
+        "mar26": 1.11
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "Marathon Nextgen Realty Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.2,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sanghvi Movers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.53,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "TIL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.31,
+        "aug25": null,
+        "sep25": 4.29,
+        "dec25": 4.29,
+        "mar26": 3.91
+      },
+      "valueCr": 54
+    },
+    {
+      "company": "Sical Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1,
+        "aug25": null,
+        "sep25": 1,
+        "dec25": 1,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Thejo Engineering Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 7.59,
+        "aug25": null,
+        "sep25": 7.59,
+        "dec25": 7.59,
+        "mar26": 7.59
+      },
+      "valueCr": 143
+    },
+    {
+      "company": "Shiva Texyarn Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.77,
+        "aug25": null,
+        "sep25": 3.77,
+        "dec25": 3.77,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Khadim India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.72,
+        "aug25": null,
+        "sep25": 1.45,
+        "dec25": 1.39,
+        "mar26": 1.34
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Kalyani Cast-Tech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 5.48,
+        "mar26": 4.99
+      },
+      "valueCr": 24
+    }
+  ]
+}

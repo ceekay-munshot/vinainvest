@@ -1,0 +1,21 @@
+{
+  "lastScrapedAt": "2026-04-25T10:57:47.732Z",
+  "worthCr": 174,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Edelweiss Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.53,
+        "aug25": null,
+        "sep25": 1.54,
+        "dec25": 1.54,
+        "mar26": 1.54
+      },
+      "valueCr": 174
+    }
+  ]
+}

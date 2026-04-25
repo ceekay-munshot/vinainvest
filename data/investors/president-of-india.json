@@ -1,0 +1,897 @@
+{
+  "lastScrapedAt": "2026-04-25T11:03:25.232Z",
+  "worthCr": 4205982,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Andrew Yule & Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 89.25,
+        "aug25": 89.25,
+        "sep25": 89.25,
+        "dec25": 89.25,
+        "mar26": 89.25
+      },
+      "valueCr": 1368
+    },
+    {
+      "company": "Balmer Lawrie Investments Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 59.67,
+        "aug25": 59.67,
+        "sep25": 59.67,
+        "dec25": 59.67,
+        "mar26": 59.67
+      },
+      "valueCr": 958
+    },
+    {
+      "company": "Bank Of Baroda",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 63.97,
+        "aug25": 63.97,
+        "sep25": 63.97,
+        "dec25": 63.97,
+        "mar26": 63.97
+      },
+      "valueCr": 90687
+    },
+    {
+      "company": "Bank Of India",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 73.38,
+        "aug25": 73.38,
+        "sep25": 73.38,
+        "dec25": 73.38,
+        "mar26": 73.38
+      },
+      "valueCr": 49258
+    },
+    {
+      "company": "Bank Of Maharashtra",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 79.6,
+        "aug25": 79.6,
+        "sep25": 79.6,
+        "dec25": 73.6,
+        "mar26": 73.6
+      },
+      "valueCr": 44100
+    },
+    {
+      "company": "BEML Land Assets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 54.03,
+        "aug25": 54.03,
+        "sep25": 54.03,
+        "dec25": 54.03,
+        "mar26": 54.03
+      },
+      "valueCr": 428
+    },
+    {
+      "company": "BEML Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 54.03,
+        "aug25": 54.03,
+        "sep25": 54.03,
+        "dec25": 54.03,
+        "mar26": 54.03
+      },
+      "valueCr": 8066
+    },
+    {
+      "company": "Bharat Dynamics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 74.93,
+        "aug25": 74.93,
+        "sep25": 74.93,
+        "dec25": 74.93,
+        "mar26": 74.93
+      },
+      "valueCr": 38462
+    },
+    {
+      "company": "Bharat Electronics Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 51.14,
+        "aug25": 51.14,
+        "sep25": 51.14,
+        "dec25": 51.14,
+        "mar26": 51.14
+      },
+      "valueCr": 166132
+    },
+    {
+      "company": "Bharat Heavy Electricals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 63.17,
+        "aug25": 63.17,
+        "sep25": 63.17,
+        "dec25": 63.17,
+        "mar26": 58.17
+      },
+      "valueCr": 68336
+    },
+    {
+      "company": "Bharat Petroleum Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 52.98,
+        "aug25": 52.98,
+        "sep25": 52.98,
+        "dec25": 52.98,
+        "mar26": 52.98
+      },
+      "valueCr": 70813
+    },
+    {
+      "company": "Canara Bank",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 62.93,
+        "aug25": 62.93,
+        "sep25": 62.93,
+        "dec25": 62.93,
+        "mar26": 62.93
+      },
+      "valueCr": 80405
+    },
+    {
+      "company": "Central Bank Of India",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 89.27,
+        "aug25": 89.27,
+        "sep25": 89.27,
+        "dec25": 89.27,
+        "mar26": 89.27
+      },
+      "valueCr": 29097
+    },
+    {
+      "company": "Coal India Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": null,
+        "aug25": 63.13,
+        "sep25": 63.13,
+        "dec25": 63.13,
+        "mar26": 63.13
+      },
+      "valueCr": 177418
+    },
+    {
+      "company": "Cochin Shipyard Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 67.91,
+        "aug25": 67.91,
+        "sep25": 67.91,
+        "dec25": 67.91,
+        "mar26": 67.91
+      },
+      "valueCr": 29743
+    },
+    {
+      "company": "Container Corporation Of India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 54.8,
+        "aug25": 54.8,
+        "sep25": 54.8,
+        "dec25": 54.8,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Engineers India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 51.32,
+        "aug25": 51.32,
+        "sep25": 51.32,
+        "dec25": 51.32,
+        "mar26": 51.32
+      },
+      "valueCr": 7006
+    },
+    {
+      "company": "GAIL (India) Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 51.88,
+        "aug25": 51.88,
+        "sep25": 51.88,
+        "dec25": 51.88,
+        "mar26": 51.88
+      },
+      "valueCr": 56102
+    },
+    {
+      "company": "Garden Reach Shipbuilders & Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 74.5,
+        "aug25": 74.5,
+        "sep25": 74.5,
+        "dec25": 74.5,
+        "mar26": 74.5
+      },
+      "valueCr": 24567
+    },
+    {
+      "company": "General Insurance Corporation of India",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 82.4,
+        "aug25": 82.4,
+        "sep25": 82.4,
+        "dec25": 82.4,
+        "mar26": 82.4
+      },
+      "valueCr": 57519
+    },
+    {
+      "company": "Hemisphere Properties India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 51.12,
+        "aug25": 51.12,
+        "sep25": 51.12,
+        "dec25": 51.12,
+        "mar26": 51.12
+      },
+      "valueCr": 1828
+    },
+    {
+      "company": "Hindustan Aeronautics Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 71.64,
+        "aug25": 71.64,
+        "sep25": 71.64,
+        "dec25": 71.64,
+        "mar26": 71.64
+      },
+      "valueCr": 204376
+    },
+    {
+      "company": "Hindustan Copper Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 66.14,
+        "aug25": 66.14,
+        "sep25": 66.14,
+        "dec25": 66.14,
+        "mar26": 66.14
+      },
+      "valueCr": 34635
+    },
+    {
+      "company": "Hindustan Organic Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 58.78,
+        "aug25": 58.78,
+        "sep25": 58.78,
+        "dec25": 58.78,
+        "mar26": 58.78
+      },
+      "valueCr": 126
+    },
+    {
+      "company": "HMT Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 93.68,
+        "aug25": 93.68,
+        "sep25": 93.68,
+        "dec25": 93.68,
+        "mar26": 36.85
+      },
+      "valueCr": 2785
+    },
+    {
+      "company": "Housing & Urban Development Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 54.27,
+        "aug25": 54.27,
+        "sep25": 54.27,
+        "dec25": 54.27,
+        "mar26": 54.27
+      },
+      "valueCr": 22964
+    },
+    {
+      "company": "IDBI Bank Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 45.48,
+        "aug25": 45.48,
+        "sep25": 45.48,
+        "dec25": 45.48,
+        "mar26": null
+      },
+      "valueCr": 37246
+    },
+    {
+      "company": "IDFC First Bank Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 9.1,
+        "aug25": 9.09,
+        "sep25": 9.08,
+        "dec25": 7.75,
+        "mar26": 7.75
+      },
+      "valueCr": 4481
+    },
+    {
+      "company": "IFCI Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 72.57,
+        "aug25": 72.57,
+        "sep25": null,
+        "dec25": 72.57,
+        "mar26": 72.57
+      },
+      "valueCr": 11634
+    },
+    {
+      "company": "India Tourism Development Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 87.03,
+        "aug25": 87.03,
+        "sep25": 87.03,
+        "dec25": 87.03,
+        "mar26": 87.03
+      },
+      "valueCr": 4366
+    },
+    {
+      "company": "Indian Bank",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 73.84,
+        "aug25": 73.84,
+        "sep25": 73.84,
+        "dec25": 73.84,
+        "mar26": 73.84
+      },
+      "valueCr": 90494
+    },
+    {
+      "company": "Indian Oil Corporation Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 51.5,
+        "aug25": 51.5,
+        "sep25": 51.5,
+        "dec25": 51.5,
+        "mar26": 51.5
+      },
+      "valueCr": 104334
+    },
+    {
+      "company": "Indian Overseas Bank",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 94.61,
+        "aug25": 94.61,
+        "sep25": 94.61,
+        "dec25": 92.44,
+        "mar26": 92.44
+      },
+      "valueCr": 62320
+    },
+    {
+      "company": "Indian Railway Catering And Tourism Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 62.4,
+        "aug25": 62.4,
+        "sep25": 62.4,
+        "dec25": 62.4,
+        "mar26": 62.4
+      },
+      "valueCr": 27015
+    },
+    {
+      "company": "Indian Railway Finance Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 86.36,
+        "aug25": 86.36,
+        "sep25": 86.36,
+        "dec25": 86.36,
+        "mar26": 84.65
+      },
+      "valueCr": 114960
+    },
+    {
+      "company": "Ircon International Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 65.17,
+        "aug25": 65.17,
+        "sep25": 65.17,
+        "dec25": 65.17,
+        "mar26": 65.17
+      },
+      "valueCr": 9207
+    },
+    {
+      "company": "ITI Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 89.97,
+        "aug25": 89.99,
+        "sep25": 89.99,
+        "dec25": 89.99,
+        "mar26": 89.99
+      },
+      "valueCr": 25837
+    },
+    {
+      "company": "KIOCL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 99.03,
+        "aug25": 99.03,
+        "sep25": 99.03,
+        "dec25": 99.03,
+        "mar26": 99.03
+      },
+      "valueCr": 24054
+    },
+    {
+      "company": "Life Insurance Corporation of India",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 96.5,
+        "aug25": 96.5,
+        "sep25": 96.5,
+        "dec25": 96.5,
+        "mar26": 96.5
+      },
+      "valueCr": 495034
+    },
+    {
+      "company": "Madras Fertilizers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 59.5,
+        "aug25": 59.5,
+        "sep25": 59.5,
+        "dec25": 59.5,
+        "mar26": 59.5
+      },
+      "valueCr": 646
+    },
+    {
+      "company": "Mahanagar Telephone Nigam Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 56.25,
+        "aug25": 56.25,
+        "sep25": 56.25,
+        "dec25": 56.25,
+        "mar26": 56.25
+      },
+      "valueCr": 1085
+    },
+    {
+      "company": "Mazagon Dock Shipbuilders Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 84.83,
+        "aug25": 81.22,
+        "sep25": 81.22,
+        "dec25": 81.22,
+        "mar26": 81.22
+      },
+      "valueCr": 87815
+    },
+    {
+      "company": "Mishra Dhatu Nigam Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 74,
+        "aug25": 74,
+        "sep25": null,
+        "dec25": 74,
+        "mar26": 74
+      },
+      "valueCr": 5212
+    },
+    {
+      "company": "MMTC Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 89.93,
+        "aug25": 89.93,
+        "sep25": 89.93,
+        "dec25": 89.93,
+        "mar26": 89.93
+      },
+      "valueCr": 8822
+    },
+    {
+      "company": "MOIL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 53.35,
+        "aug25": 53.35,
+        "sep25": 53.35,
+        "dec25": 53.35,
+        "mar26": 53.35
+      },
+      "valueCr": 3464
+    },
+    {
+      "company": "MSTC Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 64.75,
+        "aug25": 64.75,
+        "sep25": 64.75,
+        "dec25": 64.75,
+        "mar26": 64.75
+      },
+      "valueCr": 1975
+    },
+    {
+      "company": "National Aluminium Company Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 51.28,
+        "aug25": 51.28,
+        "sep25": 51.28,
+        "dec25": 51.28,
+        "mar26": 51.28
+      },
+      "valueCr": 41161
+    },
+    {
+      "company": "National Fertilizers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 74.71,
+        "aug25": 74.71,
+        "sep25": 74.71,
+        "dec25": 74.71,
+        "mar26": 74.71
+      },
+      "valueCr": 2777
+    },
+    {
+      "company": "NBCC (India) Ltd.",
+      "sector": "Infrastructure",
+      "stakes": {
+        "jun25": 61.75,
+        "aug25": 61.75,
+        "sep25": 61.75,
+        "dec25": 61.75,
+        "mar26": 61.75
+      },
+      "valueCr": 15540
+    },
+    {
+      "company": "NHPC Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 67.4,
+        "aug25": 67.4,
+        "sep25": 67.4,
+        "dec25": 67.4,
+        "mar26": 67.4
+      },
+      "valueCr": 54608
+    },
+    {
+      "company": "NLC India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 72.2,
+        "aug25": 72.2,
+        "sep25": 72.2,
+        "dec25": 72.2,
+        "mar26": 72.2
+      },
+      "valueCr": 29945
+    },
+    {
+      "company": "NMDC Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 60.79,
+        "aug25": 60.79,
+        "sep25": 60.79,
+        "dec25": 60.79,
+        "mar26": 60.79
+      },
+      "valueCr": 47725
+    },
+    {
+      "company": "NMDC Steel Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 60.79,
+        "aug25": 60.79,
+        "sep25": 60.79,
+        "dec25": 60.79,
+        "mar26": 60.79
+      },
+      "valueCr": 7298
+    },
+    {
+      "company": "NTPC Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 51.1,
+        "aug25": 51.1,
+        "sep25": 51.1,
+        "dec25": 51.1,
+        "mar26": 51.1
+      },
+      "valueCr": 199131
+    },
+    {
+      "company": "Oil & Natural Gas Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 58.89,
+        "aug25": 58.89,
+        "sep25": 58.89,
+        "dec25": 58.89,
+        "mar26": 58.89
+      },
+      "valueCr": 211005
+    },
+    {
+      "company": "Oil India Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 56.66,
+        "aug25": 56.66,
+        "sep25": 56.66,
+        "dec25": 56.66,
+        "mar26": 56.66
+      },
+      "valueCr": 43655
+    },
+    {
+      "company": "Power Finance Corporation Ltd.",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 55.99,
+        "aug25": 55.99,
+        "sep25": 55.99,
+        "dec25": 55.99,
+        "mar26": 55.99
+      },
+      "valueCr": 86730
+    },
+    {
+      "company": "Power Grid Corporation Of India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 51.34,
+        "aug25": 51.34,
+        "sep25": 51.34,
+        "dec25": 51.34,
+        "mar26": 51.34
+      },
+      "valueCr": 151077
+    },
+    {
+      "company": "Punjab & Sind Bank",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 93.85,
+        "aug25": 93.85,
+        "sep25": 93.85,
+        "dec25": 93.85,
+        "mar26": 93.85
+      },
+      "valueCr": 16541
+    },
+    {
+      "company": "Punjab National Bank",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 70.08,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rail Vikas Nigam Ltd.",
+      "sector": "Infrastructure",
+      "stakes": {
+        "jun25": 72.84,
+        "aug25": 72.84,
+        "sep25": 72.84,
+        "dec25": 72.84,
+        "mar26": 72.84
+      },
+      "valueCr": 46085
+    },
+    {
+      "company": "Railtel Corporation Of India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 72.84,
+        "aug25": 72.84,
+        "sep25": 72.84,
+        "dec25": 72.84,
+        "mar26": 72.84
+      },
+      "valueCr": 7385
+    },
+    {
+      "company": "Rashtriya Chemicals and Fertilizers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 75,
+        "aug25": 75,
+        "sep25": 75,
+        "dec25": 75,
+        "mar26": 75
+      },
+      "valueCr": 5300
+    },
+    {
+      "company": "Rites Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 72.2,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 72.2,
+        "mar26": 72.2
+      },
+      "valueCr": 7522
+    },
+    {
+      "company": "Shipping Corporation of India Land and Assets Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 63.75,
+        "aug25": 63.75,
+        "sep25": 63.75,
+        "dec25": 63.75,
+        "mar26": 63.75
+      },
+      "valueCr": 1321
+    },
+    {
+      "company": "Shipping Corporation Of India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 63.75,
+        "aug25": 63.75,
+        "sep25": 63.75,
+        "dec25": 63.75,
+        "mar26": 63.75
+      },
+      "valueCr": 8561
+    },
+    {
+      "company": "SJVN Ltd.",
+      "sector": "Energy",
+      "stakes": {
+        "jun25": 55,
+        "aug25": 55,
+        "sep25": 55,
+        "dec25": 55,
+        "mar26": 55
+      },
+      "valueCr": 16826
+    },
+    {
+      "company": "State Bank Of India",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 57.43,
+        "aug25": 57.42,
+        "sep25": 55.5,
+        "dec25": 55.5,
+        "mar26": 55.52
+      },
+      "valueCr": 559334
+    },
+    {
+      "company": "Steel Authority Of India Ltd.",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": 65,
+        "aug25": 65,
+        "sep25": 65,
+        "dec25": 65,
+        "mar26": 65
+      },
+      "valueCr": 47911
+    },
+    {
+      "company": "The Fertilisers And Chemicals Travancore Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 90,
+        "aug25": null,
+        "sep25": 90,
+        "dec25": 90,
+        "mar26": 90
+      },
+      "valueCr": 51807
+    },
+    {
+      "company": "UCO Bank",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 90.95,
+        "aug25": 90.95,
+        "sep25": 90.95,
+        "dec25": 90.95,
+        "mar26": 90.95
+      },
+      "valueCr": 30189
+    },
+    {
+      "company": "Union Bank Of India",
+      "sector": "Financials",
+      "stakes": {
+        "jun25": 74.76,
+        "aug25": 74.76,
+        "sep25": 74.76,
+        "dec25": 74.76,
+        "mar26": 74.76
+      },
+      "valueCr": 101008
+    },
+    {
+      "company": "Indian Renewable Energy Development Agency Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 75,
+        "aug25": 71.76,
+        "sep25": 71.76,
+        "dec25": 71.76,
+        "mar26": 71.76
+      },
+      "valueCr": 27393
+    },
+    {
+      "company": "Indraprastha Medical Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 26,
+        "aug25": 26,
+        "sep25": 26,
+        "dec25": 26,
+        "mar26": 26
+      },
+      "valueCr": 969
+    }
+  ]
+}

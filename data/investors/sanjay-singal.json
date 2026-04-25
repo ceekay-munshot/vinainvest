@@ -1,0 +1,141 @@
+{
+  "lastScrapedAt": "2026-04-25T11:26:44.555Z",
+  "worthCr": 283,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Dalmia Industrial Development Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.96,
+        "aug25": null,
+        "sep25": 2.96,
+        "dec25": 2.96,
+        "mar26": 2.96
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Greencrest Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 4.36,
+        "aug25": null,
+        "sep25": 6.28,
+        "dec25": 4.36,
+        "mar26": 4.36
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "JMJ Fintech Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 13.68,
+        "aug25": null,
+        "sep25": 4.55,
+        "dec25": 3.12,
+        "mar26": null
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Mukta Agriculture Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 8.3,
+        "aug25": null,
+        "sep25": 8.3,
+        "dec25": 8.3,
+        "mar26": 8.3
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Mystic Electronics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 15.18,
+        "aug25": null,
+        "sep25": 15.18,
+        "dec25": 15.18,
+        "mar26": 15.18
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Premier Capital Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 14.58,
+        "aug25": null,
+        "sep25": 14.58,
+        "dec25": 9.72,
+        "mar26": 9.72
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "PS IT Infrastructure & Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.54,
+        "aug25": null,
+        "sep25": 3.54,
+        "dec25": 2.36,
+        "mar26": 2.36
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Voltaire Leasing & Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 6.57,
+        "aug25": null,
+        "sep25": 6.57,
+        "dec25": 4.38,
+        "mar26": 4.38
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Glance Finance Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.19,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rose Merc. Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 3.08
+      },
+      "valueCr": 1
+    },
+    {
+      "company": "Siemens Energy India Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 0.24
+      },
+      "valueCr": 275
+    }
+  ]
+}

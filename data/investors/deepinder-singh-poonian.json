@@ -1,0 +1,69 @@
+{
+  "lastScrapedAt": "2026-04-25T11:11:55.623Z",
+  "worthCr": 12,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Barak Valley Cements Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "National Plastic Technologies Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.27,
+        "aug25": null,
+        "sep25": 3.27,
+        "dec25": 3.27,
+        "mar26": 3.27
+      },
+      "valueCr": 4
+    },
+    {
+      "company": "Ritco Logistics Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.24,
+        "aug25": null,
+        "sep25": 1.22,
+        "dec25": 1.22,
+        "mar26": 1.22
+      },
+      "valueCr": 7
+    },
+    {
+      "company": "We Win Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "DRA Consultants Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    }
+  ]
+}

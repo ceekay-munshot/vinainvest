@@ -1,0 +1,45 @@
+{
+  "lastScrapedAt": "2026-04-25T11:11:12.005Z",
+  "worthCr": 377,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Astra Microwave Products Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.53,
+        "aug25": null,
+        "sep25": 3.53,
+        "dec25": 3.53,
+        "mar26": 3.53
+      },
+      "valueCr": 377
+    },
+    {
+      "company": "Premier Explosives Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.25,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "United Interactive Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.06,
+        "aug25": null,
+        "sep25": 2.06,
+        "dec25": 2.06,
+        "mar26": 2.06
+      },
+      "valueCr": 0
+    }
+  ]
+}

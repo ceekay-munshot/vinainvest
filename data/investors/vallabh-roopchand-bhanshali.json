@@ -1,0 +1,81 @@
+{
+  "lastScrapedAt": "2026-04-25T11:06:01.766Z",
+  "worthCr": 117,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "7Seas Entertainment Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.03,
+        "aug25": 1.03,
+        "sep25": 1.03,
+        "dec25": 1.03,
+        "mar26": 1
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Greenlam Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.15,
+        "aug25": 1.15,
+        "sep25": 1.15,
+        "dec25": 1.15,
+        "mar26": 1.15
+      },
+      "valueCr": 66
+    },
+    {
+      "company": "PDS Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.1,
+        "aug25": 1.1,
+        "sep25": 1.1,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Styrenix Performance Materials Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": 1.13,
+        "sep25": 1.13,
+        "dec25": 1.13,
+        "mar26": 1.13
+      },
+      "valueCr": 46
+    },
+    {
+      "company": "Vascon Engineers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.01,
+        "aug25": 1.01,
+        "sep25": 1.01,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "On Door Concepts Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.91,
+        "aug25": null,
+        "sep25": 3.91,
+        "dec25": null,
+        "mar26": 3.91
+      },
+      "valueCr": 3
+    }
+  ]
+}

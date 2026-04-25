@@ -1,0 +1,309 @@
+{
+  "lastScrapedAt": "2026-04-25T10:49:29.186Z",
+  "worthCr": 472,
+  "type": "Individual",
+  "activeSince": "—",
+  "style": "Diversified equity",
+  "holdings": [
+    {
+      "company": "Chennai Petroleum Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.3,
+        "mar26": 1.09
+      },
+      "valueCr": 200
+    },
+    {
+      "company": "Deepak Spinners Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "K.C.P. Sugar And Industries Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.92,
+        "aug25": null,
+        "sep25": 1.8,
+        "dec25": 1.59,
+        "mar26": 1.85
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "National Oxygen Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.22,
+        "aug25": 1.22,
+        "sep25": 1.22,
+        "dec25": 1.22,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Prakash Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.27,
+        "aug25": 2.94,
+        "sep25": 2.57,
+        "dec25": 2.26,
+        "mar26": 2.07
+      },
+      "valueCr": 55
+    },
+    {
+      "company": "Prakash Pipes Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 3.16,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 4.08
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rajshree Sugars & Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.3,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.12
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Savera Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": 1.14,
+        "sep25": 1.1,
+        "dec25": 1.09,
+        "mar26": 1.25
+      },
+      "valueCr": 2
+    },
+    {
+      "company": "Som Distilleries And Breweries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.83,
+        "aug25": 2.43,
+        "sep25": 2.07,
+        "dec25": 1.49,
+        "mar26": 2.41
+      },
+      "valueCr": 28
+    },
+    {
+      "company": "Talbros Automotive Components Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.08
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Ujjivan Small Finance Bank Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Zuari Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.65,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.6
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "20 Microns Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.99,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.71
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Emkay Global Financial Services Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 2.75,
+        "aug25": 2.73,
+        "sep25": 2.31,
+        "dec25": 1.73,
+        "mar26": 2.76
+      },
+      "valueCr": 10
+    },
+    {
+      "company": "Pondy Oxides & Chemicals Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rajshree Polypack Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.08
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Stove Kraft Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.31
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "GHCL Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.13,
+        "aug25": 1.21,
+        "sep25": 1.07,
+        "dec25": null,
+        "mar26": 1.03
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Polyplex Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.11,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.16
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Coffee Day Enterprises Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.55,
+        "aug25": 2.19,
+        "sep25": 1.72,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Sarla Performance Fibers Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Southern Petrochemical Industries Corporation Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": 1.68,
+        "aug25": 2.98,
+        "sep25": 2.6,
+        "dec25": 1.76,
+        "mar26": null
+      },
+      "valueCr": 23
+    },
+    {
+      "company": "IFB Agro Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": 1.13,
+        "dec25": null,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Rain Industries Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.05,
+        "mar26": null
+      },
+      "valueCr": 45
+    },
+    {
+      "company": "Sharda Cropchem Ltd.",
+      "sector": "Other",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": 1.09,
+        "mar26": null
+      },
+      "valueCr": 109
+    }
+  ]
+}

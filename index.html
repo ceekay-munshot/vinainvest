@@ -44,7 +44,6 @@
         <div class="topbar-actions">
           <button class="ghost-button" type="button">Saved Screens</button>
           <button class="ghost-button" type="button">Exports</button>
-          <button class="ghost-button" type="button" id="agents-button">Agents</button>
           <button class="primary-button" type="button" id="compare-button">
             Compare Investors
           </button>
@@ -395,126 +394,6 @@
             </div>
           </section>
         </section>
-        <section class="view view--agents" id="agents-view" aria-labelledby="agents-title">
-          <div class="page-toolbar">
-            <button class="ghost-button ghost-button--compact" id="back-from-agents" type="button">
-              <span aria-hidden="true">←</span>
-              Investor Directory
-            </button>
-          </div>
-
-          <div class="page-intro">
-            <div>
-              <p class="eyebrow">MUNS Agents</p>
-              <h1 id="agents-title">Dynamic tab-based MUNS analysis</h1>
-              <p class="page-subtitle">
-                Add agent tabs on the fly, run them against the active investor context, and keep per-tab output in session.
-              </p>
-            </div>
-            <div class="agents-intro-actions">
-              <button class="primary-button" type="button" id="add-agent-button">+ Add Agent</button>
-            </div>
-          </div>
-
-          <article class="panel agents-tabstrip-panel">
-            <div class="panel-header">
-              <div>
-                <p class="panel-kicker">Agent Tabs</p>
-                <h2 id="agents-active-title">No agent selected</h2>
-              </div>
-              <button class="text-button" type="button" id="agents-token-toggle">Token</button>
-            </div>
-            <div class="agents-token-row" id="agents-token-row" hidden>
-              <label class="field-block agents-token-field">
-                <span class="field-label">MUNS access token (session override)</span>
-                <input
-                  id="agents-token-input"
-                  type="text"
-                  placeholder="Paste JWT to override hardcoded token"
-                  autocomplete="off"
-                  spellcheck="false"
-                />
-              </label>
-              <div class="agents-token-actions">
-                <button class="ghost-button ghost-button--compact" type="button" id="agents-token-save">Save</button>
-                <button class="text-button" type="button" id="agents-token-clear">Clear</button>
-              </div>
-              <p class="agents-token-status" id="agents-token-status"></p>
-            </div>
-            <div class="agents-tabstrip" id="agents-tabstrip" aria-live="polite"></div>
-          </article>
-
-          <article class="panel agents-panel" id="agents-run-panel" hidden>
-            <div class="panel-header agents-run-header">
-              <div>
-                <p class="panel-kicker" id="agents-run-id">Agent ID</p>
-                <h2 id="agents-run-name">Agent Name</h2>
-              </div>
-              <div class="agents-run-actions">
-                <button class="primary-button" type="button" id="agents-run-button">Run</button>
-                <button class="ghost-button" type="button" id="agents-query-toggle">Extra User Query</button>
-              </div>
-            </div>
-
-            <div class="chip-row agents-context-chips" id="agents-context-chips"></div>
-
-            <div class="agents-input-grid">
-              <label class="field-block">
-                <span class="field-label">Ticker override</span>
-                <input id="agents-ticker-input" type="text" placeholder="e.g. JIOFIN" autocomplete="off" />
-              </label>
-              <label class="field-block">
-                <span class="field-label">Company override</span>
-                <input id="agents-company-input" type="text" placeholder="e.g. Jio Financial Services" autocomplete="off" />
-              </label>
-            </div>
-
-            <label class="field-block agents-query-block" id="agents-query-block" hidden>
-              <span class="field-label">Extra user query (sent on next Run)</span>
-              <textarea id="agents-query-input" rows="4" placeholder="e.g. summarise key financial health signals"></textarea>
-            </label>
-
-            <div class="agents-ids" id="agents-ids" hidden></div>
-
-            <div class="agents-output" id="agents-output">
-              <p class="agents-output-empty">Run the agent to load output.</p>
-            </div>
-          </article>
-        </section>
-      </main>
-    </div>
-
-    <div class="modal" id="add-agent-modal" aria-hidden="true" role="dialog" aria-labelledby="add-agent-title">
-      <div class="modal__backdrop" data-close-add-agent></div>
-      <div class="modal__panel panel">
-        <div class="panel-header">
-          <div>
-            <p class="panel-kicker">New Tab</p>
-            <h2 id="add-agent-title">Add MUNS Agent Tab</h2>
-          </div>
-          <button class="text-button" type="button" data-close-add-agent>Close</button>
-        </div>
-        <form id="add-agent-form" class="modal__form">
-          <label class="field-block">
-            <span class="field-label">Agent ID</span>
-            <input id="add-agent-id" type="text" placeholder="e.g. management-compensation" autocomplete="off" required />
-          </label>
-          <label class="field-block">
-            <span class="field-label">Agent Name</span>
-            <input id="add-agent-name" type="text" placeholder="e.g. Management Compensation" autocomplete="off" required />
-          </label>
-          <label class="field-block">
-            <span class="field-label">Agent Library ID</span>
-            <input id="add-agent-library-id" type="text" placeholder="UUID from MUNS library" autocomplete="off" required />
-          </label>
-          <p class="modal__error" id="add-agent-error" hidden></p>
-          <div class="modal__actions">
-            <button class="ghost-button" type="button" data-close-add-agent>Cancel</button>
-            <button class="primary-button" type="submit">Add Agent</button>
-          </div>
-        </form>
-      </div>
-    </div>
 
     <aside class="compare-drawer" id="compare-drawer" aria-hidden="true">
       <div class="compare-drawer__header">

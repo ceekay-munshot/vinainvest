@@ -977,7 +977,14 @@ function renderCompareDrawer() {
 
 function setupTabs() {
   document.querySelectorAll("[data-tab-target]").forEach((button) => {
-    button.addEventListener("click", () => activateTab(button.dataset.tabTarget));
+    button.addEventListener("click", () => {
+      const target = button.dataset.tabTarget;
+      activateTab(target);
+      const panel = document.querySelector(`#${target}`);
+      if (panel) {
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   });
 }
 

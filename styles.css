@@ -850,6 +850,7 @@ select {
 
 .tab-panel {
   display: none;
+  scroll-margin-top: 100px;
 }
 
 .tab-panel.is-active {

@@ -1,0 +1,20 @@
+{
+  "investorName": "Sunil Singhania",
+  "netWorthCr": 4521,
+  "activeStocksCount": 23,
+  "totalStocksCount": 29,
+  "holdings": [
+    { "company": "BirlaNu Ltd.", "jun2025Pct": null, "aug2025Pct": null, "sep2025Pct": null, "dec2025Pct": null, "mar2026Pct": null, "valueCr": 0 },
+    { "company": "Carysil Ltd.", "jun2025Pct": 5.34, "aug2025Pct": null, "sep2025Pct": 5.34, "dec2025Pct": 5.34, "mar2026Pct": 5.34, "valueCr": 137 },
+    { "company": "DCM Shriram Industries Ltd.", "jun2025Pct": 2.86, "aug2025Pct": null, "sep2025Pct": 2.86, "dec2025Pct": 2.86, "mar2026Pct": 2.86, "valueCr": 10 },
+    { "company": "Dynamatic Technologies Ltd.", "jun2025Pct": 2.94, "aug2025Pct": null, "sep2025Pct": 2.94, "dec2025Pct": 2.94, "mar2026Pct": 2.94, "valueCr": 236 },
+    { "company": "H.G. Infra Engineering Ltd.", "jun2025Pct": 1.36, "aug2025Pct": null, "sep2025Pct": 1.36, "dec2025Pct": 1.36, "mar2026Pct": 1.36, "valueCr": 53 },
+    { "company": "Hindware Home Innovation Ltd.", "jun2025Pct": 4.56, "aug2025Pct": null, "sep2025Pct": 4.56, "dec2025Pct": 4.56, "mar2026Pct": 4.56, "valueCr": 86 },
+    { "company": "IIFL Capital Services Ltd.", "jun2025Pct": 2.50, "aug2025Pct": null, "sep2025Pct": 2.50, "dec2025Pct": 2.49, "mar2026Pct": 2.49, "valueCr": 248 },
+    { "company": "Ion Exchange (India) Ltd.", "jun2025Pct": 1.92, "aug2025Pct": null, "sep2025Pct": 1.85, "dec2025Pct": 1.85, "mar2026Pct": 1.85, "valueCr": 108 },
+    { "company": "J. Kumar Infraprojects Ltd.", "jun2025Pct": 2.40, "aug2025Pct": null, "sep2025Pct": 2.40, "dec2025Pct": 2.40, "mar2026Pct": 2.40, "valueCr": 86 },
+    { "company": "Jindal Saw Ltd.", "jun2025Pct": 1.06, "aug2025Pct": null, "sep2025Pct": 1.06, "dec2025Pct": 1.21, "mar2026Pct": 1.21, "valueCr": 230 },
+    { "company": "Mastek Ltd.", "jun2025Pct": null, "aug2025Pct": null, "sep2025Pct": null, "dec2025Pct": 1.42, "mar2026Pct": 1.78, "valueCr": 110 },
+    { "company": "Rupa & Company Ltd.", "jun2025Pct": 3.05, "aug2025Pct": null, "sep2025Pct": 3.05, "dec2025Pct": 2.84, "mar2026Pct": 2.62, "valueCr": 47 }
+  ]
+}

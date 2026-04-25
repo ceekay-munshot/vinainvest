@@ -222,6 +222,38 @@ select:focus-visible,
   justify-content: flex-end;
 }
 
+.refresh-status {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  border: 1px solid transparent;
+}
+
+.refresh-status[data-tone="pending"] {
+  background: rgba(31, 94, 168, 0.08);
+  color: #1f5ea8;
+  border-color: rgba(31, 94, 168, 0.25);
+}
+
+.refresh-status[data-tone="success"] {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2e7d32;
+  border-color: rgba(46, 125, 50, 0.25);
+}
+
+.refresh-status[data-tone="error"] {
+  background: rgba(176, 35, 35, 0.08);
+  color: #b02323;
+  border-color: rgba(176, 35, 35, 0.25);
+}
+
+.refresh-status a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .ghost-button,
 .primary-button,
 .text-button,

@@ -1030,6 +1030,58 @@ function attachGlobalEvents() {
   });
   document.querySelector("#close-compare").addEventListener("click", () => toggleCompareDrawer(false));
   drawerBackdrop.addEventListener("click", () => toggleCompareDrawer(false));
+
+  document.querySelector("#profile-refresh").addEventListener("click", handleRefreshClick);
+}
+
+async function handleRefreshClick() {
+  const btn = document.querySelector("#profile-refresh");
+  const status = document.querySelector("#profile-refresh-status");
+  const investor = investors.find((inv) => inv.id === state.selectedInvestorId);
+  if (!investor) return;
+  if (!investor.sourceUrl) {
+    showRefreshStatus(status, "No source URL set for this investor — add one to investors.json before refreshing.", "error");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Refreshing...";
+  showRefreshStatus(status, "Triggering scrape — this takes ~90 seconds.", "pending");
+
+  try {
+    const res = await fetch("/api/refresh-investor", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug: investor.id, url: investor.sourceUrl })
+    });
+    const payload = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const msg = payload.error || `Request failed (${res.status}).`;
+      throw new Error(payload.detail ? `${msg} ${payload.detail}` : msg);
+    }
+    const runsUrl = payload.runsUrl || "https://github.com/ceekay-munshot/vinainvest/actions";
+    showRefreshStatus(
+      status,
+      `Workflow dispatched. <a href="${runsUrl}" target="_blank" rel="noopener">Watch progress</a>. Reload this page in ~90 seconds.`,
+      "success",
+      true
+    );
+  } catch (err) {
+    showRefreshStatus(status, `Refresh failed: ${err.message}`, "error");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Refresh";
+  }
+}
+
+function showRefreshStatus(el, message, tone, allowHtml = false) {
+  el.hidden = false;
+  el.dataset.tone = tone;
+  if (allowHtml) {
+    el.innerHTML = message;
+  } else {
+    el.textContent = message;
+  }
 }
 
 // ========== MUNS AGENTS MODULE ==========

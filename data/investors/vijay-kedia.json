@@ -1,0 +1,129 @@
+{
+  "lastScrapedAt": null,
+  "worthCr": 9680,
+  "type": "Individual",
+  "activeSince": "1992",
+  "style": "High-conviction quality growth",
+  "holdings": [
+    {
+      "company": "Tejas Networks",
+      "sector": "Technology",
+      "stakes": {
+        "jun25": 1.84,
+        "aug25": 1.84,
+        "sep25": 1.84,
+        "dec25": 1.74,
+        "mar26": 1.58
+      },
+      "valueCr": 1980
+    },
+    {
+      "company": "Atul Auto",
+      "sector": "Automotive",
+      "stakes": {
+        "jun25": 6.22,
+        "aug25": 6.22,
+        "sep25": 6.22,
+        "dec25": 6.22,
+        "mar26": 6.22
+      },
+      "valueCr": 1420
+    },
+    {
+      "company": "Vaibhav Global",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.96,
+        "aug25": 1.96,
+        "sep25": 1.96,
+        "dec25": 2.04,
+        "mar26": 2.04
+      },
+      "valueCr": 1180
+    },
+    {
+      "company": "Cera Sanitaryware",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.28,
+        "aug25": 1.28,
+        "sep25": 1.32,
+        "dec25": 1.39,
+        "mar26": 1.48
+      },
+      "valueCr": 960
+    },
+    {
+      "company": "Elecon Engineering",
+      "sector": "Industrials",
+      "stakes": {
+        "jun25": null,
+        "aug25": null,
+        "sep25": null,
+        "dec25": null,
+        "mar26": 1.09
+      },
+      "valueCr": 620
+    },
+    {
+      "company": "Heritage Foods",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": 1.04,
+        "sep25": 1.04,
+        "dec25": 1.04,
+        "mar26": 1.04
+      },
+      "valueCr": 540
+    },
+    {
+      "company": "Neuland Labs",
+      "sector": "Healthcare",
+      "stakes": {
+        "jun25": 1.18,
+        "aug25": 1.18,
+        "sep25": 1.18,
+        "dec25": 1.18,
+        "mar26": null
+      },
+      "valueCr": 0
+    },
+    {
+      "company": "Patel Engineering",
+      "sector": "Infrastructure",
+      "stakes": {
+        "jun25": 2.42,
+        "aug25": 2.42,
+        "sep25": 2.56,
+        "dec25": 2.56,
+        "mar26": 2.74
+      },
+      "valueCr": 710
+    },
+    {
+      "company": "Sudarshan Chemical",
+      "sector": "Chemicals",
+      "stakes": {
+        "jun25": 1.04,
+        "aug25": 1.04,
+        "sep25": 1.04,
+        "dec25": 1.01,
+        "mar26": 1.01
+      },
+      "valueCr": 450
+    },
+    {
+      "company": "Mahindra Holidays",
+      "sector": "Consumer",
+      "stakes": {
+        "jun25": 1.65,
+        "aug25": 1.65,
+        "sep25": 1.65,
+        "dec25": 1.65,
+        "mar26": 1.65
+      },
+      "valueCr": 520
+    }
+  ]
+}

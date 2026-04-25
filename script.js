@@ -1192,14 +1192,22 @@ function renderConsensusView() {
   document.querySelector("#consensus-total-value").textContent = currencyCr(all.reduce((s, x) => s + x.totalValueCr, 0));
   document.querySelector("#consensus-multi-count").textContent = String(all.filter((x) => x.holderCount >= 2).length).padStart(2, "0");
 
+  const CONSENSUS_LIMIT = 50;
+  const totalMatching = sorted.length;
+  const visible = sorted.slice(0, CONSENSUS_LIMIT);
+
   const resultsCopy = document.querySelector("#consensus-results-copy");
   if (resultsCopy) {
-    resultsCopy.textContent = `${sorted.length} stock${sorted.length === 1 ? "" : "s"} match the current filters.`;
+    if (totalMatching <= CONSENSUS_LIMIT) {
+      resultsCopy.textContent = `${totalMatching} stock${totalMatching === 1 ? "" : "s"} match the current filters.`;
+    } else {
+      resultsCopy.textContent = `Showing top ${CONSENSUS_LIMIT} of ${totalMatching} stocks. Narrow with filters to see specific names.`;
+    }
   }
 
   const body = document.querySelector("#consensus-body");
   if (!body) return;
-  if (!sorted.length) {
+  if (!visible.length) {
     body.innerHTML = `
       <tr>
         <td colspan="7">
@@ -1213,7 +1221,7 @@ function renderConsensusView() {
     return;
   }
 
-  body.innerHTML = sorted
+  body.innerHTML = visible
     .map((row, i) => {
       const topHolders = row.holders.slice(0, 4)
         .map((h) => `<span class="holder-chip" title="${escAttr(h.investor.name || h.investor.fund)} · ${escAttr(currencyCr(h.holding.valueCr))}" data-investor-id="${escAttr(h.investor.id)}">${escAttr(h.investor.initials)}</span>`)

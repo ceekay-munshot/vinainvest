@@ -7,7 +7,7 @@ on:
         description: "Screener saved-screen URL"
         required: true
         type: string
-        default: "https://www.screener.in/screens/3675531/fundareal-klp/"
+        default: "https://www.screener.in/screens/3675531/fundareal-klp-final/"
       max_companies:
         description: "How many companies to scrape (0 = all). Use a small number for a quick test."
         required: false

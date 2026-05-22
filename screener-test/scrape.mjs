@@ -42,6 +42,9 @@ async function run() {
     throw new Error("Set SCREENER_EMAIL + SCREENER_PASSWORD in repo secrets.");
   }
 
+  const loggedIn = await verifyLogin(cookie);
+  console.log(`Login verification: ${loggedIn ? "AUTHENTICATED" : "NOT authenticated — anonymous session!"}\n`);
+
   const base = screenUrl.split("?")[0].replace(/\/+$/, "");
   const companies = await fetchScreenCompanies(base, cookie);
   console.log(`\nScreen returned ${companies.length} companies.`);
@@ -58,7 +61,7 @@ async function run() {
     const c = companies[i];
     process.stdout.write(`[${i + 1}/${limit}] ${c.name} ... `);
     try {
-      const ratios = await fetchCompanyRatios(c.path, cookie);
+      const ratios = await fetchCompanyRatios(c.path, cookie, i === 0);
       const row = { Company: c.name, "Screener URL": `${ORIGIN}${c.path}`, ...ratios };
       Object.keys(ratios).forEach((k) => allKeys.add(k));
       rows.push(row);
@@ -162,12 +165,27 @@ async function fetchScreenCompanies(base, cookie) {
   return companies;
 }
 
-async function fetchCompanyRatios(path, cookie) {
+async function verifyLogin(cookie) {
+  const res = await fetch(`${ORIGIN}/`, { headers: { Cookie: cookie, "User-Agent": UA } });
+  const html = await res.text();
+  return /\/logout\//.test(html);
+}
+
+async function fetchCompanyRatios(path, cookie, debug = false) {
   const res = await fetch(`${ORIGIN}${path}`, {
     headers: { Cookie: cookie, "User-Agent": UA }
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const $ = cheerio.load(await res.text());
+  const rawHtml = await res.text();
+  const $ = cheerio.load(rawHtml);
+
+  if (debug) {
+    writeFileSync(resolve(OUT_DIR, "_debug-first-company.html"), rawHtml);
+    const probes = ["Int Coverage", "OPM last year", "Dividend last year", "edit-ratios", "logout"];
+    const found = probes.filter((p) => rawHtml.includes(p));
+    console.log(`\n[debug] first company HTML saved (${rawHtml.length} bytes). Probes found: ${found.join(", ") || "none"}`);
+    process.stdout.write(`[debug] continuing ... `);
+  }
 
   const data = {};
 

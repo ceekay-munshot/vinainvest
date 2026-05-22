@@ -7,16 +7,22 @@ on:
         description: "Screener saved-screen URL"
         required: true
         type: string
-        default: "https://www.screener.in/screens/3675118/fundatest1-klp/"
-      max_pages:
-        description: "Safety cap on pages to fetch"
+        default: "https://www.screener.in/screens/3675531/fundareal-klp/"
+      max_companies:
+        description: "How many companies to scrape (0 = all). Use a small number for a quick test."
         required: false
         type: string
-        default: "25"
+        default: "15"
+      max_pages:
+        description: "Safety cap on screen pages to read"
+        required: false
+        type: string
+        default: "30"
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,6 +41,7 @@ jobs:
           SCREENER_PASSWORD: ${{ secrets.SCREENER_PASSWORD }}
           SCREENER_SESSIONID: ${{ secrets.SCREENER_SESSIONID }}
           SCREEN_URL: ${{ inputs.url }}
+          MAX_COMPANIES: ${{ inputs.max_companies }}
           MAX_PAGES: ${{ inputs.max_pages }}
         run: node screener-test/scrape.mjs
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-// Screener.in screen scraper.
-// 1. Logs in with SCREENER_EMAIL / SCREENER_PASSWORD.
-// 2. Reads the live company list from the saved screen (all pages).
-// 3. Visits each company page and extracts the top ratio ribbon.
-// 4. Writes screener-companies.csv + .json to ./output/.
+// Screener.in screen scraper (headless-browser version).
+// Screener injects custom ribbon ratios via JavaScript, so a plain fetch
+// only sees the 9 default ratios. This uses Playwright (headless Chrome)
+// to render each page fully before extracting.
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
 import * as cheerio from "cheerio";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -16,7 +16,6 @@ const ORIGIN = "https://www.screener.in";
 
 const EMAIL = process.env.SCREENER_EMAIL;
 const PASSWORD = process.env.SCREENER_PASSWORD;
-const FALLBACK_SESSIONID = process.env.SCREENER_SESSIONID;
 const screenUrl = process.env.SCREEN_URL || "https://www.screener.in/screens/3675531/fundareal-klp-final/";
 const maxPages = Number(process.env.MAX_PAGES || "30");
 const maxCompanies = Number(process.env.MAX_COMPANIES || "0"); // 0 = all
@@ -29,121 +28,93 @@ run().catch((err) => {
 });
 
 async function run() {
+  if (!EMAIL || !PASSWORD) throw new Error("Set SCREENER_EMAIL + SCREENER_PASSWORD in repo secrets.");
   mkdirSync(OUT_DIR, { recursive: true });
 
-  let cookie;
-  if (EMAIL && PASSWORD) {
+  const browser = await chromium.launch();
+  const context = await browser.newContext({ userAgent: UA });
+  const page = await context.newPage();
+
+  try {
     console.log("Logging in to Screener...");
-    cookie = await login(EMAIL, PASSWORD);
+    await loginViaBrowser(page);
     console.log("Login OK.\n");
-  } else if (FALLBACK_SESSIONID) {
-    cookie = `sessionid=${FALLBACK_SESSIONID}`;
-  } else {
-    throw new Error("Set SCREENER_EMAIL + SCREENER_PASSWORD in repo secrets.");
-  }
 
-  const loggedIn = await verifyLogin(cookie);
-  console.log(`Login verification: ${loggedIn ? "AUTHENTICATED" : "NOT authenticated — anonymous session!"}\n`);
+    const base = screenUrl.split("?")[0].replace(/\/+$/, "");
+    const companies = await fetchScreenCompanies(page, base);
+    console.log(`\nScreen returned ${companies.length} companies.`);
+    if (!companies.length) throw new Error("Screen returned no companies.");
 
-  const base = screenUrl.split("?")[0].replace(/\/+$/, "");
-  const companies = await fetchScreenCompanies(base, cookie);
-  console.log(`\nScreen returned ${companies.length} companies.`);
-  if (!companies.length) throw new Error("Screen returned no companies — login or screen URL may be wrong.");
+    const limit = maxCompanies > 0 ? Math.min(maxCompanies, companies.length) : companies.length;
+    console.log(`Scraping ${limit} company pages...\n`);
 
-  const limit = maxCompanies > 0 ? Math.min(maxCompanies, companies.length) : companies.length;
-  console.log(`Scraping ${limit} company pages...\n`);
+    const rows = [];
+    const allKeys = new Set(["Company", "Screener URL"]);
+    let failures = 0;
 
-  const rows = [];
-  const allKeys = new Set(["Company", "Screener URL"]);
-  let failures = 0;
-
-  for (let i = 0; i < limit; i++) {
-    const c = companies[i];
-    process.stdout.write(`[${i + 1}/${limit}] ${c.name} ... `);
-    try {
-      const ratios = await fetchCompanyRatios(c.path, cookie, i === 0);
-      const row = { Company: c.name, "Screener URL": `${ORIGIN}${c.path}`, ...ratios };
-      Object.keys(ratios).forEach((k) => allKeys.add(k));
-      rows.push(row);
-      console.log(`${Object.keys(ratios).length} ratios`);
-    } catch (err) {
-      failures++;
-      rows.push({ Company: c.name, "Screener URL": `${ORIGIN}${c.path}`, Error: err.message });
-      console.log(`FAILED: ${err.message}`);
+    for (let i = 0; i < limit; i++) {
+      const c = companies[i];
+      process.stdout.write(`[${i + 1}/${limit}] ${c.name} ... `);
+      try {
+        const data = await fetchCompanyData(page, c.path, i === 0);
+        const row = { Company: c.name, "Screener URL": `${ORIGIN}${c.path}`, ...data };
+        Object.keys(data).forEach((k) => allKeys.add(k));
+        rows.push(row);
+        console.log(`${Object.keys(data).length} fields`);
+      } catch (err) {
+        failures++;
+        rows.push({ Company: c.name, "Screener URL": `${ORIGIN}${c.path}`, Error: err.message });
+        console.log(`FAILED: ${err.message}`);
+      }
+      await sleep(300);
     }
-    await sleep(600);
+
+    const headers = [...allKeys];
+    const csv = [headers, ...rows.map((r) => headers.map((h) => r[h] ?? ""))]
+      .map((line) => line.map(csvCell).join(","))
+      .join("\n");
+    writeFileSync(resolve(OUT_DIR, "screener-companies.csv"), csv + "\n");
+    writeFileSync(resolve(OUT_DIR, "screener-companies.json"), JSON.stringify(rows, null, 2) + "\n");
+
+    console.log("\n=== Done ===");
+    console.log(`Companies scraped: ${rows.length} (${failures} failed)`);
+    console.log(`Columns found: ${headers.length}`);
+    console.log(`Columns: ${headers.join(" | ")}`);
+  } finally {
+    await browser.close();
   }
-
-  const headers = [...allKeys];
-  const csv = [headers, ...rows.map((r) => headers.map((h) => r[h] ?? ""))]
-    .map((line) => line.map(csvCell).join(","))
-    .join("\n");
-  writeFileSync(resolve(OUT_DIR, "screener-companies.csv"), csv + "\n");
-  writeFileSync(resolve(OUT_DIR, "screener-companies.json"), JSON.stringify(rows, null, 2) + "\n");
-
-  console.log("\n=== Done ===");
-  console.log(`Companies scraped: ${rows.length} (${failures} failed)`);
-  console.log(`Ratio columns found: ${headers.length - 2}`);
-  console.log(`Columns: ${headers.join(" | ")}`);
-  console.log("\nFiles in screener-test/output/ — download from the workflow artifact.");
 }
 
-async function login(email, password) {
-  const loginUrl = `${ORIGIN}/login/`;
-  const getRes = await fetch(loginUrl, { headers: { "User-Agent": UA } });
-  if (!getRes.ok) throw new Error(`Login page returned HTTP ${getRes.status}.`);
-  const csrftoken = extractCookie(getRes.headers.getSetCookie(), "csrftoken");
-  const html = await getRes.text();
-  const tokenMatch = html.match(/name="csrfmiddlewaretoken"\s+value="([^"]+)"/);
-  if (!tokenMatch || !csrftoken) throw new Error("Could not read CSRF token from login page.");
-
-  const body = new URLSearchParams({
-    csrfmiddlewaretoken: tokenMatch[1],
-    username: email,
-    password,
-    next: "/"
-  });
-  const postRes = await fetch(loginUrl, {
-    method: "POST",
-    redirect: "manual",
-    headers: {
-      "User-Agent": UA,
-      "Content-Type": "application/x-www-form-urlencoded",
-      Cookie: `csrftoken=${csrftoken}`,
-      Referer: loginUrl
-    },
-    body: body.toString()
-  });
-
-  const sessionid = extractCookie(postRes.headers.getSetCookie(), "sessionid");
-  if (!sessionid) throw new Error("Login failed — check SCREENER_EMAIL / SCREENER_PASSWORD.");
-  const newCsrf = extractCookie(postRes.headers.getSetCookie(), "csrftoken") || csrftoken;
-  return `sessionid=${sessionid}; csrftoken=${newCsrf}`;
+async function loginViaBrowser(page) {
+  await page.goto(`${ORIGIN}/login/`, { waitUntil: "domcontentloaded", timeout: 60000 });
+  await page.fill('input[name="username"]', EMAIL);
+  await page.fill('input[name="password"]', PASSWORD);
+  await Promise.all([
+    page.waitForLoadState("domcontentloaded").catch(() => {}),
+    page.click('button[type="submit"]')
+  ]);
+  await page.waitForTimeout(1500);
+  const html = await page.content();
+  if (!/\/logout\//.test(html)) {
+    throw new Error("Login failed — check SCREENER_EMAIL / SCREENER_PASSWORD.");
+  }
 }
 
-async function fetchScreenCompanies(base, cookie) {
+async function fetchScreenCompanies(page, base) {
   const companies = [];
   const seen = new Set();
   let totalPages = 1;
 
-  for (let page = 1; page <= maxPages; page++) {
-    process.stdout.write(`Reading screen page ${page} ... `);
-    const res = await fetch(`${base}/?page=${page}`, {
-      headers: { Cookie: cookie, "User-Agent": UA }
-    });
-    if (!res.ok) {
-      console.log(`HTTP ${res.status}`);
-      if (page === 1) throw new Error(`Screen page 1 returned HTTP ${res.status}.`);
-      break;
-    }
-    const $ = cheerio.load(await res.text());
+  for (let p = 1; p <= maxPages; p++) {
+    process.stdout.write(`Reading screen page ${p} ... `);
+    await page.goto(`${base}/?page=${p}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+    const $ = cheerio.load(await page.content());
     const table = $("table.data-table").first();
     if (!table.length) {
       console.log("no table");
-      if (page === 1) throw new Error("No data table on screen page 1.");
+      if (p === 1) throw new Error("No data table on screen page 1.");
       break;
     }
-
     let added = 0;
     table.find("tbody tr").each((_, tr) => {
       const link = $(tr).find("td a[href^='/company/']").first();
@@ -154,64 +125,46 @@ async function fetchScreenCompanies(base, cookie) {
         added++;
       }
     });
-
     const m = $("body").text().match(/page\s+\d+\s+of\s+(\d+)/i);
     if (m) totalPages = Number(m[1]);
-    console.log(`${added} companies (page ${page} of ${totalPages})`);
-
-    if (page >= totalPages) break;
-    await sleep(600);
+    console.log(`${added} companies (page ${p} of ${totalPages})`);
+    if (p >= totalPages) break;
+    await sleep(300);
   }
   return companies;
 }
 
-async function verifyLogin(cookie) {
-  const res = await fetch(`${ORIGIN}/`, { headers: { Cookie: cookie, "User-Agent": UA } });
-  const html = await res.text();
-  return /\/logout\//.test(html);
-}
+async function fetchCompanyData(page, path, debug = false) {
+  await page.goto(`${ORIGIN}${path}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+  // Wait for JS to inject custom ribbon ratios (defaults are 9).
+  await page
+    .waitForFunction(() => document.querySelectorAll("#top-ratios li").length > 9, { timeout: 12000 })
+    .catch(() => {});
+  await page.waitForTimeout(800);
 
-async function fetchCompanyRatios(path, cookie, debug = false) {
-  const res = await fetch(`${ORIGIN}${path}`, {
-    headers: { Cookie: cookie, "User-Agent": UA }
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const rawHtml = await res.text();
-  const $ = cheerio.load(rawHtml);
-
+  const html = await page.content();
   if (debug) {
-    writeFileSync(resolve(OUT_DIR, "_debug-first-company.html"), rawHtml);
-    const probes = ["Int Coverage", "OPM last year", "Dividend last year", "edit-ratios", "logout"];
-    const found = probes.filter((p) => rawHtml.includes(p));
-    console.log(`\n[debug] first company HTML saved (${rawHtml.length} bytes). Probes found: ${found.join(", ") || "none"}`);
-    process.stdout.write(`[debug] continuing ... `);
+    writeFileSync(resolve(OUT_DIR, "_debug-first-company.html"), html);
   }
+  const $ = cheerio.load(html);
 
   const data = {};
-
-  // 1. Top ratio ribbon
   $("#top-ratios li").each((_, li) => {
     const name = $(li).find(".name").text().trim().replace(/\s+/g, " ");
     const value = $(li).find(".value").text().trim().replace(/\s+/g, " ");
     if (name) data[name] = cleanValue(value);
   });
-  if (!Object.keys(data).length) {
-    throw new Error("no #top-ratios block found");
-  }
+  if (!Object.keys(data).length) throw new Error("no #top-ratios block found");
 
-  // 2. Quarterly Results -> Net Profit, last 4 quarters
   const npq = parseSectionRow($, "#quarters", /^net profit/i);
   if (npq && npq.values.length) {
     const last4 = npq.values.slice(-4);
-    const labels = npq.headers.slice(-4);
     data["Net Profit Qtr (latest)"] = last4[3] ?? "";
     data["Net Profit Qtr (-1)"] = last4[2] ?? "";
     data["Net Profit Qtr (-2)"] = last4[1] ?? "";
     data["Net Profit Qtr (-3)"] = last4[0] ?? "";
-    data["_npq_quarters"] = labels.join(" | ");
   }
 
-  // 3. Cash Flow -> Cash from Operating Activity, last + preceding year
   const cf = parseSectionRow($, "#cash-flow", /cash from operating/i);
   if (cf && cf.values.length) {
     const yearly = cf.headers
@@ -222,7 +175,6 @@ async function fetchCompanyRatios(path, cookie, debug = false) {
     data["CF Operations PY"] = yearly[yearly.length - 2] ?? "";
   }
 
-  // 4. Profit & Loss -> OPM %, 5-year average
   const opm = parseSectionRow($, "#profit-loss", /^opm\s*%/i);
   if (opm && opm.values.length) {
     const nums = opm.headers
@@ -262,14 +214,6 @@ function parseSectionRow($, sectionSel, labelRegex) {
 
 function cleanValue(v) {
   return String(v || "").replace(/\s+/g, " ").replace(/^₹\s*/, "").trim();
-}
-
-function extractCookie(setCookieArray, name) {
-  for (const c of setCookieArray || []) {
-    const m = c.match(new RegExp(`(?:^|\\s)${name}=([^;]+)`));
-    if (m) return m[1];
-  }
-  return null;
 }
 
 function csvCell(v) {

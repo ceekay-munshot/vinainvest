@@ -1,0 +1,44 @@
+name: Screener scrape test
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Screener saved-screen URL"
+        required: true
+        type: string
+        default: "https://www.screener.in/screens/3675118/fundatest1-klp/"
+      max_pages:
+        description: "Safety cap on pages to fetch"
+        required: false
+        type: string
+        default: "25"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install cheerio
+        run: npm install cheerio@1 --no-save
+
+      - name: Run scraper
+        env:
+          SCREENER_SESSIONID: ${{ secrets.SCREENER_SESSIONID }}
+          SCREEN_URL: ${{ inputs.url }}
+          MAX_PAGES: ${{ inputs.max_pages }}
+        run: node screener-test/scrape.mjs
+
+      - name: Upload scraped data
+        uses: actions/upload-artifact@v4
+        with:
+          name: screener-data
+          path: screener-test/output/
+          if-no-files-found: warn

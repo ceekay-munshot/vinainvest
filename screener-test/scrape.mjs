@@ -193,20 +193,27 @@ async function fetchCompanyRatios(path, cookie) {
     data["_npq_quarters"] = labels.join(" | ");
   }
 
-  // 3. Profit & Loss -> Dividend Payout %, last/preceding year + 5Y avg
-  const dp = parseSectionRow($, "#profit-loss", /dividend payout/i);
-  if (dp && dp.values.length) {
-    const pairs = dp.headers
-      .map((h, i) => ({ h, v: dp.values[i] }))
-      .filter((p) => p.v !== undefined && !/ttm/i.test(p.h));
-    const yearly = pairs.map((p) => p.v);
-    data["Dividend Payout LY %"] = yearly[yearly.length - 1] ?? "";
-    data["Dividend Payout PY %"] = yearly[yearly.length - 2] ?? "";
-    const last5 = yearly
-      .slice(-5)
-      .map((v) => parseFloat(String(v).replace(/[^0-9.\-]/g, "")))
+  // 3. Cash Flow -> Cash from Operating Activity, last + preceding year
+  const cf = parseSectionRow($, "#cash-flow", /cash from operating/i);
+  if (cf && cf.values.length) {
+    const yearly = cf.headers
+      .map((h, i) => ({ h, v: cf.values[i] }))
+      .filter((p) => p.v !== undefined && !/ttm/i.test(p.h))
+      .map((p) => p.v);
+    data["CF Operations LY"] = yearly[yearly.length - 1] ?? "";
+    data["CF Operations PY"] = yearly[yearly.length - 2] ?? "";
+  }
+
+  // 4. Profit & Loss -> OPM %, 5-year average
+  const opm = parseSectionRow($, "#profit-loss", /^opm\s*%/i);
+  if (opm && opm.values.length) {
+    const nums = opm.headers
+      .map((h, i) => ({ h, v: opm.values[i] }))
+      .filter((p) => p.v !== undefined && !/ttm/i.test(p.h))
+      .map((p) => parseFloat(String(p.v).replace(/[^0-9.\-]/g, "")))
       .filter((n) => Number.isFinite(n));
-    data["Dividend Payout 5Y Avg %"] = last5.length
+    const last5 = nums.slice(-5);
+    data["OPM 5Year %"] = last5.length
       ? (last5.reduce((a, b) => a + b, 0) / last5.length).toFixed(2)
       : "";
   }

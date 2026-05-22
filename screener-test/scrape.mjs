@@ -169,18 +169,70 @@ async function fetchCompanyRatios(path, cookie) {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const $ = cheerio.load(await res.text());
 
-  const ratios = {};
+  const data = {};
+
+  // 1. Top ratio ribbon
   $("#top-ratios li").each((_, li) => {
     const name = $(li).find(".name").text().trim().replace(/\s+/g, " ");
-    const value = $(li).find(".value, .number").first().closest("li").find(".value").text().trim().replace(/\s+/g, " ")
-      || $(li).find(".value").text().trim().replace(/\s+/g, " ");
-    if (name) ratios[name] = cleanValue(value);
+    const value = $(li).find(".value").text().trim().replace(/\s+/g, " ");
+    if (name) data[name] = cleanValue(value);
   });
-
-  if (!Object.keys(ratios).length) {
+  if (!Object.keys(data).length) {
     throw new Error("no #top-ratios block found");
   }
-  return ratios;
+
+  // 2. Quarterly Results -> Net Profit, last 4 quarters
+  const npq = parseSectionRow($, "#quarters", /^net profit/i);
+  if (npq && npq.values.length) {
+    const last4 = npq.values.slice(-4);
+    const labels = npq.headers.slice(-4);
+    data["Net Profit Qtr (latest)"] = last4[3] ?? "";
+    data["Net Profit Qtr (-1)"] = last4[2] ?? "";
+    data["Net Profit Qtr (-2)"] = last4[1] ?? "";
+    data["Net Profit Qtr (-3)"] = last4[0] ?? "";
+    data["_npq_quarters"] = labels.join(" | ");
+  }
+
+  // 3. Profit & Loss -> Dividend Payout %, last/preceding year + 5Y avg
+  const dp = parseSectionRow($, "#profit-loss", /dividend payout/i);
+  if (dp && dp.values.length) {
+    const pairs = dp.headers
+      .map((h, i) => ({ h, v: dp.values[i] }))
+      .filter((p) => p.v !== undefined && !/ttm/i.test(p.h));
+    const yearly = pairs.map((p) => p.v);
+    data["Dividend Payout LY %"] = yearly[yearly.length - 1] ?? "";
+    data["Dividend Payout PY %"] = yearly[yearly.length - 2] ?? "";
+    const last5 = yearly
+      .slice(-5)
+      .map((v) => parseFloat(String(v).replace(/[^0-9.\-]/g, "")))
+      .filter((n) => Number.isFinite(n));
+    data["Dividend Payout 5Y Avg %"] = last5.length
+      ? (last5.reduce((a, b) => a + b, 0) / last5.length).toFixed(2)
+      : "";
+  }
+
+  return data;
+}
+
+function parseSectionRow($, sectionSel, labelRegex) {
+  const table = $(`${sectionSel} table`).first();
+  if (!table.length) return null;
+  const headers = [];
+  table.find("thead th").each((_, th) => headers.push($(th).text().trim().replace(/\s+/g, " ")));
+  let result = null;
+  table.find("tbody tr").each((_, tr) => {
+    if (result) return;
+    const cells = $(tr).find("td");
+    const label = $(cells[0]).text().trim().replace(/\s+/g, " ");
+    if (labelRegex.test(label)) {
+      const values = [];
+      cells.each((i, td) => {
+        if (i > 0) values.push($(td).text().trim().replace(/\s+/g, " "));
+      });
+      result = { headers: headers.slice(1), values };
+    }
+  });
+  return result;
 }
 
 function cleanValue(v) {
